@@ -28,13 +28,28 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'haml-rails'
 
-#frontend
-gem 'react-rails'
-gem 'bootstrap', '~> 5.0.1'
-gem 'popper_js'
+# frontend
 gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 5.0.1'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'react-rails'
 
 gem 'friendly_id'
+gem 'will_paginate'
+
+# For Config
+gem 'config'
+
+# For Image upload
+gem 'carrierwave'                 # Image uploader
+gem 'image_processing'
+gem 'mini_magick'                 # resizable image
+
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
+gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -55,6 +70,12 @@ group :development do
   gem 'spring'
 
   gem 'rspec-rails'
+
+  # For Lint
+  gem 'rubocop', require: false
+  gem 'scss_lint', require: false
+
+  gem 'bullet'
 end
 
 group :test do

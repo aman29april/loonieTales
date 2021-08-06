@@ -1,15 +1,19 @@
-= form_for post, html: { multipart: true, class: "editor-form", data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+= form_for post, html: { multipart: true, class: "editor-form"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
   %label.picture_upload
-    = f.file_field :picture
+    = f.file_field :picture, class: 'form-control'
     %i.fa.fa-camera
   .file-upload-previewer.hidden
     %img#image_preview{:src => ""}/
   - if post.picture?
     #existing-img-previewer.existing-img-previewer
       = image_tag post.picture.url(:thumb)
-  .form-group
-    = f.text_field :title, class: 'editor-title', placeholder: 'Title', autofocus: true, data: { behavior: "autosave" }, onfocus: "this.value = this.value;"
-  .form-group
-    = f.text_area :body, class: 'medium-editable', data: { behavior: "autosave" }
+  .input-group
+    = f.text_field :title, class: 'editor-title form-control' , placeholder: 'Title', autofocus: true, data: { behavior: "autosave" }, onfocus: "this.value = this.value;"
+  .input-group
+    = f.rich_text_area :body
+    -#, data: { highlights_code_blocks: true }
+    -#, class: 'medium-editable form-control', data: { behavior: "autosave" }
   .hidden
     -# = f.text_field :all_tags
+  .input-group
+    =f.submit

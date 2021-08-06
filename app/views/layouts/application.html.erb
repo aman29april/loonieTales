@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Stories">
 <head>
   <title>Stories</title>
+  <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'  %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
   <%= favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= javascript_pack_tag 'application' %>
 
 </head>
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
@@ -24,7 +25,7 @@
 <% end %>
 <%= render 'layouts/alert_messages' %>
 
-<div class="container-fluid main-container">
+<div class="container-fluid container">
   <%= yield %>
   <%= yield :sidebar %>
 </div>

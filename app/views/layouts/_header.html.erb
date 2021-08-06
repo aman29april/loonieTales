@@ -1,28 +1,28 @@
-<nav data-behavior="animated-navbar" class="navbar navbar-default navbar-fixed-top">
+<nav data-behavior="animated-navbar" class="navbar navbar-expand-lg navbar-default fixed-top navbar-dark bg-dark">
   <div class="container-fluid col-md-10 col-md-offset-1">
     <div class="navbar-header">
       <%= link_to root_path, class: "navbar-brand", id: "logo" do %>
         <%= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
       <% end %>
     </div>
-    <ul class="nav navbar-nav filter-links">
-      <li>
+    <ul class="nav navbar-nav filter-links mr-auto">
+      <li class="nav-item">
         <% if user_signed_in? %>
           <%= nav_link_to "Home", root_path %>
         <% else %>
           <%= nav_link_to "Staff pick", root_path %>
         <% end %>
       </li>
-      <li><%= nav_link_to "Top stories", top_stories_path %></li>
+<!--      <li><%#= nav_link_to "Top stories", top_stories_path %></li>-->
       <% if user_signed_in? %>
-        <li><%= nav_link_to "Bookmarks", dashboard_bookmarks_path %></li>
+        <li class="nav-item"><%= nav_link_to "Bookmarks", dashboard_bookmarks_path %></li>
       <% else %>
-        <li><a href='' data-behavior="trigger-overlay">Bookmarks</a></li>
+        <li class="nav-item"><a href='' data-behavior="trigger-overlay">Bookmarks</a></li>
       <% end %>
     </ul>
 
     <div class="folding-nav">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-end">
         <li class="main-searchbar">
           <%= react_component('SearchContainer') %>
         </li>
