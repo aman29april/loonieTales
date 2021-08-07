@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @experience.title
+%p
+  %b Company:
+  = @experience.company
+%p
+  %b Location:
+  = @experience.location
+%p
+  %b Description:
+  = @experience.description
+%p
+  %b Start date:
+  = @experience.start_date
+%p
+  %b End date:
+  = @experience.end_date
+%p
+  %b Working here:
+  = @experience.working_here
+
+= link_to 'Edit', edit_user_experience_path(@experience)
+\|
+= link_to 'Back', user_experience_path

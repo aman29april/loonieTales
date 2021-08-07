@@ -1,23 +1,24 @@
 <div class="banner-container" data-animation="fadeInUp-fadeOutDown-slow">
-  <div class="hero-wrapper">
+  <div class="hero-wrapper1">
     <header class="hero">
+      <div class="hero-avatar">
+        <%= avatar_for @user, size: 100 %>
+      </div>
+
       <div class="profile-info">
         <h1 class="hero-title"><%= @user.username %></h1>
         <p class="hero-description"><%= @user.description %></p>
         <% if @user.location.present? %>
           <div class="hero-location">
-            <%= icon('map-marker') %><%= @user.location %>
+            <%= fa_icon('map-marker') %><%= @user.location %>
           </div>
         <% end %>
-      </div>
-      <div class="hero-avatar">
-        <%= avatar_for @user, size: 100 %>
       </div>
     </header>
 
     <div>
     <% if user_signed_in? %>
-      <%= react_component('UserFollowContainer', 
+      <%# react_component('UserFollowContainer',
                           { followerCount: @followers_count, 
                             followingCount: @following_count, 
                             following: current_user.following?(@user), 
@@ -27,7 +28,7 @@
                             overlayTrigger: true },
                           ) %>
     <% else %>
-      <%= react_component('UserFollowContainer', 
+      <%# react_component('UserFollowContainer',
                           { followerCount: @user.followers.size, 
                             followingCount: @user.following.size, 
                             following: false, 
@@ -47,31 +48,99 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col col-md-4">
+    <div class="profile-info">
 
-<div class="posts-wrapper" data-animation="fadeInUp-fadeOutDown">
-  <div class="flex-container border-top">
-    <h4 class="small-heading">Interests</h4>
-    <% if user_signed_in? && current_user?(@user) %>
-      <%= react_component('AddTagButton') %>
-    <% end %>
+
+      <div>
+        <div class="hero-location">
+          <%=fa_icon('linkedin', type: :brand) %>
+          <%= link_to @user.linkedin , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link' %>
+        </div>
+
+        <div class="hero-location">
+          <%=fa_icon('github', type: :brand) %>
+          <%= link_to @user.github , "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link' %>
+        </div>
+
+        <div class="hero-location">
+          <%=fa_icon('envelope', type: :far) %>
+          <%= link_to @user.email , "mailto:#{@user.email}", target: '_blank', class: ' social-link' %>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <% if user_signed_in? && current_user?(@user) %>
-    <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
-  <% else %>
-    <%= react_component('TagList', { tags: @user.following_tags }, { prerender: true }) %>
-  <% end %>
 
-  <% if @latest_posts.any? %>
-    <h4 class="small-heading border-top">latest</h4>
-    <%= render @latest_posts %>
-  <% end %>
-</div>
+  <div class="col col-md-8">
+    <div class="user-wrapper" data-animation="fadeInUp-fadeOutDown">
+      <div class="flex-container border-top">
+        <h4 class="small-heading">Experiences</h4>
+        <% if user_signed_in? && current_user?(@user) %>
+          <%= react_component('AddTagButton') %>
+        <% end %>
+      </div>
+      <%if @user.experiences.any? %>
+        <% @user.experiences.each do |experience| %>
+          <%= render partial: 'experiences/experience', locals: {experience: experience} %>
+
+        <%end %>
+      <%else %>
+
+      <%end %>
+    </div>
+
+    <div class="user-wrapper" data-animation="fadeInUp-fadeOutDown">
+      <div class="flex-container border-top">
+        <h4 class="small-heading">Projects</h4>
+        <% if user_signed_in? && current_user?(@user) %>
+          <%= react_component('AddTagButton') %>
+        <% end %>
+      </div>
+      <%if @user.projects.any? %>
+        <% @user.projects.each do |project| %>
+          <%= render partial: 'projects/project', locals: {project: project} %>
+
+        <%end %>
+      <%else %>
+
+      <%end %>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+<!--<div class="posts-wrapper" data-animation="fadeInUp-fadeOutDown">-->
+<!--  <div class="flex-container border-top">-->
+<!--    <h4 class="small-heading">Interests</h4>-->
+    <%# if user_signed_in? && current_user?(@user) %>
+      <%#= react_component('AddTagButton') %>
+    <%# end %>
+<!--  </div>-->
+  <%# if user_signed_in? && current_user?(@user) %>
+    <%#= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
+  <%# else %>
+    <%#= react_component('TagList', { tags: @user.following_tags }, { prerender: true }) %>
+  <%# end %>
+
+  <%# if @latest_posts.any? %>
+<!--    <h4 class="small-heading border-top">latest</h4>-->
+    <%#= render @latest_posts %>
+  <%# end %>
+<!--</div>-->
+
+
+
 
 
 <% if @recommended_posts.any? %>
   <div class="banner-container" data-animation="fadeInUp-fadeOutDown">
     <div class="posts-wrapper">
-      <h4 class="heading-border-b">Recommended by <%= @user.username %> &#149; 
+      <h4 class="heading-border-b">Recommended by <%= @user.username %> &#149;
         <%= link_to "See all", user_recommended_posts_path(@user) %>
       </h4>
       <div class="flex-container f-wrap">

@@ -1,6 +1,6 @@
 class SocialAccount < ApplicationRecord
   belongs_to :user
-  enum account_type: %i[git_hub facebook twitter linked_in]
+  enum account_type: %i[github facebook twitter linkedin stackoverflow]
 
   validates :user, presence: true
 

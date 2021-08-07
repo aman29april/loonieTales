@@ -1,0 +1,15 @@
+.row
+  .col-md-1
+    .hero-avatar
+      = avatar_for experience, size: 60
+  .col
+    %h5
+      = experience.title
+    .company
+    = experience.company
+    %span
+      |
+      =experience_range(experience)
+  .row
+    %div
+      = experience.description

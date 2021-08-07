@@ -9,7 +9,8 @@ class Dashboard
   end
 
   def featured_tags
-    Tag.where(featured: true)
+    # Tag.where(featured: true)
+    Tag.all
   end
 
   def following_tags

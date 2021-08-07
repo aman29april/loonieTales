@@ -1,8 +1,8 @@
-require 'carrierwave/processing/mime_types'
+# require 'carrierwave/processing/mime_types'
 
 class ProjectImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  include CarrierWave::MimeTypes
+  # include CarrierWave::MimeTypes
   process :set_content_type
 
   process resize_to_limit: [740, 740]

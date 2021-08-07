@@ -18,6 +18,8 @@ class Post < ApplicationRecord
 
   delegate :username, to: :user
 
+  before_save :generate_lead!
+
   extend FriendlyId
   friendly_id :title, use: %i[slugged history finders]
 
@@ -34,12 +36,12 @@ class Post < ApplicationRecord
     save
   end
 
-  def body_text
-    body.body.to_plain_text
+  def self.tagged_with(name)
+    Tag.find_by!(name: name).posts
   end
 
-  def lead
-    'true'
+  def body_text
+    body.body&.to_plain_text || ''
   end
 
   def published?
@@ -68,5 +70,24 @@ class Post < ApplicationRecord
   def related_posts(size: 3)
     Post.joins(:taggings).where.not(id: id).where(taggings: { tag_id: tag_ids }).distinct
         .published.limit(size).includes(:user)
+  end
+
+  def body_html
+    body.body&.to_html
+  end
+
+  def generate_lead!
+    if self.published?
+      post_body = Nokogiri::HTML::Document.parse(self.body_html)
+      if post_body.css('h2').size > 0
+        self.lead = post_body.css('h2')[0].to_s
+      elsif post_body.css('h3').size > 0
+        self.lead = post_body.css('h3')[0].to_s
+      elsif post_body.css('p').size > 0
+        self.lead = post_body.css('p')[0].to_s
+      elsif post_body.css('div').size > 0
+        self.lead = post_body.css('div')[0].to_s
+      end
+    end
   end
 end

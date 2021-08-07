@@ -1,11 +1,11 @@
-<div class="col-md-6 col-md-offset-1 dashboard-main-content">
+<div class="col col-md col-md-offset-1 dashboard-main-content">
 
   <% unless @dashboard.top_stories? %>
-    <% if user_signed_in? && current_page?('/') %>
-      <div data-animation="fadeInUp-fadeOutDown">
-        <%= render 'shared/inline_editor' %>
-      </div>
-    <% end %>
+    <%# if user_signed_in? && current_page?('/') %>
+<!--      <div data-animation="fadeInUp-fadeOutDown">-->
+        <%#= render 'shared/inline_editor' %>
+<!--      </div>-->
+    <%# end %>
     <div class="posts-wrapper" data-behavior="endless-scroll" data-animation="fadeInUp-fadeOutDown">
       <%= render @dashboard.posts %>
     </div>
@@ -23,19 +23,20 @@
 
 </div>
 
+
 <% content_for :sidebar do %>
-  <aside class="col-md-4 main-sidebar">
+  <aside class="col col-md-4 main-sidebar">
     <h4 class="small-heading border-top">Featured tags</h4>
     <%= react_component('TagList', { tags: @dashboard.featured_tags }) %>
 
-    <% if user_signed_in? %>
-      <div class="flex-container border-top">
-        <h4 class="small-heading">Tags you follow</h4><%= react_component('AddTagButton') %>
-      </div>
-      <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
+    <%# if user_signed_in? %>
+<!--      <div class="flex-container border-top">-->
+<!--        <h4 class="small-heading">Tags you follow</h4><%#= react_component('AddTagButton') %>-->
+<!--      </div>-->
+      <%#= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
 
-      <%= react_component('FollowSuggestionsContainer') %>
-    <% end %>
+      <%#= react_component('FollowSuggestionsContainer') %>
+    <%# end %>
 
     <% unless @dashboard.filtered? %>
       <h4 class="small-heading border-top">Top stories</h4>
@@ -58,4 +59,5 @@
       </div>
     <% end %>
   </aside>
+
 <% end %>

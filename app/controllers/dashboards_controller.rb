@@ -53,6 +53,7 @@ class DashboardsController < ApplicationController
   end
 
   def featured_posts
-    Post.recent.featured.includes(:user).paginate(page: params[:page])
+    # Post.recent.featured.includes(:user).paginate(page: params[:page])
+    Post.all.paginate(page: params[:page])
   end
 end

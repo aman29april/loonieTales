@@ -5,4 +5,8 @@ class Project < ApplicationRecord
 
   has_many :taggings, as: :subject, dependent: :destroy
   has_many :tags, through: :taggings
+
+  belongs_to :user
+
+  has_rich_text :description
 end

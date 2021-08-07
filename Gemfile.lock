@@ -173,6 +173,9 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     ffi (1.15.3)
+    font_awesome5_rails (1.5.0)
+      nokogiri (>= 1.11.3)
+      railties (>= 4.2)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (0.5.2)
@@ -213,6 +216,8 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
+    meta-tags (2.15.0)
+      actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
@@ -420,12 +425,14 @@ DEPENDENCIES
   carrierwave
   config
   devise
+  font_awesome5_rails
   friendly_id
   haml-rails
   image_processing
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  meta-tags
   mini_magick
   omniauth-facebook
   omniauth-google-oauth2

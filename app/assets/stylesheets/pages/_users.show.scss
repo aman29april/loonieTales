@@ -95,44 +95,45 @@ body.recommended_posts.index {
     color: $super-light-font-color;
     font-size: 14px;
   }
-  label.change-avatar input[type="file"] {
-    position: fixed;
-    top: -1000px;
-  }
-  .change-avatar {
-    border: 1px solid $border-color;
-    @include border-radius($round);
-    padding: 2px 5px;
-    margin: 2px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    opacity: 0.7;
-    position: relative;
-    transition: all .1s;
 
-    .fa-camera {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 30px;
-      opacity: 1;
-      color: #000;
-    }
-    &:hover {
-      cursor: pointer;
-      opacity: 0.9;
-    }
+}
+label.change-avatar input[type="file"] {
+  position: fixed;
+  top: -1000px;
+}
+.change-avatar {
+  border: 1px solid $border-color;
+  @include border-radius($round);
+  padding: 2px 5px;
+  margin: 2px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  opacity: 0.7;
+  position: relative;
+  transition: all .1s;
+
+  .fa-camera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    opacity: 1;
+    color: #000;
   }
-  .change-avatar:hover {
-    border: 1px solid $border-hover-color;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
   }
-  .change-avatar:active {
-    border: 1px solid $border-hover-color;
-  }
+}
+.change-avatar:hover {
+  border: 1px solid $border-hover-color;
+}
+.change-avatar:active {
+  border: 1px solid $border-hover-color;
 }
 
 form.edit_user {
@@ -144,4 +145,12 @@ form.edit_user {
   textarea {
     width: 100%;
   }
+}
+
+.social-link{
+  color: rgba(0, 0, 0, 0.6);
+}
+.social-link:link{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
 }

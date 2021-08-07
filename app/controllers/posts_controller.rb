@@ -22,6 +22,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     #           @responses = @post.responses.includes(:user)
     @related_posts = @post.related_posts
+
+
+    set_meta_tags title: @post.title,
+                  description: '',
+                  keywords: @post.all_tags
+
     # If an old id or a numeric id was used to find the record, then
     # the request path will not match the post_path, and we should do
     # a 301 redirect that uses the current friendly id.

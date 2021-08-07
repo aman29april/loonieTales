@@ -34,6 +34,10 @@ gem 'bootstrap', '~> 5.0.1'
 gem 'jquery-rails'
 gem 'popper_js'
 gem 'react-rails'
+gem 'font_awesome5_rails'
+gem 'meta-tags'
+
+
 
 gem 'friendly_id'
 gem 'will_paginate'

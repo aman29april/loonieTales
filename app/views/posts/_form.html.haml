@@ -10,10 +10,10 @@
   .input-group
     = f.text_field :title, class: 'editor-title form-control' , placeholder: 'Title', autofocus: true, data: { behavior: "autosave" }, onfocus: "this.value = this.value;"
   .input-group
-    = f.rich_text_area :body
+    = f.rich_text_area :body, class: 'medium-editable form-control'
     -#, data: { highlights_code_blocks: true }
     -#, class: 'medium-editable form-control', data: { behavior: "autosave" }
-  .hidden
-    -# = f.text_field :all_tags
   .input-group
-    =f.submit
+    = f.text_field :all_tags, class: ' form-control'
+  .input-group
+    =f.submit class: "btn btn-primary"
