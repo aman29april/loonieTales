@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :load_project, only: %i[edit show update]
+  before_action :load_project, only: %i[edit show update destroy]
+
   def index
     @projects = current_user.projects.all
   end
@@ -12,7 +13,7 @@ class ProjectsController < ApplicationController
   def update
     @project.assign_attributes(project_params)
     if @project.save
-      redirect_to user_projects_path, notice: 'Successfully published the project!'
+      redirect_to user_path(current_user), notice: 'Successfully published the project!'
     else
       flash.now[:alert] = 'Could not update the project, Please try again'
       render :edit
@@ -27,6 +28,14 @@ class ProjectsController < ApplicationController
     else
       flash.now[:alert] = 'Could not update the project, Please try again'
       render :new
+    end
+  end
+
+  def destroy
+    @project.destroy
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user), notice: 'Project was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

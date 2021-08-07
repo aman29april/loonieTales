@@ -1,4 +1,4 @@
-.row
+.row.experience-row
   .col-md-1
     .hero-avatar
       = avatar_for experience, size: 60
@@ -10,6 +10,9 @@
     %span
       |
       =experience_range(experience)
+  = render :partial => 'shared/edit_delete_options', locals: {edit_link: edit_experience_link(experience), delete_link: destroy_experience_link(experience)}
+
   .row
     %div
       = experience.description
+

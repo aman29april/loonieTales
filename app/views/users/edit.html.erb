@@ -1,15 +1,11 @@
 <div class="profile-container" data-page="users-edit" data-animation="fadeInUp-fadeOutDown-slow">
   <div class="hero-wrapper">
     <%= form_for @user, html: { multipart: true } do |f| %>
-        <header class="hero">
+        <header class="hero ">
 
           <div class="profile-info">
             <h1 class="hero-title"><%= @user.username %></h1>
             <p class="hero-description"><%= f.text_area :description, rows: 3, autofocus: true, placeholder: "Tell the world about yourself!" %></p>
-            <div class="hero-location">
-              <%= fa_icon('map-marker') %>
-              <%= f.text_field :location, id: 'autocomplete', onFocus: 'geolocate()', placeholder: 'Where do you live?' %>
-            </div>
           </div>
 
 
@@ -21,35 +17,56 @@
           </div>
         </header>
 
-      <div class="profile-info">
-        <div class="hero-location">
-          <%= fa_icon('linkedin', type: :brand) %>
-          <%= f.text_field :linkedin, id: 'linkedin', class: 'form-field', placeholder: 'linkedin/username' %>
+      <div class="row">
+        <div class="col">
+          <%= f.label :skills %>
+          <%= f.text_area :skills, class: 'form-control', placeholder: 'Comma separated skills' %>
+        </div>
+      </div>
+      <div class=" ">
+        <div class="row ">
+          <div class="col">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: 'form-control', placeholder: '' %>
+          </div>
+
+          <div class="col">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, class: 'form-control', placeholder: '' %>
+          </div>
         </div>
 
-<!--        <div class="hero-location">-->
-          <%#= fa_icon('facebook', type: :brand) %>
-          <%#= f.text_field :facebook, id: 'facebook', class: 'form-field', placeholder: 'linkedin/username' %>
-<!--        </div>-->
-
-        <div class="hero-location">
-          <%= fa_icon('github', type: :brand) %>
-          <%= f.text_field :github, id: 'github', class: 'form-field', placeholder: 'linkedin/username' %>
+        <div class=" input-group mb-3">
+          <span class="input-group-text">
+            <%= fa_icon('map-marker') %>
+          </span>
+          <%= f.text_field :location, class: 'form-control', placeholder: 'Where do you live?' %>
         </div>
 
-<!--        <div class="hero-location">-->
-          <%#= fa_icon('stack-overflow', type: :brand) %>
-          <%#= f.text_field :github, id: 'github', class: 'form-field', placeholder: 'linkedin/username' %>
-<!--        </div>-->
+        <div class=" input-group mb-3">
+          <span class="input-group-text">
+            <%= fa_icon('linkedin', type: :brand) %>
+          </span>
+          <%= f.text_field :linkedin, id: 'linkedin', class: 'form-control', placeholder: 'linkedin username' %>
+        </div>
 
-<!--        <div class="hero-location">-->
-          <%#= fa_icon('twitter', type: :brand) %>
-          <%#= f.text_field :twitter, id: 'twitter', class: 'form-field', placeholder: 'linkedin/username' %>
-<!--        </div>-->
+        <div class="input-group mb-3">
+          <span class="input-group-text">
+            <%= fa_icon('github', type: :brand) %>
+          </span>
+          <%= f.text_field :github, id: 'github', class: 'form-control', placeholder: 'github username' %>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">
+            <%= fa_icon('id-badge', type: :reg) %>
+          </span>
+          <%= f.text_field :resume, id: 'github', class: 'form-control', placeholder: 'link to resume' %>
+        </div>
       </div>
 
-      <h5>Projects</h5>
-      <%= link_to "Add Project", new_user_project_path(@user), class: 'button green-inner-button' %>
+<!--      <h5>Projects</h5>-->
+      <%#= link_to "Add Project", new_user_project_path(@user), class: 'button green-inner-button' %>
 
 
 

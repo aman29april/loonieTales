@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]
 
-    resources :projects, except: %w[show] do
+    resources :projects, except: %i[show index] do
       resource :acceptance, only: :update, module: :projects
     end
 
-    resources :experiences, except: %w[show]
+    resources :experiences, except: %i[show index]
   end
 
   namespace :admin do

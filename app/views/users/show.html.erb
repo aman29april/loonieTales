@@ -1,22 +1,20 @@
-<div class="banner-container" data-animation="fadeInUp-fadeOutDown-slow">
-  <div class="hero-wrapper1">
-    <header class="hero">
-      <div class="hero-avatar">
-        <%= avatar_for @user, size: 100 %>
-      </div>
-
+<div class="banner-container mt-5" data-animation="fadeInUp-fadeOutDown-slow">
+  <div class="row">
+    <div class="col-1">
+      <header class="">
+        <div class="hero-avatar">
+          <%= avatar_for @user, size: 100 %>
+        </div>
+      </header>
+    </div>
+    <div class="col-8">
       <div class="profile-info">
-        <h1 class="hero-title"><%= @user.username %></h1>
+        <h1 class="hero-title"><%= @user.full_name %></h1>
         <p class="hero-description"><%= @user.description %></p>
-        <% if @user.location.present? %>
-          <div class="hero-location">
-            <%= fa_icon('map-marker') %><%= @user.location %>
-          </div>
-        <% end %>
-      </div>
-    </header>
 
-    <div>
+      </div>
+    </div>
+    <div class="col mt-5">
     <% if user_signed_in? %>
       <%# react_component('UserFollowContainer',
                           { followerCount: @followers_count, 
@@ -48,43 +46,66 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row mt-4">
   <div class="col col-md-4">
-    <div class="profile-info">
+    <div class="row">
+      <h5>Personal Information</h5>
+
+      <%if @user.email.present? %>
+        <div class="hero-location mt-1">
+          <%=fa_icon('envelope', type: :far) %>
+          <%= link_to @user.email , "mailto:#{@user.email}", target: '_blank', class: ' social-link' %>
+        </div>
+      <%end %>
+
+      <% if @user.location.present? %>
+        <div class="hero-location mt-2">
+          <%= fa_icon('map-marker') %><%= @user.location %>
+        </div>
+      <% end %>
 
 
-      <div>
+    </div>
+
+    <div class="row mt-3">
+      <h5>Social Links</h5>
+      <div class="flex flex-row margin--top external-links-social">
         <%if @user.linkedin.present? %>
-          <div class="hero-location">
-            <%=fa_icon('linkedin', type: :brand) %>
-            <%= link_to @user.linkedin , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link' %>
-          </div>
-          <%end %>
-
-        <%if @user.linkedin.present? %>
-          <div class="hero-location">
-            <%=fa_icon('github', type: :brand) %>
-            <%= link_to @user.github , "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link' %>
+          <div class="external-links">
+            <%= link_to fa_icon('linkedin', type: :brand) , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link' %>
           </div>
         <%end %>
 
         <%if @user.linkedin.present? %>
-          <div class="hero-location">
-            <%=fa_icon('envelope', type: :far) %>
-            <%= link_to @user.email , "mailto:#{@user.email}", target: '_blank', class: ' social-link' %>
+          <div class="external-links">
+            <%= link_to fa_icon('github', type: :brand), "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link' %>
           </div>
         <%end %>
       </div>
+
+    </div>
+    <div class="row mt-3">
+      <%if @user.skills_array.any? %>
+        <h5>Skills</h5>
+        <div class="mat-chip-list-wrapper">
+          <% @user.skills_array.each do |skill| %>
+            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
+              <%=skill %>
+            </div>
+          <%end %>
+        </div>
+
+      <%end %>
     </div>
 
   </div>
 
   <div class="col col-md-8">
-    <div class="user-wrapper" data-animation="fadeInUp-fadeOutDown">
+    <div class="user-wrapper user-experiences" data-animation="fadeInUp-fadeOutDown">
       <div class="flex-container border-top">
         <h4 class="small-heading">Experiences</h4>
         <% if user_signed_in? && current_user?(@user) %>
-          <%= react_component('AddTagButton') %>
+          <%= link_to render('shared/tag_button'), new_user_experience_path(current_user) %>
         <% end %>
       </div>
       <%if @user.experiences.any? %>
@@ -97,11 +118,12 @@
       <%end %>
     </div>
 
-    <div class="user-wrapper" data-animation="fadeInUp-fadeOutDown">
+    <div class="user-wrapper user-projects" data-animation="fadeInUp-fadeOutDown">
       <div class="flex-container border-top">
         <h4 class="small-heading">Projects</h4>
         <% if user_signed_in? && current_user?(@user) %>
-          <%= react_component('AddTagButton') %>
+          <%#= react_component('AddTagButton') %>
+          <%= link_to render('shared/tag_button'), new_user_project_path(current_user) %>
         <% end %>
       </div>
       <%if @user.projects.any? %>

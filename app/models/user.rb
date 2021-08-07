@@ -63,6 +63,17 @@ class User < ApplicationRecord
     []
   end
 
+  def full_name
+    name = "#{first_name} #{last_name}"
+    (name.present? ? name : username).titleize
+  end
+
+  def skills_array
+    return [] if skills.blank?
+
+    skills.split(',').map { |s| s.strip }
+  end
+
   def self.default_avatar
     'default-avatar.svg'
   end

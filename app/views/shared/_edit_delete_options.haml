@@ -1,0 +1,11 @@
+.col-sm-1
+  -if user_signed_in? && current_user?(@user)
+    .experience-options
+      .dropdown
+      %a{role:'button', id: 'dropdownMenuLink', 'data-bs-toggle': 'dropdown', 'aria-expanded': false}
+        = fa_icon('ellipsis-v')
+      %ul.dropdown-menu{'aria-labelledby': "dropdownMenuLink"}
+        %li
+          =edit_link
+        %li
+          =delete_link

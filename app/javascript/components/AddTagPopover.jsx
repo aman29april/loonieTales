@@ -1,4 +1,5 @@
 import React from "react";
+import PubSub from "pubsub-js";
 
 class AddTagPopover extends React.Component {
   constructor(props) {

@@ -1,4 +1,11 @@
-<div>
-  <h5><%= project.title %></h5>
+<div class="row">
+  <div class="col">
+    <h5><%= project.title %></h5>
+  </div>
+  <div class="col-md-1">
+    <%= render :partial => 'shared/edit_delete_options', locals: {edit_link: edit_project_link(project), delete_link: destroy_project_link(project)}
+    %>
+  </div>
+
   <p><%= project.description %></p>
 </div>

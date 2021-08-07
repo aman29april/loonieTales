@@ -1,4 +1,5 @@
 import React from "react";
+import AddTagPopover from "./AddTagPopover";
 
 class AddTagButton extends React.Component {
   constructor(props) {

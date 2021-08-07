@@ -6,14 +6,16 @@
         - @experience.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :title
-    = f.text_field :title, class: 'form-control'
+  .row
+    .col
+      = f.label :title
+      = f.text_field :title, class: 'form-control'
 
-  .hero-avatar
-    %label.change-avatar#change-avatar{style: "background-image: url('#{ @experience.avatar.url}')"}
-      = f.file_field :avatar
-      = fa_icon('camera')
+    .col
+      .hero-avatar
+        %label.change-avatar#change-avatar{style: "background-image: url('#{ @experience.avatar.url}')"}
+          = f.file_field :avatar
+          = fa_icon('camera')
 
   .row
     .col

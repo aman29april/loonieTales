@@ -11,6 +11,8 @@ module DateUtil
     end
 
     def formatted_date(datetime)
+      return '' if datetime.nil?
+
       datetime.strftime('%B, %Y')
     end
 
