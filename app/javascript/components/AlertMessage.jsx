@@ -1,3 +1,5 @@
+import React from "react";
+
 class AlertMessage extends React.Component {
   constructor(props) {
     super(props);
@@ -32,3 +34,5 @@ AlertMessage.propTypes = {
   message: React.PropTypes.string.isRequired,
   type: React.PropTypes.string
 };
+
+export default AlertMessage

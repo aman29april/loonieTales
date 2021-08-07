@@ -1,3 +1,5 @@
+import React from "react";
+
 class AddTagPopover extends React.Component {
   constructor(props) {
     super(props);
@@ -53,3 +55,4 @@ class AddTagPopover extends React.Component {
   }
 }
 
+export default AddTagPopover

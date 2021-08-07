@@ -1,3 +1,7 @@
+import React from "react";
+import PubSub from "pubsub-js";
+import PropTypes from "prop-types";
+
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
@@ -96,17 +100,19 @@ class LikeButton extends React.Component {
 }
 
 LikeButton.propTypes = {
-  liked: React.PropTypes.bool.isRequired,
-  likeCount: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string]).isRequired,
-  likeEndpoint: React.PropTypes.string.isRequired,
-  unlikeEndpoint: React.PropTypes.string.isRequired,
-  likeableType: React.PropTypes.string.isRequired,
-  likeableId: React.PropTypes.number.isRequired,
-  disableOverlay: React.PropTypes.bool,
-  overlayHeading: React.PropTypes.string,
-  overlayEndpoint: React.PropTypes.string
+  liked: PropTypes.bool.isRequired,
+  likeCount: PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string]).isRequired,
+  likeEndpoint: PropTypes.string.isRequired,
+  unlikeEndpoint: PropTypes.string.isRequired,
+  likeableType: PropTypes.string.isRequired,
+  likeableId: PropTypes.number.isRequired,
+  disableOverlay: PropTypes.bool,
+  overlayHeading: PropTypes.string,
+  overlayEndpoint: PropTypes.string
 };
 
 LikeButton.defaultProps = {
   disableOverlay: false
 }
+
+export default LikeButton

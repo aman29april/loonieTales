@@ -1,3 +1,7 @@
+import React from "react";
+import PubSub from "pubsub-js";
+import PropTypes from "prop-types";
+
 class BookmarkButton extends React.Component {
   constructor(props) {
     super(props);
@@ -69,9 +73,11 @@ class BookmarkButton extends React.Component {
 }
 
 BookmarkButton.propTypes = {
-  bookmarked: React.PropTypes.bool.isRequired,
-  unbookmarkEndpoint: React.PropTypes.string.isRequired,
-  bookmarkEndpoint: React.PropTypes.string.isRequired,
-  bookmarkableType: React.PropTypes.string.isRequired,
-  bookmarkableId: React.PropTypes.number.isRequired
+  bookmarked: PropTypes.bool.isRequired,
+  unbookmarkEndpoint: PropTypes.string.isRequired,
+  bookmarkEndpoint: PropTypes.string.isRequired,
+  bookmarkableType: PropTypes.string.isRequired,
+  bookmarkableId: PropTypes.number.isRequired
 };
+
+export default BookmarkButton

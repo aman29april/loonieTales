@@ -7,11 +7,14 @@ class ProjectImageUploader < CarrierWave::Uploader::Base
 
   process resize_to_limit: [740, 740]
 
-  if Rails.env.production? || Rails.env.staging?
-    storage :fog
-  else
-    storage :file
-  end
+  # if Rails.env.production? || Rails.env.staging?
+  #   storage :fog
+  # else
+  #   storage :file
+  # end
+  #
+
+  storage :file
 
   def store_dir
     "uploads/project/#{mounted_as}/#{model.id}/"
