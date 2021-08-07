@@ -11,7 +11,7 @@ module MyBlog
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.action_text_syntax_highlighter.default_theme = :base16
+    # config.action_text_syntax_highlighter.default_theme = :base16
 
     # Configuration for the application, engines, and railties goes here.
     #

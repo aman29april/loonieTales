@@ -51,7 +51,7 @@ gem 'mini_magick'                 # resizable image
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
-gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
+# gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
