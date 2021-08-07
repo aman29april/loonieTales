@@ -13,20 +13,19 @@ class User < ApplicationRecord
   has_many :social_accounts, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :experiences, dependent: :destroy
-  has_many :liked_posts, through: :likes, source: :likeable, source_type: "Post"
-  has_many :liked_responses, through: :likes, source: :likeable, source_type: "Response"
+  has_many :liked_posts, through: :likes, source: :likeable, source_type: 'Post'
+  has_many :liked_responses, through: :likes, source: :likeable, source_type: 'Response'
 
   has_many :bookmarks, dependent: :destroy
-  has_many :bookmarked_posts, through: :bookmarks, source: :bookmarkable, source_type: "Post"
-  has_many :bookmarked_responses, through: :bookmarks, source: :bookmarkable, source_type: "Response"
+  has_many :bookmarked_posts, through: :bookmarks, source: :bookmarkable, source_type: 'Post'
+  has_many :bookmarked_responses, through: :bookmarks, source: :bookmarkable, source_type: 'Response'
 
   include OmniauthableUser
   mount_uploader :avatar, AvatarUploader
 
-
   extend FriendlyId
 
-  friendly_id :username, use: [ :slugged, :finders ]
+  friendly_id :username, use: %i[slugged finders]
 
   def add_like_to(likeable_obj)
     likes.where(likeable: likeable_obj).first_or_create

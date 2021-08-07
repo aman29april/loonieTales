@@ -9,21 +9,21 @@ Rails.application.routes.draw do
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]
 
-    resources :projects, except: %w(show) do
+    resources :projects, except: %w[show] do
       resource :acceptance, only: :update, module: :projects
     end
 
-    resources :experiences, except: %w(show)
+    resources :experiences, except: %w[show]
   end
 
   namespace :admin do
     resource :dashboard, only: [:show]
-    resources :featured_tags, only: [:create, :destroy]
-    resources :featured_posts, only: [:create, :destroy]
+    resources :featured_tags, only: %i[create destroy]
+    resources :featured_posts, only: %i[create destroy]
   end
 
   namespace :api do
-    get "autocomplete" => "search_autocomplete#index"
+    get 'autocomplete' => 'search_autocomplete#index'
   end
 
   get '/health_check' => 'application#health_check'

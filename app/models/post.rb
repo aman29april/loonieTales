@@ -77,8 +77,8 @@ class Post < ApplicationRecord
   end
 
   def generate_lead!
-    if self.published?
-      post_body = Nokogiri::HTML::Document.parse(self.body_html)
+    if published?
+      post_body = Nokogiri::HTML::Document.parse(body_html)
       if post_body.css('h2').size > 0
         self.lead = post_body.css('h2')[0].to_s
       elsif post_body.css('h3').size > 0

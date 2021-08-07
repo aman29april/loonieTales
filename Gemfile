@@ -31,13 +31,11 @@ gem 'haml-rails'
 # frontend
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 5.0.1'
+gem 'font_awesome5_rails'
 gem 'jquery-rails'
+gem 'meta-tags'
 gem 'popper_js'
 gem 'react-rails'
-gem 'font_awesome5_rails'
-gem 'meta-tags'
-
-
 
 gem 'friendly_id'
 gem 'will_paginate'

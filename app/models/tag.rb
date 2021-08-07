@@ -8,7 +8,7 @@ class Tag < ApplicationRecord
   has_many :related_tags, through: :tag_relationships, source: :related_tag
 
   extend FriendlyId
-  friendly_id :name, use: [ :slugged, :finders ]
+  friendly_id :name, use: %i[slugged finders]
 
   def self.first_or_create_with_name!(name)
     where(lowercase_name: name.strip.downcase).first_or_create! do |tag|

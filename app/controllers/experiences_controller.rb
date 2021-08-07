@@ -1,5 +1,5 @@
 class ExperiencesController < ApplicationController
-  before_action :set_experience, only: %i[ show edit update destroy ]
+  before_action :set_experience, only: %i[show edit update destroy]
 
   # GET /experiences or /experiences.json
   def index
@@ -7,8 +7,7 @@ class ExperiencesController < ApplicationController
   end
 
   # GET /experiences/1 or /experiences/1.json
-  def show
-  end
+  def show; end
 
   # GET /experiences/new
   def new
@@ -16,8 +15,7 @@ class ExperiencesController < ApplicationController
   end
 
   # GET /experiences/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /experiences or /experiences.json
   def create
@@ -25,7 +23,7 @@ class ExperiencesController < ApplicationController
 
     respond_to do |format|
       if @experience.save
-        format.html { redirect_to user_experiences_path @experience, notice: "Experience was successfully created." }
+        format.html { redirect_to user_experiences_path @experience, notice: 'Experience was successfully created.' }
         format.json { render :show, status: :created, location: @experience }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class ExperiencesController < ApplicationController
   def update
     respond_to do |format|
       if @experience.update(experience_params)
-        format.html { redirect_to user_experiences_path, notice: "Experience was successfully updated." }
+        format.html { redirect_to user_experiences_path, notice: 'Experience was successfully updated.' }
         format.json { render :show, status: :ok, location: @experience }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,19 +49,21 @@ class ExperiencesController < ApplicationController
   def destroy
     @experience.destroy
     respond_to do |format|
-      format.html { redirect_to experiences_url, notice: "Experience was successfully destroyed." }
+      format.html { redirect_to experiences_url, notice: 'Experience was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_experience
-      @experience = Experience.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def experience_params
-      params.require(:experience).permit(:title, :company, :avatar, :location, :description, :start_date, :end_date, :working_here)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_experience
+    @experience = Experience.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def experience_params
+    params.require(:experience).permit(:title, :company, :avatar, :location, :description, :start_date, :end_date,
+                                       :working_here)
+  end
 end

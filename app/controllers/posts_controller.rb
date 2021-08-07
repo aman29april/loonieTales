@@ -23,7 +23,6 @@ class PostsController < ApplicationController
     #           @responses = @post.responses.includes(:user)
     @related_posts = @post.related_posts
 
-
     set_meta_tags title: @post.title,
                   description: '',
                   keywords: @post.all_tags

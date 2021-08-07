@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :load_project, only: [:edit, :show, :update]
+  before_action :load_project, only: %i[edit show update]
   def index
     @projects = current_user.projects.all
   end
@@ -19,7 +19,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-
   def create
     @project = current_user.projects.build(project_params)
 
@@ -29,7 +28,6 @@ class ProjectsController < ApplicationController
       flash.now[:alert] = 'Could not update the project, Please try again'
       render :new
     end
-
   end
 
   private

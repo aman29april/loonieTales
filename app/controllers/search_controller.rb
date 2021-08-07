@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   before_action :beautify_url
-  layout "simple"
+  layout 'simple'
 
   def show
     @post_records = Post.search(query_term).paginate(page: params[:page]).records
@@ -15,18 +15,18 @@ class SearchController < ApplicationController
 
   private
 
-    def beautify_url
-      if params[:search].present?
-        case params[:action]
-        when "show"
-          redirect_to search_url(q: params[:search][:q])
-        when "users"
-          redirect_to search_users_url(q: params[:search][:q])
-        end
+  def beautify_url
+    if params[:search].present?
+      case params[:action]
+      when 'show'
+        redirect_to search_url(q: params[:search][:q])
+      when 'users'
+        redirect_to search_users_url(q: params[:search][:q])
       end
     end
+  end
 
-    def query_term
-      params[:q] || ''
-    end
+  def query_term
+    params[:q] || ''
+  end
 end

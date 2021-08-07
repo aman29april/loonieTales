@@ -11,9 +11,7 @@ module UsersHelper
       end
     else
       image_tag user.class.default_avatar, width: size, height: size, alt: 'avatar image', class: 'avatar-image',
-                                      style: style
+                                           style: style
     end
   end
-
-
 end

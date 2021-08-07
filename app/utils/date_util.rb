@@ -14,9 +14,9 @@ module DateUtil
       datetime.strftime('%B, %Y')
     end
 
-    def date_range(start_date, end_date, has_end=false)
+    def date_range(start_date, end_date, has_end = false)
       start = formatted_date(start_date)
-      ending = has_end ? "Present" : DateUtil.formatted_date(end_date)
+      ending = has_end ? 'Present' : DateUtil.formatted_date(end_date)
       "#{start} - #{ending}"
     end
   end

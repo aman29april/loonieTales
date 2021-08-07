@@ -7,11 +7,11 @@ class TagsController < ApplicationController
 
   private
 
-    def set_tag
-      @tag = Tag.find(params[:id])
-    end
+  def set_tag
+    @tag = Tag.find(params[:id])
+  end
 
-    def tagged_posts
-      @_tagged_posts ||= Post.tagged_with(@tag.name).published.includes(:user).paginate(page: params[:page]).order(created_at: :desc)
-    end
+  def tagged_posts
+    @_tagged_posts ||= Post.tagged_with(@tag.name).published.includes(:user).paginate(page: params[:page]).order(created_at: :desc)
+  end
 end

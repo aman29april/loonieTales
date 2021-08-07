@@ -18,7 +18,7 @@ class API::BookmarksController < ApplicationController
 
   private
 
-    def set_bookmarkable
-      raise NotImplementedError, "This #{self.class} cannot respond to 'set_bookmarkable'"
-    end
+  def set_bookmarkable
+    raise NotImplementedError, "This #{self.class} cannot respond to 'set_bookmarkable'"
+  end
 end

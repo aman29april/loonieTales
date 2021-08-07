@@ -6,7 +6,8 @@ class API::RelationshipsController < ApplicationController
   def create
     current_user.follow(@user)
     # Notify the user
-    Notification.create(recipient: @user, actor: current_user, action: "started following you", notifiable: current_user, is_new: true)
+    Notification.create(recipient: @user, actor: current_user, action: 'started following you',
+                        notifiable: current_user, is_new: true)
     render json: { followerCount: @user.followers.size }, render: 200
   end
 
@@ -18,7 +19,7 @@ class API::RelationshipsController < ApplicationController
 
   private
 
-    def set_user
-      @user = User.find(params[:followed_id])
-    end
+  def set_user
+    @user = User.find(params[:followed_id])
+  end
 end

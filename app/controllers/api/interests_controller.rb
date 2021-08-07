@@ -16,7 +16,7 @@ class API::InterestsController < ApplicationController
 
   private
 
-    def set_tag
-      @tag = Tag.find(params[:tag_id])
-    end
+  def set_tag
+    @tag = Tag.find(params[:tag_id])
+  end
 end
