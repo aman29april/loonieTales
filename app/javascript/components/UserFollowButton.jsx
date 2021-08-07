@@ -1,3 +1,7 @@
+import React from "react";
+import PubSub from "pubsub-js";
+import PropTypes from "prop-types";
+
 class UserFollowButton extends React.Component {
   constructor(props) {
     super(props)
@@ -110,5 +114,7 @@ class UserFollowButton extends React.Component {
 }
 
 UserFollowButton.propTypes = {
-  following: React.PropTypes.bool
+  following: PropTypes.bool
 };
+
+export default UserFollowButton

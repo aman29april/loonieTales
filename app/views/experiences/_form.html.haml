@@ -24,6 +24,13 @@
     .col
       = f.label :location
       = f.text_field :location, class: 'form-control'
+
+  .field
+    = f.label :company_link
+    = f.text_field :company_link, class: 'form-control', placeholder: 'Company URL'
+  .field
+    = f.label :company_heading
+    = f.text_field :company_heading, class: 'form-control', placeholder: 'Company Description'
   .field
     = f.label :description
     = f.rich_text_area :description, class: 'form-control'

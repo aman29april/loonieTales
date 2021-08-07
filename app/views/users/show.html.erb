@@ -109,7 +109,7 @@
         <% end %>
       </div>
       <%if @user.experiences.any? %>
-        <% @user.experiences.each do |experience| %>
+        <% @user.experiences.chronological.each do |experience| %>
           <%= render partial: 'experiences/experience', locals: {experience: experience} %>
 
         <%end %>

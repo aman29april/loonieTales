@@ -1,3 +1,7 @@
+import UserFollowButton from "./UserFollowButton";
+import PopoverLink from "./PopoverLink";
+import React from "react";
+
 class SuggestionItem extends React.Component {
   render () {
     return (
@@ -20,3 +24,4 @@ class SuggestionItem extends React.Component {
   }
 }
 
+export default SuggestionItem

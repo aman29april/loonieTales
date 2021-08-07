@@ -68,7 +68,7 @@ class TagFollowButton extends React.Component {
 }
 
 TagFollowButton.propTypes = {
-  following: React.PropTypes.bool
+  following: PropTypes.bool
 };
 
 export default TagFollowButton

@@ -1,4 +1,5 @@
 import React from "react";
+import UserPopover from "./UserPopover";
 
 class PopoverLink extends React.Component {
   constructor(props) {

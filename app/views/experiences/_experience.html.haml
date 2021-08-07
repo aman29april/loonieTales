@@ -6,7 +6,10 @@
     %h5
       = experience.title
     .company
-    = experience.company
+    - if experience.company_link.present?
+      = link_to experience.company, experience.company_link, target: '_blank', class: 'no-underline'
+    - else
+      = experience.company
     %span
       |
       =experience_range(experience)

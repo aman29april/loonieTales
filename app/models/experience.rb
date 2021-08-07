@@ -9,6 +9,8 @@ class Experience < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  scope :chronological, -> { order(start_date: :desc) }
+
   def self.default_avatar
     'experience-default.png'
   end

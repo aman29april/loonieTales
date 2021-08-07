@@ -17,6 +17,7 @@ class Post < ApplicationRecord
   scope :featured, -> { where(featured: true) }
 
   delegate :username, to: :user
+  delegate :full_name, to: :user, prefix: :user
 
   before_save :generate_lead!
 

@@ -1,3 +1,8 @@
+import React from "react";
+import PropTypes from "prop-types";
+import OverlayTriggerButton from "./OverlayTriggerButton";
+import UserFollowButton from "./UserFollowButton";
+
 class UserFollowContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -78,15 +83,16 @@ class UserFollowContainer extends React.Component {
 }
 
 
-UserFollowContainer.propTypes = { following: React.PropTypes.bool,
-  hideButton: React.PropTypes.bool,
-  followed_id: React.PropTypes.number,
-  followerCount: React.PropTypes.number,
-  followingCount: React.PropTypes.number,
-  username: React.PropTypes.string,
-  overlayTrigger: React.PropTypes.bool
+UserFollowContainer.propTypes = { following: PropTypes.bool,
+  hideButton: PropTypes.bool,
+  followed_id: PropTypes.number,
+  followerCount: PropTypes.number,
+  followingCount: PropTypes.number,
+  username: PropTypes.string,
+  overlayTrigger: PropTypes.bool
 };
 
 UserFollowContainer.defaultProps = {
   overlayTrigger: false
 };
+export default UserFollowContainer

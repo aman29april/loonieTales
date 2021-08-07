@@ -7,6 +7,8 @@
 //= require jquery3
 //= require jquery
 
+import "../trix-editor-overrides"
+
 require("trix")
 require("@rails/actiontext")
 

@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'autocomplete' => 'search_autocomplete#index'
+
+    resources :users, only: [:show]
   end
 
   get '/health_check' => 'application#health_check'

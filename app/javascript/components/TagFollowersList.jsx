@@ -1,5 +1,6 @@
 import React from "react";
 import PubSub from "pubsub-js";
+import PopoverLink from "./PopoverLink";
 
 class TagFollowersList extends React.Component {
   constructor(props) {

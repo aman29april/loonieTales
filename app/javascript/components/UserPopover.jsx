@@ -1,4 +1,5 @@
 import React from "react";
+import UserFollowContainer from "./UserFollowContainer";
 
 class UserPopover extends React.Component {
   render () {

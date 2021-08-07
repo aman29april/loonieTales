@@ -1,3 +1,7 @@
+import React from "react";
+import PropTypes from "prop-types";
+import PubSub from "pubsub-js";
+
 class OverlayTriggerButton extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +30,8 @@ class OverlayTriggerButton extends React.Component {
 
 
 OverlayTriggerButton.propTypes = {
-  text: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]).isRequired,
-  overlayHeading: React.PropTypes.string,
-  apiEndpoint: React.PropTypes.string.isRequired
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  overlayHeading: PropTypes.string,
+  apiEndpoint: PropTypes.string.isRequired
 };
+export default OverlayTriggerButton

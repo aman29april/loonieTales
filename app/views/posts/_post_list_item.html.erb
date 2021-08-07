@@ -5,7 +5,7 @@
     </div>
     <div class="post-info">
       <strong class="pli-title"><%= link_to post.title, post %></strong><br/>
-      <small class="pli-username"><%=link_to post.username, post.user %></small>
+      <small class="pli-username"><%=link_to post.user_full_name, post.user %></small>
     </div>
     <% if post.picture? %>
       <div class="pli-picture-wrapper">

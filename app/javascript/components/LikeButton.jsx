@@ -101,7 +101,7 @@ class LikeButton extends React.Component {
 
 LikeButton.propTypes = {
   liked: PropTypes.bool.isRequired,
-  likeCount: PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string]).isRequired,
+  likeCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   likeEndpoint: PropTypes.string.isRequired,
   unlikeEndpoint: PropTypes.string.isRequired,
   likeableType: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import React from "react";
 import PubSub from "pubsub-js";
+import UserFollowButton from "./UserFollowButton";
 
 class UserOverlay extends React.Component {
   constructor(props) {
