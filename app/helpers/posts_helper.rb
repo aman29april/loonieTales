@@ -22,4 +22,8 @@ module PostsHelper
     sanitize(html, tags: %w[p b i u blockquote br h2 h3 div a img figure figcaption iframe html],
                    attributes: %w[class href style])
   end
+
+  def post_body(post)
+    post.body_text.length < 1000 ? post.body : post.lead.html_safe
+  end
 end
