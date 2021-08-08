@@ -17,6 +17,13 @@
     -#, class: 'medium-editable form-control', data: { behavior: "autosave" }
   .col-12.mt-4
     = f.label :tags, class: 'form-label'
-    = f.text_field :all_tags, class: 'form-control'
+    = f.text_field :all_tags, class: 'form-control tagsinput', 'data-role': 'tagsinput'
   .col-12.mt-4
     =f.submit class: "btn btn-primary"
+    =link_to 'Cancel', :back ,class: "btn btn-secondary"
+
+
+:javascript
+  $(document).ready( function() {
+      $(".tagsinput").tagsinput('items')
+    } );

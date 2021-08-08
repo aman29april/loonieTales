@@ -79,16 +79,37 @@ class Post < ApplicationRecord
 
   def generate_lead!
     if published?
-      post_body = Nokogiri::HTML::Document.parse(body_html)
-      if post_body.css('h2').size > 0
-        self.lead = post_body.css('h2')[0].to_s
-      elsif post_body.css('h3').size > 0
-        self.lead = post_body.css('h3')[0].to_s
-      elsif post_body.css('p').size > 0
-        self.lead = post_body.css('p')[0].to_s
-      elsif post_body.css('div').size > 0
-        self.lead = post_body.css('div')[0].to_s
+      body_doc = Nokogiri::HTML::DocumentFragment.parse(body_html)
+      if body_doc.css('h2').size > 0
+        self.lead = body_doc.css('h2')[0].to_s
+      elsif body_doc.css('h3').size > 0
+        self.lead = body_doc.css('h3')[0].to_s
+      elsif body_doc.css('p').size > 0
+        self.lead = body_doc.css('p')[0].to_s
+      elsif body_doc.css('div').size > 0
+        self.lead = body_doc.css('div')[0].to_s
       end
     end
+
+    add_css_class_to_pre_tags(body_doc)
+    # body_doc = set_target_blank(body_doc)
+    body.body = body_doc.to_html
+  end
+
+  private
+
+  def add_css_class_to_pre_tags(doc)
+    doc.search('pre').tap { |ns| ns.add_class('language-rb') }
+    doc
+  end
+
+  # TODO: Not working. Fix this.
+  def set_target_blank(doc)
+    # doc.css('a').each do |link|
+    #   link['target'] = '_blank'
+    # end
+    #
+    doc.search('a').tap { |link| link.attr('target', '_blank') }
+    doc
   end
 end

@@ -7,16 +7,21 @@
 
 require("trix")
 require("@rails/actiontext")
+require("jquery")
 
 // import { ActionTextSyntaxHighlighter } from "@ayushn21/actiontext-syntax-highlighter"
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
+
+
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
 import "@fortawesome/fontawesome-free/js/all"
 import 'prismjs';
 import 'copy-to-clipboard'
+import "../trix-editor-overrides"
+
 
 Rails.start()
 Turbolinks.start()
@@ -30,7 +35,14 @@ ReactRailsUJS.useContext(componentRequireContext);
 // ActionTextSyntaxHighlighter.start()
 
 document.addEventListener('turbolinks:load', () => {
-    Prism.highlightAll();
+    // Prism.highlightAll();
+
+    document.querySelectorAll('pre').forEach((element) => {
+        // element.setAttribute("data-src", "plugins/toolbar/prism-toolbar.js");
+        // element.setAttribute("data-prismjs-copy", "Copy");
+        // element.classList.add("line-numbers");
+        Prism.highlightElement(element);
+    });
 });
 
-import "../trix-editor-overrides"
+import 'bootstrap-tagsinput'
