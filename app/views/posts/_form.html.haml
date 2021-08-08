@@ -1,4 +1,4 @@
-= form_for post, html: { multipart: true, class: "editor-form"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+= form_for post, html: { multipart: true, class: "editor-form row gt-3"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
   %label.picture_upload
     = f.file_field :picture, class: 'form-control'
     %i.fa.fa-camera
@@ -7,16 +7,16 @@
   - if post.picture?
     #existing-img-previewer.existing-img-previewer
       = image_tag post.picture.url(:thumb)
-  .input-group
+  .input-group.col-12
     = f.label :title, class: ' form-label'
     = f.text_field :title, class: 'editor-title form-control' , placeholder: 'Title', autofocus: true, data: { behavior: "autosave" }, onfocus: "this.value = this.value;"
-  .input-group
-    = f.label :content, class: ' form-label'
+  .input-group.col-12.mt-4
+    -# = f.label :content, class: ' form-label'
     = f.rich_text_area :body, class: 'medium-editable form-control'
     -#, data: { highlights_code_blocks: true }
     -#, class: 'medium-editable form-control', data: { behavior: "autosave" }
-  .input-group
+  .col-12.mt-4
     = f.label :tags, class: 'form-label'
     = f.text_field :all_tags, class: 'form-control'
-  .input-group
+  .col-12.mt-4
     =f.submit class: "btn btn-primary"

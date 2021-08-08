@@ -1,5 +1,5 @@
 .dashboard-main-content {
-  padding-top: 2em;
+  //padding-top: 2em;
   padding-bottom: 2em;
 }
 
@@ -16,6 +16,7 @@ body.dashboards.top_stories {
     border: 1px solid rgba(0,0,0, 0.09);
     @include box-shadow;
     @include border-radius($radius);
+    padding-bottom: 0px;
   }
 }
 

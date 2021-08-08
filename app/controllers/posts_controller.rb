@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :load_post, only: %i[edit destroy update]
-  layout 'editor', only: %i[new edit create update]
+  # layout 'editor', only: %i[new edit create update]
 
   def new
     @post = Post.new
