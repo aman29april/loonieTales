@@ -1,14 +1,15 @@
 body.sessions.new,
-body.registrations.new {
+body.registrations.new,
+body.registrations.create{
   input[type="text"],
   input[type="password"],
   input[type="email"] {
     font-size: 28px;
     font-weight: 100;
     width: 100%;
-    border: none;
+    //border: none;
     outline: none;
-    background-color: rgb(250, 255, 189);
+    //background-color: rgb(250, 255, 189);
   }
   .form-input-wrapper {
     padding: 1.5em 0;

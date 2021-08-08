@@ -6,20 +6,20 @@
       <%= devise_error_messages! %>
 
       <div class="form-input-wrapper">
-        <%= f.text_field :username, autofocus: true, placeholder: "Username", onfocus: "this.value = this.value;" %>
+        <%= f.text_field :username, autofocus: true, placeholder: "Username", onfocus: "this.value = this.value;" , class: 'form-control'%>
       </div>
 
       <div class="form-input-wrapper">
-        <%= f.email_field :email, placeholder: "Email" %>
+        <%= f.email_field :email, placeholder: "Email", class: 'form-control' %>
       </div>
 
       <% if f.object.password_required? %>
         <div class="form-input-wrapper">
-          <%= f.password_field :password, autocomplete: "off", placeholder: "Password (#{@minimum_password_length} characters minimum)" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Password (#{@minimum_password_length} characters minimum)", class: 'form-control' %>
         </div>
 
         <div class="form-input-wrapper">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Password", class: 'form-control' %>
         </div>
       <% end %>
 

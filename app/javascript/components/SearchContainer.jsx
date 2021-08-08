@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 
 class SearchContainer extends React.Component {
   constructor(props) {

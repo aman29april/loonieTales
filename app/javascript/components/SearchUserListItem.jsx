@@ -1,3 +1,5 @@
+import React from "react";
+
 class SearchUserListItem extends React.Component {
   render() {
     return (
@@ -11,3 +13,4 @@ class SearchUserListItem extends React.Component {
   }
 }
 
+export default SearchUserListItem

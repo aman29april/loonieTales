@@ -3,7 +3,7 @@
     <%= render partial: 'posts/feed_metadata', locals: { post: PostDecorator.new(post, current_user) } %>
   <% end %>
 
-  <%= render partial: 'posts/post_metadata', locals: { post: post } %>
+  <%#= render partial: 'posts/post_metadata', locals: { post: post } %>
 
   <% if post.picture? %>
     <div class="post-picture-wrapper">

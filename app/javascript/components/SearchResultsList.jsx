@@ -1,3 +1,5 @@
+import React from "react";
+
 class SearchResultsList extends React.Component {
 
   render() {
@@ -57,3 +59,4 @@ class SearchResultsList extends React.Component {
   }
 }
 
+export default SearchResultsList

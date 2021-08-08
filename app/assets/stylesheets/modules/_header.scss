@@ -41,7 +41,7 @@ nav.navbar {
 
 .navbar-admin {
   ul.nav.navbar-nav > li > a {
-    color: #fff;
+    //color: #fff;
     border: none;
   }
 }
@@ -138,22 +138,14 @@ nav.navbar {
 
     right: 20px;
     a {
+      text-decoration: none;
       color: $light-font-color;
       &:hover {
-        background-color: $white;
+        //background-color: $white;
         color: rgba(0,0,0,0.8);
       }
     }
-    .nd-main {
-      font-size: 16px;
-      font-weight: 100px;
-      line-height: 1.4;
-    }
-    .nd-sub {
-      font-size: 14px;
-      font-weight: 100;
-      line-height: 1.4;
-    }
+
     .dropdown-arrow-top {
       width: 0;
       height: 0;

@@ -35,6 +35,7 @@ gem 'font_awesome5_rails'
 gem 'jquery-rails'
 gem 'meta-tags'
 gem 'popper_js'
+gem 'prism-rails'
 gem 'react-rails'
 
 gem 'friendly_id'

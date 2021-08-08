@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  add_flash_types :error, :success
+
   def health_check
     render layout: false, text: 'ok', status: :ok
   end

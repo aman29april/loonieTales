@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @related_posts = @post.related_posts
 
     set_meta_tags title: @post.title,
-                  description: '',
+                  description: @post.title,
                   keywords: @post.all_tags
 
     # If an old id or a numeric id was used to find the record, then

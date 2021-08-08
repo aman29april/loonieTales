@@ -11,17 +11,23 @@
   <%= display_meta_tags site: 'My website' %>
 
 </head>
-<body class="<%= controller.controller_name %> <%= controller.action_name %>">
+<body class="<%= controller.controller_name %> <%= controller.action_name %>" data-prismjs-copy-timeout="500">
+<!--<pre><code class="language-js" data-prismjs-copy="Copy the JavaScript snippet!">console.log('Hello, world!');</code></pre>-->
+
 <%= render 'layouts/overlay' unless user_signed_in? %>
 <%= react_component('UserOverlay', {}) %>
 
 <div data-behavior="progress-bar" class="progress-bar"></div>
 
-<% if admin_signed_in? %>
-  <%= render 'layouts/admin_header' %>
-<% else %>
-  <%= render 'layouts/header' %>
-<% end %>
+<%# if admin_signed_in? %>
+  <%#= render 'layouts/admin_header' %>
+<%# else %>
+  <%#= render 'layouts/header' %>
+<%# end %>
+
+<%= render 'layouts/header' %>
+
+
 <%= render 'layouts/alert_messages' %>
 
 <div class="container-fluid container">
