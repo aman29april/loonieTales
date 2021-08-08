@@ -1,11 +1,5 @@
 = form_for [current_user, @experience] do |f|
-  - if @experience.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@experience.errors.count, "error")} prohibited this experience from being saved:"
-      %ul
-        - @experience.errors.full_messages.each do |message|
-          %li= message
-
+  = render :partial => 'shared/resource_error', locals: {resource: @experience}
   .row
     .col
       = f.label :title

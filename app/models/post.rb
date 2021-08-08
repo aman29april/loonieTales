@@ -1,5 +1,10 @@
 class Post < ApplicationRecord
-  validates :body, :user_id, presence: true
+  validates :user_id, presence: true
+  validates :title, presence: true, uniqueness: { message: '%{value} is already used' },
+                    length: { minimum: 5 }, allow_blank: false
+  validates :body, presence: true, length: { minimum: 50 }, allow_blank: false
+  validates :all_tags, length: { minimum: 2 }, allow_blank: false, presence: true
+
   belongs_to :user
 
   has_many :taggings, as: :subject, dependent: :destroy
@@ -7,15 +12,13 @@ class Post < ApplicationRecord
 
   has_many :items, -> { order('sort_rank asc') }, dependent: :destroy
 
-  validates :title, presence: true, uniqueness: { message: '%{value} is already used' }
-
   scope :recent, -> { order(created_at: :desc) }
   scope :latest, ->(number) { recent.limit(number) }
   scope :top_stories, ->(number) { order(likes_count: :desc).limit(number) }
   scope :published, -> { where.not(published_at: nil) }
   scope :drafts, -> { where(published_at: nil) }
   scope :featured, -> { where(featured: true) }
-
+  scope :by_user, ->(user) { where(user: user) }
   delegate :username, to: :user
   delegate :full_name, to: :user, prefix: :user
 

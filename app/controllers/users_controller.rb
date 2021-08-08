@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: %i[edit update]
   before_action :authorize_user, only: %i[edit update]
-  before_action :set_user, only: %i[show edit update]
+  before_action :set_user, only: %i[show edit update posts]
 
   def show
     # @followers_count = @user.followers.count
@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     else
       render :edit, alert: 'Could not update, Please try again'
     end
+  end
+
+  def posts
+    @posts = Post.by_user(@user).paginate(page: params[:page]).order(created_at: :desc)
   end
 
   private

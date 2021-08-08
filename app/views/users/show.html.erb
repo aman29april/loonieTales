@@ -73,24 +73,26 @@
 
 
     </div>
+    <%if @user.has_social_links? %>
+      <div class="row mt-3">
+        <h5>Social Links</h5>
+        <div class="flex flex-row margin--top external-links-social">
+          <%if @user.linkedin.present? %>
+            <div class="external-links">
+              <%= link_to fa_icon('linkedin', type: :brand) , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link' %>
+            </div>
+          <%end %>
 
-    <div class="row mt-3">
-      <h5>Social Links</h5>
-      <div class="flex flex-row margin--top external-links-social">
-        <%if @user.linkedin.present? %>
-          <div class="external-links">
-            <%= link_to fa_icon('linkedin', type: :brand) , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link' %>
-          </div>
-        <%end %>
-
-        <%if @user.linkedin.present? %>
-          <div class="external-links">
-            <%= link_to fa_icon('github', type: :brand), "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link' %>
-          </div>
-        <%end %>
+          <%if @user.github.present? %>
+            <div class="external-links">
+              <%= link_to fa_icon('github', type: :brand), "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link' %>
+            </div>
+          <%end %>
+        </div>
       </div>
+    <%end %>
 
-    </div>
+
     <div class="row mt-3">
       <%if @user.skills_array.any? %>
         <h5>Skills</h5>

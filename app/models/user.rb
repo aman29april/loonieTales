@@ -77,4 +77,8 @@ class User < ApplicationRecord
   def self.default_avatar
     'default-avatar.svg'
   end
+
+  def has_social_links?
+    linkedin.present? || github.present?
+  end
 end

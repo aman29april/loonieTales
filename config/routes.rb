@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  # sessions: 'users/sessions',
-  #   root 'home#show'
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
+                                    registrations: 'users/registrations' }
+
   root 'dashboards#show'
   resources :posts
   resources :tags, only: [:show]
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
 
     resources :experiences, except: %i[show index]
+
+    get :posts, on: :member
   end
 
   namespace :admin do

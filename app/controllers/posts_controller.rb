@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    if @post.publish
+    if validate_captcha && @post.publish
       redirect_to @post, notice: 'Successfully published the post!'
     else
       @post.unpublish
@@ -37,7 +37,8 @@ class PostsController < ApplicationController
 
   def update
     @post.assign_attributes(post_params)
-    if @post.publish
+
+    if validate_captcha && @post.publish
       redirect_to @post, notice: 'Successfully published the post!'
     else
       @post.unpublish
@@ -53,8 +54,12 @@ class PostsController < ApplicationController
 
   private
 
+  def validate_captcha
+    verify_recaptcha(action: 'post', minimum_score: 0.5, model: @post)
+  end
+
   def post_params
-    params.require(:post).permit(:title, :body, :all_tags, :picture)
+    params.require(:post).permit(:title, :body, :all_tags, :picture, :meta_keywords, :meta_description, :language)
   end
 
   def load_post

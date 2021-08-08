@@ -53,6 +53,8 @@ gem 'mini_magick'                 # resizable image
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+gem 'recaptcha'
+
 # gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -80,6 +82,7 @@ group :development do
   gem 'scss_lint', require: false
 
   gem 'bullet'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -89,6 +92,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 
+  gem 'dotenv-rails'
   gem 'rspec-rails'
 end
 

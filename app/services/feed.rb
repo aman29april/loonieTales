@@ -54,7 +54,17 @@ class Feed
   end
 
   def feed_post_ids
-    @_feed_post_ids ||= (Post.where(user_id: user_ids).pluck(:id) + tagged_post_ids + recommended_post_ids + featured_post_ids).uniq
+    @_feed_post_ids ||= (
+      Post.where(user_id: user_ids).pluck(:id) +
+        all_posts
+      # tagged_post_ids +
+      # recommended_post_ids +
+      # featured_post_ids
+    ).uniq
+  end
+
+  def all_posts
+    Post.pluck(:id)
   end
 
   def recommended_post_ids

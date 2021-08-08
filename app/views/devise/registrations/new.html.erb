@@ -4,6 +4,7 @@
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { autocomplete: 'off' }) do |f| %>
       <%= devise_error_messages! %>
+      <%= recaptcha_v3(action: 'registration') %>
 
       <div class="form-input-wrapper">
         <%= f.text_field :username, autofocus: true, placeholder: "Username", onfocus: "this.value = this.value;" , class: 'form-control'%>

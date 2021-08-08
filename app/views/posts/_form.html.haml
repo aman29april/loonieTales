@@ -1,4 +1,7 @@
+= render :partial => 'shared/resource_error', locals: {resource: post}
+
 = form_for post, html: { multipart: true, class: "editor-form row gt-3"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+  = recaptcha_v3(action: 'post')
   %label.picture_upload
     = f.file_field :picture, class: 'form-control'
     %i.fa.fa-camera
@@ -18,6 +21,12 @@
   .col-12.mt-4
     = f.label :tags, class: 'form-label'
     = f.text_field :all_tags, class: 'form-control tagsinput', 'data-role': 'tagsinput'
+  .col-12.mt-4
+    = f.label :meta_keywords, class: 'form-label'
+    = f.text_field :meta_keywords, class: 'form-control tagsinput', 'data-role': 'tagsinput'
+  .col-12.mt-4
+    = f.label :meta_description, class: 'form-label'
+    = f.text_field :meta_description, class: 'form-control'
   .col-12.mt-4
     =f.submit class: "btn btn-primary"
     =link_to 'Cancel', :back ,class: "btn btn-secondary"

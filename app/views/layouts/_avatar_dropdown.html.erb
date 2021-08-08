@@ -6,10 +6,9 @@
   <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
     <span class="dropdown-arrow-top"></span>
     <span class="dropdown-arrow-bottom"></span>
-<!--    <li><%#= link_to "New story", new_post_path, class: 'dropdown-item'  %></li>-->
-<!--    <li class="nd-main"><%#= link_to "Drafts and stories", stories_drafts_path %></li>-->
 <!--    <li><hr class="dropdown-divider"></li>-->
     <li><%= link_to "Profile", current_user, class: 'dropdown-item' %></li>
+    <li><%= link_to "My Posts", posts_user_path(current_user), class: "dropdown-item" %></li>
     <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'dropdown-item'  %></li>
   </ul>
 </li>
