@@ -39,6 +39,8 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/tags/ruby-on-rails">Ruby on Rails</a></li>
               <li><a class="dropdown-item" href="/tags/ruby">Ruby</a></li>
+              <li><a class="dropdown-item" href="/tags/javascript">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/tags/sql">SQL</a></li>
 <!--              <li><a class="dropdown-item" href="/tags/ruby">Algorithms</a></li>-->
 <!--              <li><hr class="dropdown-divider"></li>-->
 <!--              <li><a class="dropdown-item" href="#">Something else here</a></li>-->
@@ -65,7 +67,7 @@
                   System Design
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/tags/system-design">Concepts</a></li>
+                  <li><a class="dropdown-item" href="/tags/system-design-concepts">Concepts</a></li>
                   <li><a class="dropdown-item" href="/tags/system-design-case-study">Case Studies</a></li>
                 </ul>
               </li>
@@ -97,7 +99,8 @@
   <!--          </li>-->
             <%= render 'layouts/avatar_dropdown' %>
           <% else %>
-            <li class="new-post-button"><%= link_to "Write Article", new_post_path, class: "button", data: { behavior: 'trigger-overlay' } %></li>
+            <li class="new-post-button"><%= link_to "Say Hi", user_path('aman'), class: "button" %></li>
+            <!--            <li class="new-post-button"><%#= link_to "Write Article", new_post_path, class: "button", data: { behavior: 'trigger-overlay' } %></li>-->
             <li class="sign-in-button"><%= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %></li>
           <% end %>
         </ul>

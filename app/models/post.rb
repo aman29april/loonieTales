@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  LANGUAGES = %w[rb java python js html]
+  LANGUAGES = %w[rb java python js html sql]
 
   validates :user_id, presence: true
   validates :title, presence: true, uniqueness: { message: '%{value} is already used' },

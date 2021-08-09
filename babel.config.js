@@ -81,7 +81,11 @@ module.exports = function(api) {
         {
           removeImport: true
         }
-      ]
+      ],
+      // ["prismjs", {
+      //   "languages": [ "css", "liquid", "ruby", "sql"],
+      //   "plugins": ["line-numbers", "show-language", "copy-to-clipboard", "toolbar", "autoloader"],
+      // }]
     ].filter(Boolean)
   }
 }
