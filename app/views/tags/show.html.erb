@@ -8,7 +8,13 @@
         <%#= follow_tag_button_for(@dashboard.tag) %>
       <%# end %>
 <!--      <small class="heading-prefix">Tagged in</small>-->
-      <h3 class="heading-title"><%= @dashboard.tag.name %></h3>
+      <div class="float-start">
+        <h3 class="heading-title"><%= @dashboard.tag.name %></h3>
+      </div>
+
+      <span class="fa-pull-right float-end">
+        <%= link_to "Expand All", url_for( expand: !(is_expand?)), class: "btn btn-sm #{ is_expand? ? 'btn-primary' : 'btn-secondary' }" %>
+      </span>
 
     </div>
 

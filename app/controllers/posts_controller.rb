@@ -23,9 +23,7 @@ class PostsController < ApplicationController
     #           @responses = @post.responses.includes(:user)
     @related_posts = @post.related_posts
 
-    set_meta_tags title: @post.title,
-                  description: @post.title,
-                  keywords: @post.all_tags
+    set_meta_tags @post.meta_info
 
     # If an old id or a numeric id was used to find the record, then
     # the request path will not match the post_path, and we should do
@@ -38,7 +36,7 @@ class PostsController < ApplicationController
   def update
     @post.assign_attributes(post_params)
 
-    if validate_captcha && @post.publish
+    if @post.publish
       redirect_to @post, notice: 'Successfully published the post!'
     else
       @post.unpublish

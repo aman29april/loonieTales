@@ -101,6 +101,14 @@ class Post < ApplicationRecord
     body.body = body_doc.to_html
   end
 
+  def meta_info
+    {
+      title: title,
+      description: meta_description || title,
+      keywords: meta_keywords || all_tags
+    }
+  end
+
   private
 
   def add_css_class_to_pre_tags(doc)

@@ -18,7 +18,7 @@
         <span>
           <%#= truncate(remove_javascript(post.lead.html_safe), length: 150, separator: ' ', escape: false) %>
         </span>
-        <%= post_body(post) %>
+        <%= post_body(post, params) %>
       </div>
       <%= link_to "Read more", post, class: 'read-more' %>
     <% end %>
