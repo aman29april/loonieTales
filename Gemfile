@@ -38,6 +38,7 @@ gem 'popper_js'
 gem 'prism-rails'
 gem 'react-rails'
 gem 'sitemap_generator'
+gem 'trix-rails', require: 'trix'
 
 gem 'friendly_id'
 gem 'will_paginate'
