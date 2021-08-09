@@ -103,8 +103,16 @@
             </div>
           <%end %>
         </div>
-
       <%end %>
+    </div>
+
+    <div class="row mt-3">
+      <% if @latest_posts.any? %>
+        <h4 class="small-heading border-top">Latest Posts</h4>
+        <div class="sidebar-top-stories">
+          <%= render partial: 'dashboards/top_stories_bar', locals: {records: @latest_posts} %>
+        </div>
+      <% end %>
     </div>
 
   </div>

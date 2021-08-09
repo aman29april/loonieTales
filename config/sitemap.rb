@@ -6,6 +6,11 @@ SitemapGenerator::Sitemap.create do
   Post.find_each do |post|
     add post_path(post), lastmod: post.updated_at
   end
+
+  Tag.find_each do |tag|
+    add tag_path(tag), lastmod: tag.updated_at
+  end
+
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.

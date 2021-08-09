@@ -15,4 +15,12 @@ class Tag < ApplicationRecord
       tag.name = name.strip
     end
   end
+
+  def meta_info
+    {
+      title: name,
+      description: name,
+      keywords: name
+    }
+  end
 end

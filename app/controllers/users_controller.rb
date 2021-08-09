@@ -6,8 +6,9 @@ class UsersController < ApplicationController
   def show
     # @followers_count = @user.followers.count
     # @following_count = @user.following.count
-    @latest_posts = @user.posts.latest(3).published
+    @latest_posts = @user.posts.latest(6).published
     @recommended_posts = @user.liked_posts.latest(4).published.includes(:user)
+    set_meta_tags @user.meta_info
   end
 
   def edit; end

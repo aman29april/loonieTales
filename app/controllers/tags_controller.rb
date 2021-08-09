@@ -3,6 +3,7 @@ class TagsController < ApplicationController
   def show
     @dashboard = Dashboard.new(user: current_user, posts: tagged_posts, tag: @tag)
     @related_tags = @tag.related_tags
+    set_meta_tags @tag.meta_info
   end
 
   private

@@ -81,4 +81,12 @@ class User < ApplicationRecord
   def has_social_links?
     linkedin.present? || github.present?
   end
+
+  def meta_info
+    {
+      title: full_name,
+      description: "#{full_name} #{description}",
+      keywords: (skills_array << full_name).join(',')
+    }
+  end
 end
