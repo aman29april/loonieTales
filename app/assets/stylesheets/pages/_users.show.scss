@@ -218,9 +218,29 @@ form.edit_user {
 .external-links-social > div:not(:first-child) {
   margin-left: 10px;
 }
-.user-experiences > .experience-row:not(:first-child){
-  border-top: 1px solid #dee2e6 !important;
-  padding-top: 1.5em;
+//.user-experiences > .experience-row:not(:first-of-type){
+//  border-top: 1px solid #dee2e6 !important;
+//  padding-top: 1.5em;
+//}
+//.user-experiences{
+//  .experience-row:not(:first-of-type){
+//    border-top: 1px solid #dee2e6 !important;
+//  }
+//}
+
+.user-experiences > div:not(:first-of-type){
+  border-bottom: 1px solid #dee2e6 !important;
+  padding-bottom: 1.5em;
+}
+
+.user-projects > div:not(:first-of-type){
+  border-bottom: 1px solid #dee2e6 !important;
+  //padding-bottom: 1.5em;
+}
+.project-name{
+  h5{
+    color: #4b0000;
+  }
 }
 
 .external-links{
@@ -239,4 +259,11 @@ form.edit_user {
 
 .no-underline {
   text-decoration: none;
+}
+
+.user-experiences, .user-projects{
+  .small-heading{
+    color: #1408b1;
+    font-size: 12px;
+  }
 }
