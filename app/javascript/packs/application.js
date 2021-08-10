@@ -43,6 +43,8 @@ document.addEventListener('turbolinks:load', () => {
         // element.classList.add("line-numbers");
         Prism.highlightElement(element);
     });
+
+    gtag('config', 'G-Q10GQWEB40', {'page_location': event.data.url});
 });
 
 
