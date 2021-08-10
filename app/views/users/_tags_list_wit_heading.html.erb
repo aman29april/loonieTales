@@ -1,0 +1,12 @@
+<%if tags.any? %>
+  <div class="row mt-3">
+    <h5><%=heading %></h5>
+    <div class="mat-chip-list-wrapper">
+      <% tags.each do |record| %>
+        <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
+          <%=record %>
+        </div>
+      <%end %>
+    </div>
+  </div>
+<%end %>

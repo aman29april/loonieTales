@@ -6,8 +6,8 @@ module UsersHelper
             user.avatar.url(:thumb)
           elsif user.avatar?
             user.avatar.url
-          elsif user.respond_to?(:avatar_url) && user.avatar_url.present?
-            user.avatar_url
+          elsif user.respond_to?(:image_url) && user.image_url.present?
+            user.image_url
           else
             user.class.default_avatar
           end

@@ -96,54 +96,19 @@
       </div>
     <%end %>
 
+    <%= render partial: 'tags_list_wit_heading', locals: { tags: @user.skills_array, heading: 'Skills'} %>
+    <%= render partial: 'tags_list_wit_heading', locals: { tags: @user.languages_array, heading: 'Languages'} %>
+    <%= render partial: 'tags_list_wit_heading', locals: { tags: @user.hobbies_array, heading: 'Hobbies'} %>
 
-    <div class="row mt-3">
-      <%if @user.skills_array.any? %>
-        <h5>Skills</h5>
-        <div class="mat-chip-list-wrapper">
-          <% @user.skills_array.each do |record| %>
-            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
-              <%=record %>
-            </div>
-          <%end %>
-        </div>
-      <%end %>
-    </div>
 
-    <div class="row mt-3">
-      <%if @user.languages_array.any? %>
-        <h5>Languages</h5>
-        <div class="mat-chip-list-wrapper">
-          <% @user.languages_array.each do |record| %>
-            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
-              <%=record %>
-            </div>
-          <%end %>
-        </div>
-      <%end %>
-    </div>
-
-    <div class="row mt-3">
-      <%if @user.hobbies_array.any? %>
-        <h5>Hobbies</h5>
-        <div class="mat-chip-list-wrapper">
-          <% @user.hobbies_array.each do |record| %>
-            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
-              <%=record %>
-            </div>
-          <%end %>
-        </div>
-      <%end %>
-    </div>
-
-    <div class="row mt-3">
-      <% if @latest_posts.any? %>
+    <% if @latest_posts.any? %>
+      <div class="row mt-3">
         <h4 class="small-heading ">Latest Posts</h4>
         <div class="sidebar-top-stories">
           <%= render partial: 'dashboards/top_stories_bar', locals: {records: @latest_posts} %>
         </div>
-      <% end %>
-    </div>
+     </div>
+    <% end %>
   </div>
 
   <div class="col col-md-8">
