@@ -235,7 +235,8 @@ form.edit_user {
 
 .user-projects > div:not(:first-of-type){
   border-bottom: 1px solid #dee2e6 !important;
-  //padding-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  margin-top: 1em;
 }
 .project-name{
   h5{

@@ -44,4 +44,12 @@ module ApplicationHelper
     options[:class].strip!
     link_to text, url, options
   end
+
+  def create_post_options
+    if params[:controller] == 'tags'
+      { tags: params[:id] }
+    else
+      {}
+    end
+  end
 end

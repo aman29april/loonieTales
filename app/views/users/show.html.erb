@@ -148,11 +148,9 @@
           <%= link_to render('shared/tag_button'), new_user_project_path(current_user) %>
         <% end %>
       </div>
-        <div class="sortable">
-          <% @projects.main.each do |project| %>
-            <%= render partial: 'projects/project', locals: {project: project} %>
-          <%end %>
-        </div>
+        <% @projects.main.each do |project| %>
+          <%= render partial: 'projects/project', locals: {project: project} %>
+        <%end %>
     </div>
   </div>
 

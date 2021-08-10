@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    if validate_captcha && @post.publish
+    if @post.publish
       redirect_to @post, notice: 'Successfully published the post!'
     else
       @post.unpublish

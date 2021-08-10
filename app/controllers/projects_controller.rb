@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :picture, :sort, :is_side ,:url, :team_size)
+    params.require(:project).permit(:title, :description, :picture, :sort, :is_side, :url, :team_size)
   end
 
   def load_project

@@ -93,7 +93,7 @@
             <%#= react_component('SearchContainer') %>
 <!--          </li>-->
           <% if user_signed_in? %>
-            <li class="new-post-button "><%= link_to "Write Article", new_post_path, class: "button" %></li>
+            <li class="new-post-button "><%= link_to "Write Article", new_post_path(create_post_options), class: "button" %></li>
   <!--          <li id="notifications">-->
               <%#= react_component('NotificationsContainer', {}) %>
   <!--          </li>-->
