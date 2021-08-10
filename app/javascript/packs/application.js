@@ -8,6 +8,7 @@
 require("trix")
 require("@rails/actiontext")
 require("jquery")
+require("jquery-ui/ui/widgets/sortable")
 
 // import { ActionTextSyntaxHighlighter } from "@ayushn21/actiontext-syntax-highlighter"
 import Rails from "@rails/ujs"
@@ -21,7 +22,6 @@ import "@fortawesome/fontawesome-free/js/all"
 import 'prismjs';
 import 'copy-to-clipboard'
 import "../trix-editor-overrides"
-
 
 Rails.start()
 Turbolinks.start()

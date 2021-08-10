@@ -43,6 +43,8 @@ gem 'trix-rails', require: 'trix'
 gem 'friendly_id'
 gem 'will_paginate'
 
+gem 'rails_sortable'
+
 # For Config
 gem 'config'
 

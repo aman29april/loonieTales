@@ -11,11 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field col-12">
-    <%= form.label :title, class: 'form-label' %>
-    <%= form.text_field :title, class: 'form-control' %>
-  </div>
+  <div class="row">
+    <div class="field col-10">
+      <%= form.label :title, class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
 
+    <div class="field col form-check">
+      <%= form.label :is_side, class: 'form-check-label' %>
+      <%= form.check_box :is_side, class: 'form-check-input' %>
+    </div>
+  </div>
   <div class="field col-12">
     <%= form.label :description, class: 'form-label' %>
     <%= form.rich_text_area :description, class: 'form-control'  %>

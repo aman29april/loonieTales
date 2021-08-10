@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     # @following_count = @user.following.count
     @latest_posts = @user.posts.latest(6).published
     @recommended_posts = @user.liked_posts.latest(4).published.includes(:user)
+    @projects = @user.projects.sort_order
     set_meta_tags @user.meta_info
   end
 
