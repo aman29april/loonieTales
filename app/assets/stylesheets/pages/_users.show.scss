@@ -255,6 +255,19 @@ form.edit_user {
       }
     }
   }
+
+  .col-md-4{
+    h5{
+      color: #1408b1;
+    }
+
+    .mt-3:not(:first-of-type){
+      border-top: 0.5px solid #dee2e6 !important;
+      padding-top: 5px !important;
+    }
+  }
+
+
 }
 
 .no-underline {
@@ -264,6 +277,7 @@ form.edit_user {
 .user-experiences, .user-projects{
   .small-heading{
     color: #1408b1;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
+

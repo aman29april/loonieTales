@@ -38,25 +38,36 @@
           </div>
         </div>
 
-        <div class=" input-group mb-3 mt-3">
-          <span class="input-group-text">
-            <%= fa_icon('map-marker') %>
-          </span>
-          <%= f.text_field :location, class: 'form-control', placeholder: 'Where do you live?' %>
+        <div class="row">
+          <div class=" col input-group mb-3 mt-3">
+            <span class="input-group-text">
+              <%= fa_icon('map-marker') %>
+            </span>
+              <%= f.text_field :location, class: 'form-control', placeholder: 'Where do you live?' %>
+            </div>
+
+          <div class=" col input-group mb-3 mt-3">
+            <span class="input-group-text">
+              <%= fa_icon('phone') %>
+            </span>
+            <%= f.text_field :mobile, class: 'form-control', placeholder: 'Mobile' %>
+          </div>
         </div>
 
-        <div class=" input-group mb-3">
-          <span class="input-group-text">
-            <%= fa_icon('linkedin', type: :brand) %>
-          </span>
-          <%= f.text_field :linkedin, id: 'linkedin', class: 'form-control', placeholder: 'linkedin username' %>
-        </div>
+        <div class="row">
+            <div class=" input-group mb-3 col">
+              <span class="input-group-text">
+                <%= fa_icon('linkedin', type: :brand) %>
+              </span>
+              <%= f.text_field :linkedin, id: 'linkedin', class: 'form-control', placeholder: 'linkedin username' %>
+            </div>
 
-        <div class="input-group mb-3">
-          <span class="input-group-text">
-            <%= fa_icon('github', type: :brand) %>
-          </span>
-          <%= f.text_field :github, id: 'github', class: 'form-control', placeholder: 'github username' %>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text">
+                <%= fa_icon('github', type: :brand) %>
+              </span>
+              <%= f.text_field :github, id: 'github', class: 'form-control', placeholder: 'github username' %>
+            </div>
         </div>
 
         <div class="input-group mb-3">
@@ -65,12 +76,26 @@
           </span>
           <%= f.text_field :resume, id: 'github', class: 'form-control', placeholder: 'link to resume' %>
         </div>
+
+        <div class="row">
+          <div class="col">
+            <%= f.label :Hobbies , class: 'form-label'%>
+            <%= f.text_field :hobbies, class: 'form-control tagsinput', 'data-role': 'tagsinput' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <%= f.label :Languages , class: 'form-label'%>
+            <%= f.text_field :languages, class: 'form-control tagsinput', 'data-role': 'tagsinput' %>
+          </div>
+        </div>
       </div>
 
 <!--      <h5>Projects</h5>-->
       <%#= link_to "Add Project", new_user_project_path(@user), class: 'button green-inner-button' %>
 
-      <%= f.submit "Save Change", class: 'button green-inner-button' %>
+      <%= f.submit "Save Change", class: 'button green-inner-button mt-3' %>
         <%= link_to "Cancel", @user, class: 'button green-border-button' %>
     <% end %>
   </div>

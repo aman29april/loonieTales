@@ -1,10 +1,13 @@
 = form_for [current_user, @experience] do |f|
   = render :partial => 'shared/resource_error', locals: {resource: @experience}
   .row
-    .col
+    .col-md-5
       = f.label :title
       = f.text_field :title, class: 'form-control'
 
+    .col-md-5
+      = f.label :avatar_url
+      = f.text_field :avatar_url, class: 'form-control'
     .col
       .hero-avatar
         %label.change-avatar#change-avatar{style: "background-image: url('#{ @experience.avatar.url}')"}

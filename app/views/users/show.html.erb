@@ -71,7 +71,11 @@
         </div>
       <% end %>
 
-
+      <% if @user.mobile.present? %>
+        <div class="hero-location mt-2">
+          <%= fa_icon('phone') %><%= link_to @user.mobile, "tel:#{@user.mobile}", target: '_blank', class: 'social-link' %>
+        </div>
+      <% end %>
     </div>
     <%if @user.has_social_links? %>
       <div class="row mt-3">
@@ -97,9 +101,35 @@
       <%if @user.skills_array.any? %>
         <h5>Skills</h5>
         <div class="mat-chip-list-wrapper">
-          <% @user.skills_array.each do |skill| %>
+          <% @user.skills_array.each do |record| %>
             <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
-              <%=skill %>
+              <%=record %>
+            </div>
+          <%end %>
+        </div>
+      <%end %>
+    </div>
+
+    <div class="row mt-3">
+      <%if @user.languages_array.any? %>
+        <h5>Languages</h5>
+        <div class="mat-chip-list-wrapper">
+          <% @user.languages_array.each do |record| %>
+            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
+              <%=record %>
+            </div>
+          <%end %>
+        </div>
+      <%end %>
+    </div>
+
+    <div class="row mt-3">
+      <%if @user.hobbies_array.any? %>
+        <h5>Hobbies</h5>
+        <div class="mat-chip-list-wrapper">
+          <% @user.hobbies_array.each do |record| %>
+            <div class="mat-chip mat-focus-indicator mat-primary mat-standard-chip ng-star-inserted" >
+              <%=record %>
             </div>
           <%end %>
         </div>
@@ -108,13 +138,12 @@
 
     <div class="row mt-3">
       <% if @latest_posts.any? %>
-        <h4 class="small-heading border-top">Latest Posts</h4>
+        <h4 class="small-heading ">Latest Posts</h4>
         <div class="sidebar-top-stories">
           <%= render partial: 'dashboards/top_stories_bar', locals: {records: @latest_posts} %>
         </div>
       <% end %>
     </div>
-
   </div>
 
   <div class="col col-md-8">

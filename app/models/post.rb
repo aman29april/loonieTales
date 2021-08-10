@@ -104,8 +104,8 @@ class Post < ApplicationRecord
   def meta_info
     {
       title: title,
-      description: meta_description || title,
-      keywords: meta_keywords || all_tags
+      description: meta_description.present? ? meta_description : title,
+      keywords: meta_keywords.present? ? meta_keywords : all_tags
     }
   end
 

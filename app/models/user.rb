@@ -74,6 +74,18 @@ class User < ApplicationRecord
     skills.split(',').map { |s| s.strip }
   end
 
+  def languages_array
+    return [] if languages.blank?
+
+    languages.split(',').map { |s| s.strip }
+  end
+
+  def hobbies_array
+    return [] if hobbies.blank?
+
+    hobbies.split(',').map { |s| s.strip }
+  end
+
   def self.default_avatar
     'default-avatar.svg'
   end
