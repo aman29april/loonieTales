@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_810_185_159) do
+ActiveRecord::Schema.define(version: 20_210_819_201_554) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -251,6 +251,7 @@ ActiveRecord::Schema.define(version: 20_210_810_185_159) do
     t.string 'mobile'
     t.string 'hobbies'
     t.string 'languages'
+    t.boolean 'show_linkedin_badge', default: false
     t.index ['email'], name: 'index_users_on_email', unique: true
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
     t.index ['slug'], name: 'index_users_on_slug', unique: true

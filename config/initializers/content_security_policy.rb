@@ -8,12 +8,14 @@ Rails.application.config.content_security_policy do |policy|
   policy.script_src :self, :unsafe_inline, 'https://www.googletagmanager.com',
                     'https://www.google-analytics.com',
                     'https://fonts.googleapis.com',
+                    'https://platform.linkedin.com',
+                    'https://badges.linkedin.com',
                     'https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js'
   #   policy.font_src    :self, :https, :data
   #   policy.img_src     :self, :https, :data
   #   policy.object_src  :none
   #   policy.script_src  :self, :https
-  policy.style_src :self, :unsafe_inline, 'https://fonts.googleapis.com'
+  policy.style_src :self, 'https://static-exp1.licdn.com', :unsafe_inline, 'https://fonts.googleapis.com'
   #   # If you are using webpack-dev-server then specify webpack-dev-server host
   #   policy.connect_src :self, :https, "http://localhost:3035", "ws://localhost:3035" if Rails.env.development?
 

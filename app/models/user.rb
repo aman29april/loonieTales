@@ -101,4 +101,8 @@ class User < ApplicationRecord
       keywords: (skills_array << full_name).join(',')
     }
   end
+
+  def can_show_linkedin_badge?
+    show_linkedin_badge && linkedin.present?
+  end
 end
