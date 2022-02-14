@@ -9,11 +9,11 @@ default: &default
 
 development:
   <<: *default
-  database: myblog_development
+  database: loonietales_development
 
 test:
   <<: *default
-  database: myblog_test
+  database: loonietales_test
 
 production:
   <<: *default
