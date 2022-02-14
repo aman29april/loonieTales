@@ -498,7 +498,6 @@ DEPENDENCIES
   selenium-webdriver
   sitemap_generator
   spring
-  sprockets-rails
   strscan
   trix-rails
   turbolinks (~> 5)

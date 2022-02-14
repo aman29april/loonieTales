@@ -63,6 +63,18 @@ module.exports = function(api) {
         }
       ],
       [
+        '@babel/plugin-proposal-private-methods',
+        {
+          loose: true
+        }
+      ],
+      [
+        '@babel/plugin-proposal-private-property-in-object',
+        {
+          loose: true
+        }
+      ],
+      [
         '@babel/plugin-transform-runtime',
         {
           helpers: false,
@@ -81,11 +93,7 @@ module.exports = function(api) {
         {
           removeImport: true
         }
-      ],
-      // ["prismjs", {
-      //   "languages": [ "css", "liquid", "ruby", "sql"],
-      //   "plugins": ["line-numbers", "show-language", "copy-to-clipboard", "toolbar", "autoloader"],
-      // }]
+      ]
     ].filter(Boolean)
   }
 }
