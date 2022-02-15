@@ -35,6 +35,8 @@
               </ul>
             </div>
 
+
+
         <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
           <li class="nav-item ">
             <a class="nav-link " href="/info/about-us" >
@@ -54,8 +56,7 @@
   <!--          </li>-->
             <%= render 'layouts/avatar_dropdown' %>
           <% else %>
-<!--            <li class="new-post-button"><%#= link_to "Say Hi", user_path('aman'), class: "button" %></li>-->
-<!--            <li class="sign-in-button"><%#= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %></li>-->
+            <li class="sign-in-button"><%= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %></li>
           <% end %>
         </ul>
       </div>
