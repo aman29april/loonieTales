@@ -21,7 +21,7 @@ module LoonieTales
     # config.eager_load_paths << Rails.root.join("extras")
     #
     config.to_prepare do
-      ActionText::ContentHelper.allowed_tags << "iframe"
+      ActionText::ContentHelper.allowed_tags << 'iframe'
     end
   end
 end
