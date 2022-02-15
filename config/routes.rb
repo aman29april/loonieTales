@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :provinces
+  resources :program_streams
+  resources :nocs
+  resources :companies
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                                     registrations: 'users/registrations' }
 
   root 'dashboards#show'
   resources :posts
+  resources :lmia_jobs
   resources :tags, only: [:show]
   post 'posts/create_and_edit' => 'posts#create_and_edit', as: :post_create_and_edit
   resources :users, only: %i[show edit update] do

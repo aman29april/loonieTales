@@ -1,0 +1,51 @@
+%h1 LMIA Approvals
+
+= form_tag(lmia_jobs_path, method: :get, class: 'inline-form') do |form|
+  .row
+    .col
+      .field
+        = text_field_tag :NOC, params[:NOC], placeholder: 'NOC', class: 'form-control'
+    .col
+      .field
+        = text_field_tag :company, params[:company], placeholder: 'Company', class: 'form-control'
+    .col
+      .field
+        = select_tag :province, options_for_select(Province.all, params[:province]), {class: 'form-control',
+        placeholder: 'Province', include_blank: true}
+    .col
+      .actions
+        = submit_tag "Search", class: 'btn btn-primary'
+        = button_tag "Reset", type: :reset, class: 'btn btn-secondary'
+
+
+%table.table.table-hover
+  %thead.thead-dark
+    %tr
+      %th NOC
+      %th Company
+
+      %th Program
+      %th Positions
+      %th Year
+      -#%th Month
+      %th Province
+
+
+  %tbody
+    - @lmia_jobs.each do |lmia_job|
+      %tr
+        %td= lmia_job.noc
+        %td= lmia_job.company
+
+        %td= lmia_job.program_stream
+        %td= lmia_job.positions_approved
+        %td= lmia_job.year
+        -#%td= lmia_job.month
+        %td= lmia_job.province
+        -#%td= link_to 'Show', lmia_job
+        -#%td= link_to 'Edit', edit_lmia_job_path(lmia_job)
+        -#%td= link_to 'Destroy', lmia_job, method: :delete, data: { confirm: 'Are you sure?' }
+
+-#%br
+-#
+-#= link_to 'New Lmia job', new_lmia_job_path

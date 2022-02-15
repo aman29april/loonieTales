@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,7 +21,7 @@ module LoonieTales
     # config.eager_load_paths << Rails.root.join("extras")
     #
     config.to_prepare do
-          ActionText::ContentHelper.allowed_tags << "iframe"
+      ActionText::ContentHelper.allowed_tags << 'iframe'
     end
   end
 end

@@ -1,0 +1,21 @@
+%h1 Listing program_streams
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @program_streams.each do |program_stream|
+      %tr
+        %td= program_stream.name
+        %td= link_to 'Show', program_stream
+        %td= link_to 'Edit', edit_program_stream_path(program_stream)
+        %td= link_to 'Destroy', program_stream, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Program stream', new_program_stream_path

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Logo:
+  = @company.logo
+%p
+  %b Hq:
+  = @company.hq
+%p
+  %b Address:
+  = @company.address
+%p
+  %b Linkedin:
+  = @company.linkedin
+%p
+  %b Indeed:
+  = @company.indeed
+%p
+  %b Url:
+  = @company.url
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path

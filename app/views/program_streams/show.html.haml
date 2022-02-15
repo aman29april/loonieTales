@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @program_stream.name
+
+= link_to 'Edit', edit_program_stream_path(@program_stream)
+\|
+= link_to 'Back', program_streams_path

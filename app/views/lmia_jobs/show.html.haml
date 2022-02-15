@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Company:
+  = @lmia_job.company
+%p
+  %b Noc:
+  = @lmia_job.noc
+%p
+  %b Programstream:
+  = @lmia_job.ProgramStream
+%p
+  %b Positions approved:
+  = @lmia_job.positions_approved
+%p
+  %b Year:
+  = @lmia_job.year
+%p
+  %b Month:
+  = @lmia_job.month
+%p
+  %b Province:
+  = @lmia_job.province
+
+= link_to 'Edit', edit_lmia_job_path(@lmia_job)
+\|
+= link_to 'Back', lmia_jobs_path

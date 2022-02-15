@@ -1,0 +1,13 @@
+= form_for @program_stream do |f|
+  - if @program_stream.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@program_stream.errors.count, "error")} prohibited this program_stream from being saved:"
+      %ul
+        - @program_stream.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'

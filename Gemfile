@@ -6,7 +6,7 @@ ruby '3.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 # gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
-gem "rails", "~> 7.0.0"
+gem 'rails', '~> 7.0.0'
 
 gem 'pg'
 # Use Puma as the app server
@@ -60,8 +60,8 @@ gem 'mini_magick'                 # resizable image
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
-gem 'recaptcha'
 gem 'json'
+gem 'recaptcha'
 
 # gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
 

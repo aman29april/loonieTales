@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Code:
+  = @noc.code
+%p
+  %b Skill type:
+  = @noc.skill_type
+%p
+  %b Title:
+  = @noc.title
+
+= link_to 'Edit', edit_noc_path(@noc)
+\|
+= link_to 'Back', nocs_path
