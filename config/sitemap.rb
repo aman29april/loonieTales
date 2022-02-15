@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = 'https://sudokode.herokuapp.com'
+SitemapGenerator::Sitemap.default_host = 'https://loonietales.herokuapp.com'
 SitemapGenerator::Sitemap.compress = :all_but_first
 
 SitemapGenerator::Sitemap.create do
