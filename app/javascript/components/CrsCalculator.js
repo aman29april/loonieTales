@@ -10,17 +10,16 @@ const FOUR_YEARS = "4 years"
 const FIVE_YEARS_OR_MORE = "5 years or more"
 
 class CrsCalculator extends React.Component {
-  render () {
-    return (
-        <div style={{display: 'flex'}}>
-          <div id="currentScore">
-              <h3>CRS</h3>
-
-            <HumanCapitalFactors ></HumanCapitalFactors>
-          </div>
-        </div>
-    );
-  }
+    render () {
+        return (
+            <div style={{display: 'flex'}}>
+                <div id="currentScore">
+                    <h3>CRS</h3>
+                    <HumanCapitalFactors ></HumanCapitalFactors>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default CrsCalculator

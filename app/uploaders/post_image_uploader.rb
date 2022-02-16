@@ -11,7 +11,6 @@ class PostImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [512, 256]
   end
 
-
   # if Rails.env.production? || Rails.env.staging?
   #   storage :fog
   # else
