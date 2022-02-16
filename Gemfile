@@ -67,6 +67,10 @@ gem 'recaptcha'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'yt', '~> 0.32.0'
+
+gem 'redis'
+gem 'redis-namespace'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

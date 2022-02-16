@@ -8,6 +8,8 @@ class DashboardsController < ApplicationController
                  else
                    Dashboard.new(posts: featured_posts)
                  end
+
+    @videos = YoutubeService.get_videos
   end
 
   def bookmarks

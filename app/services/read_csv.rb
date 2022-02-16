@@ -25,7 +25,7 @@ class ReadCsv
   end
 
   def match?(job, params)
-    return true if params.to_enum.all?{|k, v| v.empty? }
+    return true if params.to_enum.all? { |_k, v| v.empty? }
 
     match = false
     if params[:NOC].present?
@@ -38,7 +38,6 @@ class ReadCsv
       match = (job.company =~ /#{Regexp.quote(params[:company])}/i)
       return match if match
     end
-
   end
 
   def search_nocs(nocs)

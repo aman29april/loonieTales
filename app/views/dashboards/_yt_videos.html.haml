@@ -1,0 +1,8 @@
+-@videos.each do |video|
+  .col-lg-4.col-md-12.mb-4
+    .card
+      .bg-image.hover-overlay.ripple
+        =render 'shared/video', data: video
+      .card-body
+        %h5.card-title
+          = video[:title]

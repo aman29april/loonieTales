@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :lmia_jobs
   resources :tags, only: [:show]
   post 'posts/create_and_edit' => 'posts#create_and_edit', as: :post_create_and_edit
+  get 'crs-calculator', to: 'calculator#crs'
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]
 

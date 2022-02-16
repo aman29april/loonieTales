@@ -30,6 +30,9 @@ class Post < ApplicationRecord
   friendly_id :title, use: %i[slugged history finders]
 
   has_rich_text :body
+
+  mount_uploader :image, PostImageUploader
+
   # has_rich_text :content
 
   def unpublish
