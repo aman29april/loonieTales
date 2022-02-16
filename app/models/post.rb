@@ -34,6 +34,7 @@ class Post < ApplicationRecord
   mount_uploader :picture, PostImageUploader
 
 
+
   # has_rich_text :content
 
   def unpublish
