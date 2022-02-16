@@ -1,76 +1,63 @@
 <nav data-behavior="animated-navbar" class="navbar navbar-expand-lg navbar-default fixed-top navbar-light bg-light">
   <div class="container-fluid col-md-10 col-md-offset-1">
 
-      <%= link_to root_path, class: "navbar-brand", id: "logo" do %>
-        <%#= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
-        <span class="bold">Loonie Tales</span>
-      <% end %>
+    <%= link_to root_path, class: "navbar-brand", id: "logo" do %>
+      <%#= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
+      <span class="bold">Loonie Tales</span>
+    <% end %>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+
+      <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link " href="/lmia-jobs" >
+            LMIA JOBS
+          </a>
+        </li>
+      </ul>
 
       <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-
-            <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
-              <li class="nav-item ">
-                <a class="nav-link " href="/lmia-jobs" >
-                  LMIA JOBS
-                </a>
-              </li>
-            </ul>
-
-            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-              <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Calculator
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/crs-calculator">CRS</a></li>
-                    <li><a class="dropdown-item" href="/tags/arrays">PNP</a></li>
-                    <li><a class="dropdown-item" href="/tags/strings">IELTS</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-
-
-            <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
-              <li class="nav-item ">
-                <a class="nav-link " href="/lmia_jobs" >
-                  LMIA Jobs
-                </a>
-<!--                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                  <li><a class="dropdown-item" href="/tags/system-design-concepts">Concepts</a></li>-->
-<!--                  <li><a class="dropdown-item" href="/tags/system-design-case-study">Case Studies</a></li>-->
-<!--                </ul>-->
-              </li>
-            </ul>
-
         <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
-          <li class="nav-item ">
-            <a class="nav-link " href="/info/about-us" >
-              About Us
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Calculator
             </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/crs-calculator">CRS</a></li>
+              <li><a class="dropdown-item" href="/tags/arrays">PNP</a></li>
+              <li><a class="dropdown-item" href="/tags/strings">IELTS</a></li>
+            </ul>
           </li>
         </ul>
-
-        <ul class="nav navbar-nav navbar-end ms-auto mb-2 mb-lg-0">
-<!--          <li class="main-searchbar nav-item">-->
-            <%#= react_component('SearchContainer') %>
-<!--          </li>-->
-          <% if user_signed_in? %>
-            <li class="new-post-button "><%= link_to "Write Article", new_post_path(create_post_options), class: "button" %></li>
-  <!--          <li id="notifications">-->
-              <%#= react_component('NotificationsContainer', {}) %>
-  <!--          </li>-->
-            <%= render 'layouts/avatar_dropdown' %>
-          <% else %>
-            <li class="sign-in-button"><%= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %></li>
-          <% end %>
-        </ul>
       </div>
+
+      <ul class="nav navbar-nav navbar-end me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link " href="/info/about-us" >
+            About Us
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-end ms-auto mb-2 mb-lg-0">
+        <!--          <li class="main-searchbar nav-item">-->
+        <%#= react_component('SearchContainer') %>
+        <!--          </li>-->
+        <% if user_signed_in? %>
+          <li class="new-post-button "><%= link_to "Write Article", new_post_path(create_post_options), class: "button" %></li>
+          <!--          <li id="notifications">-->
+          <%#= react_component('NotificationsContainer', {}) %>
+          <!--          </li>-->
+          <%= render 'layouts/avatar_dropdown' %>
+        <% else %>
+          <!--            <li class="new-post-button"><%#= link_to "Say Hi", user_path('aman'), class: "button" %></li>-->
+          <!--            <li class="sign-in-button"><%#= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data: { behavior: 'trigger-overlay' } %></li>-->
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>

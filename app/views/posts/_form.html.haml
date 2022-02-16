@@ -19,7 +19,6 @@
     -#.col-md-2
     -#  = f.select :language, options_for_select(Post::LANGUAGES, post.language), {include_blank: 'Code Language'}, {class: 'form-control'}
     = f.rich_text_area :body, class: 'medium-editable form-control mt-2'
->>>>>>> f0c5487 (rename code)
   .col-12.mt-4
     =f.trix_editor :lead, autofocus: true
 
