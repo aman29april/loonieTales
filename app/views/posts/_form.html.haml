@@ -1,12 +1,12 @@
 = render :partial => 'shared/resource_error', locals: {resource: post}
 
-= form_for post, html: { multipart: true, class: "editor-form row gt-3"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+= form_for post, html: { multipart: true, class: "editor-form row gt-3 dropzone"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
   = recaptcha_v3(action: 'post')
   %label.picture_upload
-    = f.file_field :picture, class: 'form-control'
+    = f.file_field :picture, class: 'form-control image-uploader'
     %i.fa.fa-camera
-  .file-upload-previewer.hidden
-    %img#image_preview{:src => ""}/
+  .file-upload-previewer
+    %img#image_preview{src: ''}/
   - if post.picture?
     #existing-img-previewer.existing-img-previewer
       = image_tag post.picture.url(:thumb)
@@ -31,6 +31,7 @@
     = f.text_field :meta_description, class: 'form-control'
   .col-12.mt-4
     =f.submit class: "btn btn-primary"
+    -# =f.button 'Save Draft', :back ,class: "btn btn-primary"
     -unless post.new_record?
       =link_to "Delete", post_path(post), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }
     =link_to 'Cancel', :back ,class: "btn btn-secondary"
@@ -38,5 +39,18 @@
 
 :javascript
   $(document).ready( function() {
-      $(".tagsinput").tagsinput('items')
-    } );
+      $(".tagsinput").tagsinput('items');
+
+     var preview = $("#image_preview");
+      $('input[type="file"]').change(function(event){
+         var input = $(event.currentTarget);
+         var file = this.files[0];
+         var reader = new FileReader();
+         reader.onload = function(e){
+             image_base64 = e.target.result;
+             preview.attr("src", image_base64);
+         };
+         reader.readAsDataURL(file);
+      });
+    });
+

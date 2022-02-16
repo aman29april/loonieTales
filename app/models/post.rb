@@ -31,7 +31,7 @@ class Post < ApplicationRecord
 
   has_rich_text :body
 
-  # mount_uploader :image, PostImageUploader
+  mount_uploader :picture, PostImageUploader
 
   # has_rich_text :content
 

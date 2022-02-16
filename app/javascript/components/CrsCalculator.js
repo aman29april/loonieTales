@@ -14,6 +14,7 @@ class CrsCalculator extends React.Component {
     return (
         <div style={{display: 'flex'}}>
           <div id="currentScore">
+              <h3>CRS</h3>
             <HumanCapitalFactors ></HumanCapitalFactors>
           </div>
         </div>

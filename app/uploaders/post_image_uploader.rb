@@ -3,9 +3,13 @@
 class PostImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   # include CarrierWave::MimeTypes
-  process :set_content_type
+  # process :set_content_type
 
-  process resize_to_limit: [740, 480]
+  process resize_to_limit: [1024, 512]
+
+  version :thumb do
+    process resize_to_fill: [512, 256]
+  end
 
   # if Rails.env.production? || Rails.env.staging?
   #   storage :fog

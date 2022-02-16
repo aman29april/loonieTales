@@ -1,4 +1,6 @@
--@videos.each do |video|
+-@videos.each_with_index do |video, index|
+  -#.carousel-inner{role: "listbox"}
+  -#  .carousel-item{class: index.zero? ? "active": "" }
   .col-lg-4.col-md-12.mb-4
     .card
       .bg-image.hover-overlay.ripple

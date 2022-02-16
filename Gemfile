@@ -34,7 +34,7 @@ gem 'haml-rails'
 
 # frontend
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 5.0.1'
+gem 'bootstrap', '~> 5.1.3'
 gem 'font_awesome5_rails'
 gem 'jquery-rails'
 gem 'meta-tags'
