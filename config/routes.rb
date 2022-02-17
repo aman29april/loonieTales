@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   root 'dashboards#show'
   resources :posts
   resources :lmia_jobs
-
   # get 'admin', to: 'admin#index'
   resources :admin, only: :index do
     collection do
@@ -20,7 +19,6 @@ Rails.application.routes.draw do
     end
   end
   get 'lmia-jobs', to: 'lmia_jobs#index'
-
   resources :tags, only: [:show]
   post 'posts/create_and_edit' => 'posts#create_and_edit', as: :post_create_and_edit
   get 'crs-calculator', to: 'calculator#crs'
