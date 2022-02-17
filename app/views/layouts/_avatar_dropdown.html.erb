@@ -9,7 +9,9 @@
 <!--    <li><hr class="dropdown-divider"></li>-->
     <li><%= link_to "Profile", current_user, class: 'dropdown-item' %></li>
     <li><%= link_to "My Posts", posts_user_path(current_user), class: "dropdown-item" %></li>
+    <li><%= link_to "Admin", admin_index_path, class: 'dropdown-item'  %></li>
     <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'dropdown-item'  %></li>
+
   </ul>
 </li>
 

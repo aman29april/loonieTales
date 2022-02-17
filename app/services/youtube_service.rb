@@ -1,7 +1,7 @@
 class YoutubeService
   def self.get_videos
     cached_data = RedisStore.videos
-    if cached_data.empty?
+    if cached_data.blank?
       data = get_videos_by_api
       RedisStore.add_all(data)
       return data
@@ -18,7 +18,9 @@ class YoutubeService
       {
         id: video.id,
         title: video_data['title'],
-        thumbnail: video_data['thumbnails']['high']['url']
+        thumbnail: video_data['thumbnails']['high']['url'],
+        url: "https://www.youtube.com/video/#{video.id}",
+        embed_url: "https://www.youtube.com/embed/#{video.id}"
       }
     end
   end

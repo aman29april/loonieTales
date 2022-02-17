@@ -55,3 +55,60 @@
     font-size: 3rem;
   }
 }
+
+.youtubePreview {
+  //height:204px;
+  //width:480px;
+
+  .thumb {
+    overflow: hidden;
+  }
+  .thumb img {
+    margin: -10% 0;
+    width: 100%;
+  }
+}
+
+/* Just a parent container for the videos */
+.videos {
+  margin: 20px auto;
+  max-width: 700px;
+}
+/* Individual video container */
+.video-wrap {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* video poster frame or placeholder image */
+.video-wrap .placeholder {
+  max-width: 700px;
+  width: 100%;
+}
+/* SVG play button container */
+.video-wrap .play-btn {
+  position: absolute;
+  max-width: 700px;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-wrap .play-btn svg {
+  transition: all .2s ease;
+  fill: #fff;
+}
+.video-wrap .play-btn:hover svg,
+.video-wrap .play-btn:focus svg {
+  cursor: pointer;
+  fill: #17e617;
+}
+/* adjust your icon size, add different breakpoints as needed */
+@media screen and (max-width: 600px) {
+  .video-wrap .play-btn {
+    width: 70px;
+    height: 70px;
+  }
+}

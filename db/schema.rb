@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_215_092_638) do
+ActiveRecord::Schema[7.0].define(version: 20_220_217_192_209) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -239,6 +239,19 @@ ActiveRecord::Schema[7.0].define(version: 20_220_215_092_638) do
     t.index ['user_id'], name: 'index_social_accounts_on_user_id'
   end
 
+  create_table 'static_pages', force: :cascade do |t|
+    t.string 'title'
+    t.string 'body'
+    t.string 'picture'
+    t.string 'meta_keywords'
+    t.string 'meta_description'
+    t.string 'slug'
+    t.bigint 'user_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_static_pages_on_user_id'
+  end
+
   create_table 'tag_relationships', force: :cascade do |t|
     t.integer 'tag_id', null: false
     t.integer 'related_tag_id', null: false
@@ -317,4 +330,5 @@ ActiveRecord::Schema[7.0].define(version: 20_220_215_092_638) do
   add_foreign_key 'posts', 'users'
   add_foreign_key 'responses', 'posts'
   add_foreign_key 'responses', 'users'
+  add_foreign_key 'static_pages', 'users'
 end

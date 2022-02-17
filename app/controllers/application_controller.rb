@@ -22,5 +22,13 @@ class ApplicationController < ActionController::Base
     current_user.id == user.id
   end
 
+  def meta_info_from_locals(prefix:)
+    {
+      title: I18n.t("#{prefix}.title"),
+      description: I18n.t("#{prefix}.description"),
+      keywords: I18n.t("#{prefix}.keywords")
+    }
+  end
+
   helper_method :current_user?
 end

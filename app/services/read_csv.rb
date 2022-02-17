@@ -25,7 +25,7 @@ class ReadCsv
   end
 
   def match?(job, params)
-    return true if params.to_enum.all? { |_k, v| v.empty? }
+    return true if params.to_enum.all? { |_k, v| v.blank? }
 
     match = false
     if params[:NOC].present?
