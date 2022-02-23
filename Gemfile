@@ -95,6 +95,8 @@ group :development do
 
   gem 'bullet'
   gem 'dotenv-rails'
+  gem 'erb2haml'
+  # gem 'postwill'
 end
 
 group :test do

@@ -1,0 +1,21 @@
+- posts.each_with_index do |post, index|
+  .post-panel
+    .top-story-rank
+      .count-button-wrapper
+        %span.count-button= index + 1
+    - if post.picture?
+      .post-picture-wrapper
+        = image_tag post.picture.url(:thumb)
+    .main-body
+      %h3.post-title= link_to post.title, post
+      - if post.lead
+        .post-body= truncate(post.lead, length: 190, separator: ' ', escape: false)
+        = link_to "Read more", post, class: 'read-more'
+    .post-stats.clearfix
+      .pull-left{:id => "post_#{post.id}_likes"}
+        = render partial: 'posts/likes', locals: { post: post }
+      .pull-right{:id => "post_#{post.id}_bookmarks"}
+        = render partial: 'posts/bookmarks', locals: { post: post }
+      .response-count.pull-right
+        - if post.responses_count > 0
+          = link_to (pluralize(post.responses_count, "response")), post_path(post, anchor: 'responses'), class: 'response-count'

@@ -1,0 +1,32 @@
+= render 'shared/hero_image', image: 'hero.png'
+%section.text-center1.mt-lg-2
+  %h4.mb-2
+    %strong Latest Videos
+  .row.mx-auto.my-auto
+    = render 'yt_videos', videos: @videos
+.col.col-md-8.col-md-offset-1.dashboard-main-content
+  %h4.mb-2
+    %strong Latest Articles
+  - unless @dashboard.top_stories?
+    / <div data-animation="fadeInUp-fadeOutDown">
+    / </div>
+    .posts-wrapper.row{"data-animation" => "fadeInUp-fadeOutDown", "data-behavior" => "endless-scroll"}
+      = render @dashboard.posts
+  - else
+    .posts-wrapper{"data-animation" => "fadeInUp-fadeOutDown"}
+      = render 'posts/top_stories', posts: @dashboard.posts
+  - unless @dashboard.top_stories?
+    .center
+      = will_paginate @dashboard.posts
+- content_for :sidebar do
+  %aside.col.col-md-4.main-sidebar
+    / border-top
+    %h4.small-heading Featured Categories
+    = react_component('TagList', { tags: @dashboard.featured_tags })
+    / <div class="flex-container border-top">
+    / <h4 class="small-heading">Tags you follow</h4><haml_silent></haml_silent>
+    / </div>
+    - unless @dashboard.filtered?
+      %h4.small-heading.border-top Top stories
+      .sidebar-top-stories
+        = render partial: 'top_stories_bar', locals: {records: @dashboard.top_stories}

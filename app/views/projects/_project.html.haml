@@ -1,0 +1,6 @@
+.row.project-row
+  .col.project-name
+    %h5= project.title
+  .col-md-1
+    = render :partial => 'shared/edit_delete_options', locals: {edit_link: edit_project_link(project), delete_link: destroy_project_link(project)}
+  %div= project.description

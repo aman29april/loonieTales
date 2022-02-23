@@ -7,7 +7,9 @@ class StaticPagesController < ApplicationController
   end
 
   # GET /static_pages/1 or /static_pages/1.json
-  def show; end
+  def show
+    set_meta_tags @resource.meta_info
+  end
 
   # GET /static_pages/new
   def new

@@ -1,0 +1,290 @@
+{
+  "17 or less": {
+    "partnered": 0,
+    "single": 0
+  },
+  "18": {
+    "partnered": 90,
+    "single": 99
+  },
+  "19": {
+    "partnered": 95,
+    "single": 105
+  },
+  "20 to 29": {
+    "partnered": 100,
+    "single": 110
+  },
+  "30": {
+    "partnered": 95,
+    "single": 105
+  },
+  "31": {
+    "partnered": 90,
+    "single": 99
+  },
+  "32": {
+    "partnered": 85,
+    "single": 94
+  },
+  "33": {
+    "partnered": 80,
+    "single": 88
+  },
+  "34": {
+    "partnered": 75,
+    "single": 83
+  },
+  "35": {
+    "partnered": 70,
+    "single": 77
+  },
+  "36": {
+    "partnered": 65,
+    "single": 72
+  },
+  "37": {
+    "partnered": 60,
+    "single": 66
+  },
+  "38": {
+    "partnered": 55,
+    "single": 61
+  },
+  "39": {
+    "partnered": 50,
+    "single": 55
+  },
+  "40": {
+    "partnered": 45,
+    "single": 50
+  },
+  "41": {
+    "partnered": 35,
+    "single": 39
+  },
+  "42": {
+    "partnered": 25,
+    "single": 28
+  },
+  "43": {
+    "partnered": 15,
+    "single": 17
+  },
+  "44": {
+    "partnered": 5,
+    "single": 6
+  },
+  "45 or more": {
+    "partnered": 0,
+    "single": 0
+  },
+
+  "less_than_secondary_school": {
+    "partnered": 0,
+    "single": 0
+  },
+  "secondary_diploma": {
+    "partnered": 28,
+    "single": 30
+  },
+  "one_year_degree": {
+    "partnered": 84,
+    "single": 90
+  },
+  "two_year_program": {
+    "partnered": 91,
+    "single": 98
+  },
+  "bachelors_degree": {
+    "partnered": 112,
+    "single": 120
+  },
+  "two_or_more_certificates": {
+    "partnered": 119,
+    "single": 128
+  },
+  "masters_degree": {
+    "partnered": 126,
+    "single": 135
+  },
+  "doctoral_level": {
+    "partnered": 140,
+    "single": 150
+  },
+
+  "first_lang_less_than_clb_4": {
+    "partnered": 0,
+    "single": 0
+  },
+  "first_lang_clb_4_5": {
+    "partnered": 6,
+    "single": 6
+  },
+  "first_lang_clb_6": {
+    "partnered": 8,
+    "single": 9
+  },
+  "first_lang_clb_7": {
+    "partnered": 16,
+    "single": 17
+  },
+  "first_lang_clb_8": {
+    "partnered": 22,
+    "single": 23
+  },
+  "first_lang_clb_9": {
+    "partnered": 29,
+    "single": 31
+  },
+  "first_lang_clb_10_or_more": {
+    "partnered": 32,
+    "single": 34
+  },
+
+  "second_lang_clb_4_or_less": {
+    "partnered": 0,
+    "single": 0
+  },
+  "second_lang_clb_5_6": {
+    "partnered": 1,
+    "single": 1
+  },
+  "second_lang_clb_7_8": {
+    "partnered": 3,
+    "single": 3
+  },
+  "second_lang_clb_9_or_more": {
+    "partnered": 6,
+    "single": 6
+  },
+
+  "canadian_work_exp_none_or_less_than_1_year": {
+    "partnered": 0,
+    "single": 0
+  },
+  "canadian_work_exp_1_year": {
+    "partnered": 35,
+    "single": 40
+  },
+  "canadian_work_exp_2_years": {
+    "partnered": 46,
+    "single": 53
+  },
+  "canadian_work_exp_3_years": {
+    "partnered": 56,
+    "single": 64
+  },
+  "canadian_work_exp_4_years": {
+    "partnered": 63,
+    "single": 72
+  },
+  "canadian_work_exp_5_years_or_more": {
+    "partnered": 70,
+    "single": 80
+  },
+
+
+  "spouse_less_than_secondary_school": 0,
+  "spouse_secondary_diploma": 2,
+  "spouse_one_year_degree": 6,
+  "spouse_two_year_program": 7,
+  "spouse_bachelors_degree": 8,
+  "spouse_two_or_more_certificates": 9,
+  "spouse_masters_degree": 10,
+  "spouse_doctoral_level": 10,
+  "spouse_first_lang_clb_4_or_less": 0,
+  "spouse_first_lang_clb_5_6": 1,
+  "spouse_first_lang_clb_7_8": 3,
+  "spouse_first_lang_clb_9_or_more": 5,
+  "spouse_canadian_work_exp_none_or_less_than_1_year": 0,
+  "spouse_canadian_work_exp_1_year": 5,
+  "spouse_canadian_work_exp_2_years": 7,
+  "spouse_canadian_work_exp_3_years": 8,
+  "spouse_canadian_work_exp_4_years": 9,
+  "spouse_canadian_work_exp_5_years_or_more": 10,
+
+
+  "education_with_good_language_secondary_school": {
+    "clb_7_or_more": 0,
+    "clb_9_or_more": 0
+  },
+  "education_with_good_language_post_secondary_program": {
+    "clb_7_or_more": 13,
+    "clb_9_or_more": 25
+  },
+  "education_with_good_language_two_or_more_post_secondary_program": {
+    "clb_7_or_more": 25,
+    "clb_9_or_more": 50
+  },
+  "education_with_good_language_university_level_masters": {
+    "clb_7_or_more": 25,
+    "clb_9_or_more": 50
+  },
+  "education_with_good_language_university_level_doctoral": {
+    "clb_7_or_more": 25,
+    "clb_9_or_more": 50
+  },
+
+  "education_with_canadian_work_exp_secondary_school": {
+    "education_and_1+_year_canadian_work_exp": 0,
+    "education_and_2+_years_canadian_work_exp": 0
+  },
+  "education_with_canadian_work_exp_post_secondary_program": {
+    "education_and_1+_year_canadian_work_exp": 13,
+    "education_and_2+_years_canadian_work_exp": 25
+  },
+  "education_with_canadian_work_exp_two_or_more_post_secondary_program": {
+    "education_and_1+_year_canadian_work_exp": 25,
+    "education_and_2+_years_canadian_work_exp": 50
+  },
+  "education_with_canadian_work_exp_university_level_masters": {
+    "education_and_1+_year_canadian_work_exp": 25,
+    "education_and_2+_years_canadian_work_exp": 50
+  },
+  "education_with_canadian_work_exp_university_level_doctoral": {
+    "education_and_1+_year_canadian_work_exp": 25,
+    "education_and_2+_years_canadian_work_exp": 50
+  },
+
+  "foreign_work_exp_good_lang_proficiency_no_foreign_work_exp": {
+    "foreign_work_exp_and_clb_7_or_more": 0,
+    "foreign_work_exp_and_clb_9_or_more": 0
+  },
+  "foreign_work_exp_good_lang_proficiency_1_or_2_years_foreign_work_exp": {
+    "foreign_work_exp_and_clb_7_or_more": 13,
+    "foreign_work_exp_and_clb_9_or_more": 25
+  },
+  "foreign_work_exp_good_lang_proficiency_3_years_foreign_work_exp": {
+    "foreign_work_exp_and_clb_7_or_more": 25,
+    "foreign_work_exp_and_clb_9_or_more": 50
+  },
+
+  "foreign_work_experience_canadian_work_exp": {
+    "foreign_work_exp_and_1+_year_canadian_work_exp": 0,
+    "foreign_work_exp_and_2+_years_canadian_work_exp": 0
+  },
+  "foreign_work_experience_canadian_work_exp_1_or_2_years_foreign_work_exp": {
+    "foreign_work_exp_and_1+_year_canadian_work_exp": 13,
+    "foreign_work_exp_and_2+_years_canadian_work_exp": 25
+  },
+  "foreign_work_experience_canadian_work_exp_3_years_foreign_work_exp": {
+    "foreign_work_exp_and_1+_year_canadian_work_exp": 25,
+    "foreign_work_exp_and_2+_years_canadian_work_exp": 50
+  },
+
+  "certificate_of_qualification": {
+    "certificate_of_qualification_and_clb_5_or_more": 25,
+    "certificate_of_qualification_and_clb_7_or_more": 50
+  },
+
+
+  "sibling_in_canada": 15,
+  "nclc_7_or_higher_and_clb_4_or_lower": 25,
+  "nclc_7_or_higher_and_clb_5_or_higher": 50,
+  "post_secondary_education_in_canada_1_or_2_years": 15,
+  "post_secondary_education_in_canada_3_years_longer": 30,
+  "arranged_employment_noc_00": 200,
+  "arranged_employment_noc_0_a_b": 50,
+  "provincial_or_territorial_nomination": 600
+}

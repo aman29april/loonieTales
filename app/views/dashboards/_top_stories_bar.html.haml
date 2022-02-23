@@ -1,0 +1,8 @@
+%ul
+  - records.each_with_index do |post, index|
+    %li.top-stories-list-item
+      .count-button-wrapper
+        %span.count-button= index + 1
+      .top-stories-links
+        = link_to post.title, post, class: 'post-title'
+        %br/

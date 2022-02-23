@@ -1,0 +1,13 @@
+.col-md-6.col-md-offset-1
+  %h1 Admin Dashboard
+  = render @dashboard.posts
+- content_for :sidebar do
+  %aside.col-md-4.col-md-offset-1.main-sidebar
+    %h4.small-heading Featured Categories
+    .tags-wrapper.featured-tags
+      - @dashboard.featured_tags.each do |tag|
+        = render partial: 'tags/tag', locals: { tag: tag }
+    %h4.small-heading.border-top Other tags
+    .tags-wrapper
+      - @dashboard.all_tags.each do |tag|
+        = render partial: 'tags/tag', locals: { tag: tag }

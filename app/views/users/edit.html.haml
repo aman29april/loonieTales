@@ -1,0 +1,101 @@
+%body
+  .profile-container.g-3{"data-animation" => "fadeInUp-fadeOutDown-slow", "data-page" => "users-edit"}
+    .hero-wrapper
+      = form_for @user, html: { multipart: true } do |f|
+        %header.hero
+          .profile-info
+            %h1.hero-title= @user.username
+            %p.hero-description
+              = f.text_area :description, rows: 3, autofocus: true, placeholder: "Tell the world about yourself!"
+          .hero-avatar
+            %label#change-avatar.change-avatar{:style => "background-image: url('#{@user.avatar.url}')"}
+              = f.file_field :avatar
+              = fa_icon('camera')
+        .row
+          .col
+            = f.label :skills , class: 'form-label'
+            = f.text_field :skills, class: 'form-control tagsinput', rows: 3, 'data-role': 'tagsinput'
+        .mt-3
+          .row
+            .col
+              = f.label :first_name, class: 'form-label'
+              = f.text_field :first_name, class: 'form-control', placeholder: ''
+            .col
+              = f.label :last_name, class: 'form-label'
+              = f.text_field :last_name, class: 'form-control', placeholder: ''
+          .row
+            .col.input-group.mb-3.mt-3
+              %span.input-group-text
+                = fa_icon('map-marker')
+              = f.text_field :location, class: 'form-control', placeholder: 'Where do you live?'
+            .col.input-group.mb-3.mt-3
+              %span.input-group-text
+                = fa_icon('phone')
+              = f.text_field :mobile, class: 'form-control', placeholder: 'Mobile'
+          .row
+            .input-group.mb-3.col
+              %span.input-group-text
+                = fa_icon('linkedin', type: :brand)
+              = f.text_field :linkedin, id: 'linkedin', class: 'form-control', placeholder: 'linkedin username'
+            .input-group.col.mb-1
+              .form-check
+                = f.check_box  :show_linkedin_badge, class: 'form-check-input'
+                = f.label :badge, class: 'form-check-label'
+            .input-group.mb-3.col
+              %span.input-group-text
+                = fa_icon('github', type: :brand)
+              = f.text_field :github, id: 'github', class: 'form-control', placeholder: 'github username'
+          .input-group.mb-3
+            %span.input-group-text
+              = fa_icon('id-badge', type: :reg)
+            = f.text_field :resume, id: 'github', class: 'form-control', placeholder: 'link to resume'
+          .row
+            .col
+              = f.label :Hobbies , class: 'form-label'
+              = f.text_field :hobbies, class: 'form-control tagsinput', 'data-role': 'tagsinput'
+          .row
+            .col
+              = f.label :Languages , class: 'form-label'
+              = f.text_field :languages, class: 'form-control tagsinput', 'data-role': 'tagsinput'
+        / <h5>Projects</h5>
+        = f.submit "Save Change", class: 'button green-inner-button mt-3'
+        = link_to "Cancel", @user, class: 'button green-border-button'
+  :javascript
+    $(document).ready( function() {
+        $(".tagsinput").tagsinput('items')
+    } );
+  / <script type="text/javascript">
+  / var autocomplete;
+  / function initAutocomplete() {
+  / // Create the autocomplete object, restricting the search to geographical
+  / // location types.
+  / autocomplete = new google.maps.places.Autocomplete(
+  / (document.getElementById('autocomplete')),
+  / {types: ['geocode']});
+  / // When the user selects an address from the dropdown, populate the address
+  / // fields in the form.
+  / autocomplete.addListener('place_changed', fillInAddress);
+  / }
+  / function fillInAddress() {
+  / // Get the place details from the autocomplete object.
+  / var place = autocomplete.getPlace();
+  / console.log(place);
+  / }
+  / function geolocate() {
+  / if (navigator.geolocation) {
+  / navigator.geolocation.getCurrentPosition(function(position) {
+  / var geolocation = {
+  / lat: position.coords.latitude,
+  / lng: position.coords.longitude
+  / };
+  / var circle = new google.maps.Circle({
+  / center: geolocation,
+  / radius: position.coords.accuracy
+  / });
+  / autocomplete.setBounds(circle.getBounds());
+  / });
+  / }
+  / }
+  / </script>
+  / <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu7lncsYacttWvXdmhRadOixqxX0ODlBA&libraries=places&callback=initAutocomplete"
+  / async defer></script>

@@ -1,0 +1,7 @@
+- if tags.any?
+  .row.mt-3
+    %h5= heading
+    .mat-chip-list-wrapper
+      - tags.each do |record|
+        .mat-chip.mat-focus-indicator.mat-primary.mat-standard-chip.ng-star-inserted
+          = record
