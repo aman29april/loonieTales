@@ -19,7 +19,7 @@ class FirstLanguage extends React.Component {
   render () {
 
     const handleFirstLanguageChange = (_, child) => {
-        debugger
+        // debugger
       const pointsJsonId = child.props.id
       // setNewFirstLanguageSelection(pointsJsonId)
         partneredValue =  'single'

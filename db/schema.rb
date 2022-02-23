@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_217_192_209) do
     t.datetime 'created_at', precision: nil, null: false
     t.index ['blob_id'], name: 'index_active_storage_attachments_on_blob_id'
     t.index %w[record_type record_id name blob_id], name: 'index_active_storage_attachments_uniqueness',
-            unique: true
+                                                    unique: true
   end
 
   create_table 'active_storage_blobs', force: :cascade do |t|
@@ -109,7 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_217_192_209) do
     t.string 'scope'
     t.datetime 'created_at'
     t.index %w[slug sluggable_type scope], name: 'index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope',
-            unique: true
+                                           unique: true
     t.index %w[slug sluggable_type], name: 'index_friendly_id_slugs_on_slug_and_sluggable_type'
     t.index %w[sluggable_type sluggable_id], name: 'index_friendly_id_slugs_on_sluggable_type_and_sluggable_id'
   end
@@ -319,7 +319,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_217_192_209) do
   end
 
   add_foreign_key 'action_text_highlighted_code_blocks', 'action_text_rich_texts', column: 'rich_text_id',
-                  on_delete: :cascade
+                                                                                   on_delete: :cascade
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'active_storage_variant_records', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'bookmarks', 'users'

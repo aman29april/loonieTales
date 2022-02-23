@@ -36,7 +36,7 @@ class Age extends React.Component {
           const newAgeKey = getAgePointsKey(newAgeValue)
           const partneredValue = partnered ? 'partnered' : 'single'
           agePoints = pointsJson[newAgeKey][partneredValue]
-            debugger
+            // debugger
           // this.props.crsData['age'] = {
           //     value: newAgeValue,
           //     points: agePoints
