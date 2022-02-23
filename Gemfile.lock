@@ -79,9 +79,9 @@ GEM
     bindex (0.8.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
-    bootstrap (5.0.2)
+    bootstrap (5.1.3)
       autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.9.2, < 3)
+      popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
     bullet (7.0.1)
@@ -342,6 +342,9 @@ GEM
       tilt
     recaptcha (5.8.1)
       json
+    redis (4.6.0)
+    redis-namespace (1.8.1)
+      redis (>= 3.0.4)
     regexp_parser (2.2.1)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -452,6 +455,8 @@ GEM
     will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yt (0.32.6)
+      activesupport
     zeitwerk (2.5.4)
 
 PLATFORMS
@@ -462,7 +467,7 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt
   bootsnap (>= 1.4.4)
-  bootstrap (~> 5.0.1)
+  bootstrap (~> 5.1.3)
   bullet
   byebug
   capybara (>= 3.26)
@@ -491,6 +496,8 @@ DEPENDENCIES
   rails_sortable
   react-rails
   recaptcha
+  redis
+  redis-namespace
   rspec-rails
   rubocop
   sass-rails (>= 6)
@@ -506,6 +513,7 @@ DEPENDENCIES
   webdrivers
   webpacker (~> 5.0)
   will_paginate
+  yt (~> 0.32.0)
 
 RUBY VERSION
    ruby 3.0.2p107

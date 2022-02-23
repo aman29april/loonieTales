@@ -6,7 +6,7 @@ ruby '3.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 # gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
-gem "rails", "~> 7.0.0"
+gem 'rails', '~> 7.0.0'
 
 gem 'pg'
 # Use Puma as the app server
@@ -34,7 +34,7 @@ gem 'haml-rails'
 
 # frontend
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 5.0.1'
+gem 'bootstrap', '~> 5.1.3'
 gem 'font_awesome5_rails'
 gem 'jquery-rails'
 gem 'meta-tags'
@@ -60,13 +60,17 @@ gem 'mini_magick'                 # resizable image
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
-gem 'recaptcha'
 gem 'json'
+gem 'recaptcha'
 
 # gem 'actiontext-syntax-highlighter', require: 'action_text_syntax_highlighter/engine'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'yt', '~> 0.32.0'
+
+gem 'redis'
+gem 'redis-namespace'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

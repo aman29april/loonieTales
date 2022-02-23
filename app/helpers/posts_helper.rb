@@ -30,6 +30,6 @@ module PostsHelper
   def post_body(post, options = {})
     return post.body if options[:expand] == 'true'
 
-    post.body_text.length < 1000 ? post.body : post.lead.html_safe
+    post.body_text.length < 500 ? post.body : post.lead.html_safe
   end
 end

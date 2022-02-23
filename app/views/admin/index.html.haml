@@ -1,0 +1,6 @@
+.admin
+  .actions
+    %h3 Actions
+    =link_to "Clear Redis Cache", delete_cache_admin_index_path(), method: :delete, class: 'btn btn-primary', data: { confirm: 'Are you sure?' }
+    =link_to "Static Pages", static_pages_path, class: 'btn btn-primary'
+

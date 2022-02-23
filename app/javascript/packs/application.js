@@ -13,7 +13,7 @@ require("jquery-ui/ui/widgets/sortable")
 // import { ActionTextSyntaxHighlighter } from "@ayushn21/actiontext-syntax-highlighter"
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
-
+// import Dropzone from 'dropzone';
 
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"

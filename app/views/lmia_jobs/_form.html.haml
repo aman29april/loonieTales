@@ -1,0 +1,31 @@
+= form_for @lmia_job do |f|
+  - if @lmia_job.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@lmia_job.errors.count, "error")} prohibited this lmia_job from being saved:"
+      %ul
+        - @lmia_job.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :company
+    = f.text_field :company
+  .field
+    = f.label :noc
+    = f.text_field :noc
+  .field
+    = f.label :ProgramStream
+    = f.text_field :ProgramStream
+  .field
+    = f.label :positions_approved
+    = f.number_field :positions_approved
+  .field
+    = f.label :year
+    = f.number_field :year
+  .field
+    = f.label :month
+    = f.number_field :month
+  .field
+    = f.label :province
+    = f.text_field :province
+  .actions
+    = f.submit 'Save'

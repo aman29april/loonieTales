@@ -30,6 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  meta:
+    site:
+      title: 'Loonie Tales'
+      keywords: 'Canada Immigration, Canada Jobs, Work Permit Canada, Life in Canada'
+      description: 'Loonie Tales is our journey to Canada'
+  calculators:
+    crs:
+      title: 'CRS Score Calculator | CIC Express Entry Points Tool'
+      description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
+      keywords: 'CRS Score Calculator'
+  jobs:
+    lmia:
+      title: 'Canada LMIA Jobs'
+      description: 'Find companies that got positive LMIA issued Canada'
+      keywords: 'LMIA Jobs, Canada Jobs'
+
   activerecord:
     attributes:
       post:

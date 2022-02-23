@@ -1,0 +1,2 @@
+class ProgramStream < ApplicationRecord
+end

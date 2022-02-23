@@ -1,0 +1,19 @@
+= form_for @noc do |f|
+  - if @noc.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@noc.errors.count, "error")} prohibited this noc from being saved:"
+      %ul
+        - @noc.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :code
+    = f.number_field :code
+  .field
+    = f.label :skill_type
+    = f.text_field :skill_type
+  .field
+    = f.label :title
+    = f.text_field :title
+  .actions
+    = f.submit 'Save'

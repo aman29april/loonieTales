@@ -1,0 +1,25 @@
+%h1 Listing nocs
+
+%table
+  %thead
+    %tr
+      %th Code
+      %th Skill type
+      %th Title
+      %th
+      %th
+      %th
+
+  %tbody
+    - @nocs.each do |noc|
+      %tr
+        %td= noc.code
+        %td= noc.skill_type
+        %td= noc.title
+        %td= link_to 'Show', noc
+        %td= link_to 'Edit', edit_noc_path(noc)
+        %td= link_to 'Destroy', noc, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Noc', new_noc_path

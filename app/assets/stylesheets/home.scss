@@ -1,3 +1,114 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+
+.media-container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: start;
+}
+
+.follow-us {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: linear-gradient(0deg, #a8d5f4, #70dfc1);
+  .display-2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3rem;
+  }
+}
+
+.youtubePreview {
+  //height:204px;
+  //width:480px;
+
+  .thumb {
+    overflow: hidden;
+  }
+  .thumb img {
+    margin: -10% 0;
+    width: 100%;
+  }
+}
+
+/* Just a parent container for the videos */
+.videos {
+  margin: 20px auto;
+  max-width: 700px;
+}
+/* Individual video container */
+.video-wrap {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* video poster frame or placeholder image */
+.video-wrap .placeholder {
+  max-width: 700px;
+  width: 100%;
+}
+/* SVG play button container */
+.video-wrap .play-btn {
+  position: absolute;
+  max-width: 700px;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-wrap .play-btn svg {
+  transition: all .2s ease;
+  fill: #fff;
+}
+.video-wrap .play-btn:hover svg,
+.video-wrap .play-btn:focus svg {
+  cursor: pointer;
+  fill: #17e617;
+}
+/* adjust your icon size, add different breakpoints as needed */
+@media screen and (max-width: 600px) {
+  .video-wrap .play-btn {
+    width: 70px;
+    height: 70px;
+  }
+}

@@ -3,7 +3,7 @@
 class ProjectImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   # include CarrierWave::MimeTypes
-  process :set_content_type
+  # process :set_content_type
 
   process resize_to_limit: [740, 740]
 
@@ -18,6 +18,10 @@ class ProjectImageUploader < CarrierWave::Uploader::Base
 
   def store_dir
     "uploads/project/#{mounted_as}/#{model.id}/"
+  end
+
+  def content_type_allowlist
+    %r{image/}
   end
 
   def extension_white_list

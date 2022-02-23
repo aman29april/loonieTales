@@ -1,0 +1,30 @@
+
+= render :partial => 'shared/resource_error', locals: {resource: @resource}
+
+= form_for @resource, html: { multipart: true, class: "editor-form row gt-3"  , data: { page: 'main-editor' }, autocomplete: "off" } do |f|
+  = recaptcha_v3(action: 'post')
+
+  = render partial: '/posts/post_main_content', locals: {f: f, resource: @resource}
+
+  = render :partial => '/posts/meta_fields', locals: {f: f}
+
+  = render :partial => '/posts/post_buttons', locals: {f: f, resource: @resource}
+
+
+:javascript
+  $(document).ready( function() {
+      $(".tagsinput").tagsinput('items');
+
+     var preview = $("#image_preview");
+      $('input[type="file"]').change(function(event){
+         var input = $(event.currentTarget);
+         var file = this.files[0];
+         var reader = new FileReader();
+         reader.onload = function(e){
+             image_base64 = e.target.result;
+             preview.attr("src", image_base64);
+         };
+         reader.readAsDataURL(file);
+      });
+    });
+

@@ -8,6 +8,10 @@ class DashboardsController < ApplicationController
                  else
                    Dashboard.new(posts: featured_posts)
                  end
+
+    @videos = YoutubeService.get_videos.first(4)
+
+    set_meta_tags meta_info_from_locals(prefix: 'meta.site')
   end
 
   def bookmarks

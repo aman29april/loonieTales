@@ -1,12 +1,22 @@
+<%= render 'shared/hero_image', image: 'hero.png' %>
+
+<section class="text-center1 mt-lg-2">
+  <h4 class="mb-2"><strong>Latest Videos</strong></h4>
+  <div class="row mx-auto my-auto " >
+    <%= render 'yt_videos', videos: @videos %>
+  </div>
+</section>
+
 <div class="col col-md-8 col-md-offset-1 dashboard-main-content">
+  <h4 class="mb-2"><strong>Latest Articles</strong></h4>
 
   <% unless @dashboard.top_stories? %>
     <%# if user_signed_in? && current_page?('/') %>
-<!--      <div data-animation="fadeInUp-fadeOutDown">-->
-        <%#= render 'shared/inline_editor' %>
-<!--      </div>-->
+    <!--      <div data-animation="fadeInUp-fadeOutDown">-->
+    <%#= render 'shared/inline_editor' %>
+    <!--      </div>-->
     <%# end %>
-    <div class="posts-wrapper" data-behavior="endless-scroll" data-animation="fadeInUp-fadeOutDown">
+    <div class="posts-wrapper row" data-behavior="endless-scroll" data-animation="fadeInUp-fadeOutDown">
       <%= render @dashboard.posts %>
     </div>
   <% else %>
@@ -26,17 +36,17 @@
 
 <% content_for :sidebar do %>
   <aside class="col col-md-4 main-sidebar">
-<!--    border-top-->
-    <h4 class="small-heading ">Featured tags</h4>
+    <!--    border-top-->
+    <h4 class="small-heading ">Featured Categories</h4>
     <%= react_component('TagList', { tags: @dashboard.featured_tags }) %>
 
     <%# if user_signed_in? %>
-<!--      <div class="flex-container border-top">-->
-<!--        <h4 class="small-heading">Tags you follow</h4><%#= react_component('AddTagButton') %>-->
-<!--      </div>-->
-      <%#= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
+    <!--      <div class="flex-container border-top">-->
+    <!--        <h4 class="small-heading">Tags you follow</h4><%#= react_component('AddTagButton') %>-->
+    <!--      </div>-->
+    <%#= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
 
-      <%#= react_component('FollowSuggestionsContainer') %>
+    <%#= react_component('FollowSuggestionsContainer') %>
     <%# end %>
 
     <% unless @dashboard.filtered? %>
@@ -48,3 +58,4 @@
   </aside>
 
 <% end %>
+
