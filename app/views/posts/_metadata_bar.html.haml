@@ -1,0 +1,13 @@
+.post-metadata-bar{"data-page" => "post-metadata-bar"}
+  .flex-container{"data-behavior" => "animated-metadata"}
+    .post-stats.flex-container
+      %div
+        = link_to post_path(post, anchor: 'responses'), class: "response-icon-wrapper" do
+          %i.fa.fa-comment
+          / <span class="response-count" data-behavior="response-count"><haml_silent></haml_silent></span>
+      .bookmark-button
+    .metabar-author-info.flex-container.flex-space-btw
+      %div
+        = avatar_for post.user, size: 35
+        = react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username })
+      = follow_button_for post.user

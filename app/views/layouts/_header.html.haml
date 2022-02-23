@@ -1,0 +1,38 @@
+%nav.navbar.navbar-expand-lg.navbar-default.fixed-top.navbar-light.bg-light{"data-behavior" => "animated-navbar"}
+  .container-fluid.col-md-10.col-md-offset-1
+    = link_to root_path, class: "navbar-brand", id: "logo" do
+      %span.bold Loonie Tales
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-end.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          %a.nav-link{:href => "/lmia-jobs"}
+            LMIA JOBS
+      #navbarSupportedContent.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-end.me-auto.mb-2.mb-lg-0
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+              Calculator
+            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %li
+                %a.dropdown-item{:href => "/crs-calculator"} CRS
+              %li
+                %a.dropdown-item{:href => "/tags/arrays"} PNP
+              %li
+                %a.dropdown-item{:href => "/tags/strings"} IELTS
+      %ul.nav.navbar-nav.navbar-end.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          %a.nav-link{:href => "/info/about-us"}
+            About Us
+      %ul.nav.navbar-nav.navbar-end.ms-auto.mb-2.mb-lg-0
+        / <li class="main-searchbar nav-item">
+        / </li>
+        - if user_signed_in?
+          %li.new-post-button= link_to "Write Article", new_post_path(create_post_options), class: "button"
+          / <li id="notifications">
+          / </li>
+          = render 'layouts/avatar_dropdown'
+        - else
+          / <li class="new-post-button"><haml_silent></haml_silent></li>
+          / <li class="sign-in-button"><haml_silent></haml_silent></li>

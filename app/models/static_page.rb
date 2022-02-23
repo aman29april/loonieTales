@@ -25,7 +25,7 @@ class StaticPage < ApplicationRecord
     {
       title: title,
       description: meta_description.present? ? meta_description : title,
-      keywords: meta_keywords.present? ? meta_keywords : all_tags
+      keywords: meta_keywords.present? ? meta_keywords : []
     }
   end
 end

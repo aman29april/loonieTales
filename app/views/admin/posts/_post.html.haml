@@ -1,0 +1,8 @@
+.post-panel
+  = render partial: 'posts/post_metadata', locals: { post: post }
+  - if post.picture?
+    .post-picture-wrapper
+      = image_tag post.picture.url(:thumb)
+  .main-body
+    %h3.post-title= link_to post.title, post
+    .post-body= truncate(post.body, length: 120) { link_to "Read more ...", post, class: 'read-more' }

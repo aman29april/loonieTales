@@ -1,0 +1,18 @@
+.row
+  .col-md-6.col-md-offset-3
+    %h2 Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { autocomplete: 'off' }) do |f|
+      = devise_error_messages!
+      = recaptcha_v3(action: 'registration')
+      .form-input-wrapper
+        = f.text_field :username, autofocus: true, placeholder: "Username", onfocus: "this.value = this.value;" , class: 'form-control'
+      .form-input-wrapper
+        = f.email_field :email, placeholder: "Email", class: 'form-control'
+      - if f.object.password_required?
+        .form-input-wrapper
+          = f.password_field :password, autocomplete: "off", placeholder: "Password (#{@minimum_password_length} characters minimum)", class: 'form-control'
+        .form-input-wrapper
+          = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter Password", class: 'form-control'
+      = f.submit "Create Account", class: "button green-inner-button"
+    .devise-links
+      = render "devise/shared/links"

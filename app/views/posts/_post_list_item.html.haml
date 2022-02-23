@@ -1,0 +1,11 @@
+.post-list-item
+  .flex-container
+    .avatar-wrapper
+      = avatar_for(post.user, size: 40)
+    .post-info
+      %strong.pli-title= link_to post.title, post
+      %br/
+      %small.pli-username= link_to post.user_full_name, post.user
+    - if post.picture?
+      .pli-picture-wrapper
+        = image_tag post.picture.url(:thumb)

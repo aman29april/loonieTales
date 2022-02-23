@@ -1,0 +1,12 @@
+- if post.tagged?
+  .feed-metadata
+    = fa_icon('tag')
+    = link_to post.tag.name, post.tag
+- elsif post.recommended?
+  .feed-metadata
+    Recommended by #{link_to post.recommender.username, post.recommender}
+    - if (post.likes_count > 2)
+      and #{pluralize(post.likes.count - 1, 'other')}
+- elsif post.featured?
+  .feed-metadata
+    Featured by Stories Staff and recommended by #{pluralize(post.likes_count, 'other')}

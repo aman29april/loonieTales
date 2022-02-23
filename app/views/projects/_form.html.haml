@@ -1,0 +1,24 @@
+= form_with(model: [current_user, project], class: 'row g-3') do |form|
+  - if project.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(project.errors.count, "error")
+        prohibited this project from being saved:
+      %ul
+        - project.errors.each do |error|
+          %li= error.full_message
+  .row
+    .field.col-9
+      = form.label :title, class: 'form-label'
+      = form.text_field :title, class: 'form-control'
+    .field.col.form-check
+      = form.label :sort, class: 'form-label'
+      = form.text_field :sort, type: :number, class: 'form-control'
+    .col.form-check
+      = form.label :is_side, class: 'form-check-label'
+      = form.check_box :is_side, class: 'form-check-input'
+  .field.col-12
+    = form.label :description, class: 'form-label'
+    = form.rich_text_area :description, class: 'form-control'
+  .actions.col-12
+    = form.submit class: 'btn btn-primary'

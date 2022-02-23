@@ -1,0 +1,27 @@
+%nav.navbar.navbar-default.navbar-fixed-top.navbar-light.bg-light
+  .container-fluid.col-md-10.col-md-offset-1
+    .navbar-header
+      = link_to root_path, class: "navbar-brand", id: "logo" do
+        = image_tag('stories-logo.svg', height: 40, alt: "Stories")
+    %ul.navbar-nav.me-auto.filter-links
+      %li.nav-item
+        %a{"data-behavior" => "editor-message", :href => "#"}
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar.navbar-end
+        %li.publish-button.nav-item
+          %button.button.green-border-button.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+            Publish
+            %i.fa.fa-chevron-down
+          %ul.dropdown-menu.publish-dropdown.nav-dropdown
+            %span.dropdown-arrow-top
+            %span.dropdown-arrow-bottom
+            %div
+              %h4 Ready to Publish your work?
+              %p Add tags to reach more people
+              .clearfix{"data-behavior" => "tags", "data-tags" => "#{@post.all_tags}"}
+                #js-taggle{"data-behavior" => "autosave", :style => "position: relative;"}
+            %hr/
+            %div
+              %button.button.green-border-button.pull-right{"data-behavior" => "publish-button"} Publish
+        %li#notifications
+        = render 'layouts/avatar_dropdown'

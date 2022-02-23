@@ -39,9 +39,9 @@ gem 'font_awesome5_rails'
 gem 'jquery-rails'
 gem 'meta-tags'
 gem 'popper_js'
-gem 'prism-rails'
 gem 'react-rails'
 gem 'sitemap_generator'
+gem 'prism-rails'
 gem 'trix-rails', require: 'trix'
 
 gem 'friendly_id'
@@ -95,6 +95,9 @@ group :development do
 
   gem 'bullet'
   gem 'dotenv-rails'
+  gem "erb2haml"
+  # gem 'postwill'
+
 end
 
 group :test do
