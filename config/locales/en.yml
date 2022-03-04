@@ -40,6 +40,18 @@ en:
       title: 'CRS Score Calculator | CIC Express Entry Points Tool'
       description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
       keywords: 'CRS Score Calculator'
+    tax:
+      title: 'Canada Income Tax Calculator | Inhhand Salary Canada'
+      description: 'Canada Income Tax Calculator'
+      keywords: 'Canada Income Tax Calculator'
+    pnp:
+      title: 'CRS Score Calculator | CIC Express Entry Points Tool'
+      description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
+      keywords: 'CRS Score Calculator'
+    ielts:
+      title: 'CRS Score Calculator | CIC Express Entry Points Tool'
+      description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
+      keywords: 'CRS Score Calculator'
   jobs:
     lmia:
       title: 'Canada LMIA Jobs'

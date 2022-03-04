@@ -1,0 +1,266 @@
+.widget {
+  clear: both;
+  font-size: 1.1rem;
+}
+
+.widget-calculator th {
+  font-weight: 600;
+}
+.widget-calculator th.strong {
+  font-weight: 700;
+  color: #393a3d;
+}
+.widget-calculator-is-refund .btn {
+  background: #53b700 !important;
+  border-color: #53b700;
+}
+.site-content.calculator-is-refund .btn-cta:focus,
+.site-content.calculator-is-refund .btn-cta:hover {
+  background: #72c722 !important;
+  border-color: #72c722;
+}
+@media (min-width: 1200px) {
+  .widget {
+      padding: 3rem 0;
+      border-top: 0.1rem solid #dfd7dc;
+  }
+}
+// .form-control {
+//   height: 3rem;
+// }
+.form-group-calculate {
+  text-align: center;
+}
+@media (min-width: 374px) and (max-width: 1199px) {
+  .form-group-calculate .btn {
+      display: block;
+      width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-fields-inline .form-group:after {
+      display: table;
+      content: " ";
+      clear: both;
+  }
+  .form-fields-inline .form-control {
+      display: inline-block;
+      text-align: right;
+      float: right;
+      width: 16rem;
+  }
+  .form-fields-inline label {
+      line-height: 4rem;
+  }
+  .form-group-calculate {
+      text-align: right;
+  }
+}
+.results {
+  display: block;
+}
+.results > div {
+  margin: auto;
+}
+.potential-container {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.potential-title {
+  display: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.c {
+  display: none;
+  transform: rotate(-90deg);
+  margin: auto;
+  width: 10px;
+  height: 10px;
+}
+.results-title {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+.results-return {
+  color: #babec5;
+  font-size: 5rem;
+  font-weight: 600;
+}
+.results-note {
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .results {
+      text-align: center;
+  }
+}
+@media (max-width: 766px) {
+  #results {
+      padding-top: 1.5rem;
+  }
+  .results-note {
+      text-align: center;
+  }
+}
+
+.results-return.refund {
+  color: #53b700;
+}
+.results-return.balance {
+  color: #b80000;
+}
+.results-return.potential-refund {
+  color: #108000 !important;
+}
+.results-return.potential-balance {
+  color: #e43834 !important;
+}
+.results-val {
+  font-weight: 600;
+}
+.results-start {
+  display: none;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  border: 0.1rem solid #8d9096;
+  border-width: 0.1rem 0;
+  text-align: center;
+  color: #393a3d;
+}
+#results.is-init .results-start {
+  display: block;
+}
+.results-start h3 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.results-start .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+@media (max-width: 766px) {
+  .results-start {
+      position: relative;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #eceef1;
+      border-width: 0;
+      border-radius: 0.5rem;
+  }
+  .results-start:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(236, 238, 241, 0);
+      border-bottom-color: #eceef1;
+      border-width: 2rem;
+      margin-left: -2rem;
+  }
+  .results-start p {
+      margin-bottom: 0;
+  }
+}
+.results table {
+  width: 100%;
+}
+.results table tr {
+  border-bottom: 0.1rem solid #eceef1;
+}
+.results table tr.row-emph {
+  border-bottom-width: 0.3rem;
+}
+.results table td {
+  padding: 0.8rem 0;
+}
+.results table .title {
+  font-weight: 400;
+}
+.results table .value {
+  text-align: right;
+}
+.results table td,
+.results table th {
+  padding: 0.8rem 0;
+}
+.results table th {
+  font-weight: 400;
+}
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  opacity: 0;
+  z-index: 10;
+  margin-top: 40px;
+}
+.slider-container > label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.results-return.refund {
+  color: #53b700;
+}
+.results-return.balance {
+  color: #b80000;
+}
+.results-return.potential-refund {
+  color: #108000 !important;
+}
+.results-return.potential-balance {
+  color: #e43834 !important;
+}
+.results-val {
+  font-weight: 600;
+}
+.results-start {
+  display: none;
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  border: 0.1rem solid #8d9096;
+  border-width: 0.1rem 0;
+  text-align: center;
+  color: #393a3d;
+}
+.bullet {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background: #53b700;
+  text-indent: -999em;
+}
+
+.bullet-info {
+  display: inline-block;
+  background: 0;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  position: relative;
+  text-indent: 0;
+}
+
+.bullet-info:before {
+  display: block;
+  content: '';
+  width: 13px;
+  height: 13px;
+  background: url(info-alt.svg) 0 0 no-repeat;
+}
