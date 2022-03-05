@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Age from "./Age";
-import FirstLanguage from "./FirstLanguage";
+import Age from "./SectionA/Age";
+import FirstLanguage from "./SectionA/FirstLanguage";
+
 class HumanCapitalFactors extends React.Component {
   render () {
     return (
@@ -14,4 +15,4 @@ class HumanCapitalFactors extends React.Component {
   }
 }
 
-export default HumanCapitalFactors;
+export default HumanCapitalFactors
