@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import {Form} from "react-bootstrap";
-// import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import pointsJson from '../data/points.json';
+import {setCrs} from "../../../redux/crsStore";
 
 const NONE_OR_LESS_THAN_A_YEAR = "None or less than a year"
 const ONE_YEAR = "1 year"
@@ -13,59 +14,32 @@ const FIVE_YEARS_OR_MORE = "5 years or more"
 
 function CanadianWorkExperience(props) {
 
-    const [experience, setExperience] = useState(null)
+    const [experienceSelection, setExperienceSelection] = useState(null)
 
-    // const partnered = useSelector(state => state.partnered.value)
-    // const dispatch = useDispatch()
+    const experienceStore = useSelector(state => state.crsStore.userProfile.canadian_experience)
+    const partnered = useSelector(state => state.partnered.value)
+    const dispatch = useDispatch()
 
     const isPrincipal = props.target === 'principal'
 
     useEffect(() => {
-        const setUpJsonKey = (educationKey, partnerValue = null) => {
-            return partnerValue ?
-                pointsJson[educationKey][partnerValue] :
-                pointsJson[educationKey]
-        }
 
-        // if (!oldExperience && !newExperience) return
-        // const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
-        // let pointsToAdd
-        // if (oldExperience) {
-        //     pointsToAdd = setUpJsonKey(newExperience, partneredValue) -
-        //         setUpJsonKey(oldExperience, partneredValue)
-        // }
-        // else {
-        //     pointsToAdd = setUpJsonKey(newExperience, partneredValue)
-        // }
-        // setOldExperience(newExperience)
-        // dispatch(incrementByAmount(pointsToAdd))
-    }, [experience])
 
-    // useEffect(() => {
-    //     if (isPrincipal && newExperience) {
-    //         dispatch(setCanadianWorkExperienceValue(newExperience))
-    //     }
-    // }, [dispatch, newExperience])
-    //
-    // useEffect(() => {
-    //     if (!oldExperience) return
-    //     if (isPrincipal) {
-    //         const newPartneredValue = partnered ? 'partnered' : 'single'
-    //         const oldPartneredValue = partnered ? 'single' : 'partnered'
-    //         let pointsToAdd = pointsJson[oldExperience][newPartneredValue] -
-    //             pointsJson[oldExperience][oldPartneredValue]
-    //         dispatch(incrementByAmount(pointsToAdd))
-    //     }
-    //     else {
-    //         let pointsDifference = pointsJson[oldExperience]
-    //         if (!partnered) pointsDifference = pointsDifference * -1
-    //         dispatch(incrementByAmount(pointsDifference))
-    //     }
-    // }, [dispatch, partnered])
+        if (!experienceSelection) return
+        const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
+        // const points = setUpJsonKey(experienceSelection, partneredValue)
+        const points = pointsJson[experienceSelection][partneredValue]
+
+        dispatch(setCrs({canadian_experience: {
+                value: experienceSelection,
+                points: points
+            }}
+        ))
+    }, [experienceSelection, partnered])
 
     const handleCanadianWorkExperienceChange = (event) => {
         const pointsId = event.target.selectedOptions[0].id
-        setExperience(pointsId)
+        setExperienceSelection(pointsId)
     }
 
     return (
@@ -114,6 +88,10 @@ function CanadianWorkExperience(props) {
                               value={5}>{FIVE_YEARS_OR_MORE}</option>
                 </Form.Select>
             </Form.Group>
+
+            {/*<div>*/}
+            {/*    <Form.Text>{experienceStore ? experienceStore.points : 0}</Form.Text>*/}
+            {/*</div>*/}
         </div>
     )
 }

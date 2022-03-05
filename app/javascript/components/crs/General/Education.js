@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {Form, FormControl} from "react-bootstrap";
 import pointsJson from '../data/points.json';
 import {Tooltip} from "bootstrap";
+import {useDispatch, useSelector} from "react-redux";
+import {setCrs} from "../../../redux/crsStore";
 
 
 const LESS_THAN_SECONDARY_SCHOOL = "Less than secondary school (high school)"
@@ -15,10 +17,11 @@ const DOCTORAL_LEVEL = "Doctoral level university degree (Ph.D.)"
 
 function Education(props) {
 
-    const [educationValue, setEducationValue] = useState(null)
+    const [educationSelection, setEducationSelection] = useState(null)
 
-    // const partnered = useSelector(state => state.partnered.value)
-    // const dispatch = useDispatch()
+    const partnered = useSelector(state => state.partnered.value)
+    const educationStore = useSelector(state => state.crsStore.userProfile.education)
+    const dispatch = useDispatch()
 
     const isPrincipal = props.target === 'principal'
 
@@ -29,34 +32,20 @@ function Education(props) {
                 pointsJson[educationKey]
         }
 
-        if (!educationValue ) return
+        if (!educationSelection ) return
         const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
-        let pointsToAdd
-        pointsToAdd = setUpJsonKey(newEducationValue, partneredValue)
-        // dispatch(incrementByAmount(pointsToAdd))
-    }, [educationValue])
+        const points = setUpJsonKey(educationSelection, partneredValue)
+        dispatch(setCrs({education: {
+                value: educationSelection,
+                points: points
+            }}
+        ))
+    }, [educationSelection, partnered])
 
-
-
-    // useEffect(() => {
-    //     if (!oldEducationValue) return
-    //     if (isPrincipal) {
-    //         const newPartneredValue = partnered ? 'partnered' : 'single'
-    //         const oldPartneredValue = partnered ? 'single' : 'partnered'
-    //         let pointsToAdd = pointsJson[oldEducationValue][newPartneredValue] -
-    //             pointsJson[oldEducationValue][oldPartneredValue]
-    //         dispatch(incrementByAmount(pointsToAdd))
-    //     }
-    //     else {
-    //         let pointsDifference = pointsJson[oldEducationValue]
-    //         if (!partnered) pointsDifference = pointsDifference * -1
-    //         dispatch(incrementByAmount(pointsDifference))
-    //     }
-    // }, [dispatch, partnered])
 
     const handleEducationChange = (event) => {
         const pointsId = event.target.selectedOptions[0].id
-        setEducationValue(pointsId)
+        setEducationSelection(pointsId)
     }
 
     return (
@@ -82,28 +71,28 @@ function Education(props) {
                             isPrincipal ? 'one_year_degree' : 'spouse_one_year_degree'
                         }
                                   value={2}>
-                            <Tooltip title="One-year degree, diploma or certificate from  a
-                  university, college, trade or technical school, or other institute">
-                                <div>{ONE_YEAR_DEGREE}</div>
-                            </Tooltip>
+                  {/*          <Tooltip title="One-year degree, diploma or certificate from  a*/}
+                  {/*university, college, trade or technical school, or other institute">*/}
+                  {/*              <div>{ONE_YEAR_DEGREE}</div>*/}
+                  {/*          </Tooltip>*/}
                         </option>
                         <option id={
                             isPrincipal ? 'two_year_program' : 'spouse_two_year_program'
                         }
                                   value={3}>
-                            <Tooltip title="Two-year program at a university, college,
-                  trade or technical school, or other institute">
-                                <div>{TWO_YEAR_PROGRAM}</div>
-                            </Tooltip>
+                  {/*          <Tooltip title="Two-year program at a university, college,*/}
+                  {/*trade or technical school, or other institute">*/}
+                  {/*              <div>{TWO_YEAR_PROGRAM}</div>*/}
+                  {/*          </Tooltip>*/}
                         </option>
                         <option id={
                             isPrincipal ? 'bachelors_degree' : 'spouse_bachelors_degree'
                         }
                                   value={4}>
-                            <Tooltip title="Bachelor's degree OR a three or more year program at
-                  a university, college, trade or technical school, or other institute">
-                                <div>{BACHELORS_DEGREE}</div>
-                            </Tooltip>
+                  {/*          <Tooltip title="Bachelor's degree OR a three or more year program at*/}
+                  {/*a university, college, trade or technical school, or other institute">*/}
+                  {/*              <div>{BACHELORS_DEGREE}</div>*/}
+                  {/*          </Tooltip>*/}
                         </option>
                         <option id={
                             isPrincipal ?
@@ -111,21 +100,21 @@ function Education(props) {
                                 'spouse_two_or_more_certificates'
                         }
                                   value={5}>
-                            <Tooltip title="Two or more certificates, diplomas, or degrees.
-                  One must be for a program of three or more years	">
-                                <div>{TWO_OR_MORE_CERTIFICATES}</div>
-                            </Tooltip>
+                  {/*          <Tooltip title="Two or more certificates, diplomas, or degrees.*/}
+                  {/*One must be for a program of three or more years	">*/}
+                  {/*              <div>{TWO_OR_MORE_CERTIFICATES}</div>*/}
+                  {/*          </Tooltip>*/}
                         </option>
                         <option id={
                             isPrincipal ? 'masters_degree' : 'spouse_masters_degree'
                         }
                                   value={6}>
-                            <Tooltip title="Master's degree, OR professional degree needed to
-                    practice in a licensed profession (For “professional degree,” the
-                    degree program must have been in: medicine, veterinary medicine,
-                    dentistry, optometry, law, chiropractic medicine, or pharmacy.)	">
-                                <div>{MASTERS_DEGREE}</div>
-                            </Tooltip>
+                    {/*        <Tooltip title="Master's degree, OR professional degree needed to*/}
+                    {/*practice in a licensed profession (For “professional degree,” the*/}
+                    {/*degree program must have been in: medicine, veterinary medicine,*/}
+                    {/*dentistry, optometry, law, chiropractic medicine, or pharmacy.)	">*/}
+                    {/*            <div>{MASTERS_DEGREE}</div>*/}
+                    {/*        </Tooltip>*/}
                         </option>
                         <option id={
                             isPrincipal ? 'doctoral_level' : 'spouse_doctoral_level'
@@ -135,6 +124,9 @@ function Education(props) {
                     {/*<FormHelperText>Hover for more details (where applicable)</FormHelperText>*/}
                 </Form.Group>
             </div>
+            {/*<div>*/}
+            {/*    <Form.Text>{educationStore ? educationStore.points : 0}</Form.Text>*/}
+            {/*</div>*/}
         </div>
     );
 }

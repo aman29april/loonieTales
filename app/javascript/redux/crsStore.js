@@ -15,13 +15,24 @@ const crsStore = createSlice({
             })
 
             state.total = sum
+        },
+        removeCrsKey: (state, action) => {
+            delete state.userProfile[action.payload];
+
+            let sum = 0
+            Object.entries(state.userProfile).map(([key, value]) => {
+                sum += value['points']
+            })
+
+            state.total = sum
         }
     }
 
 })
 
 export const {
-    setCrs
+    setCrs,
+    removeCrsKey
 } = crsStore.actions
 
 export default crsStore.reducer

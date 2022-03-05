@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {Form, FormControl} from "react-bootstrap";
 import pointsJson from '../data/points.json';
+import {useDispatch, useSelector} from "react-redux";
+import {setCrs} from "../../../redux/crsStore";
 
 
 const CLB_4_OR_LESS = "CLB 4 or less";
@@ -11,9 +13,10 @@ const CLB_9_OR_MORE = "CLB 9 or more";
 function SubsidiaryLanguage(props) {
 
     const [secondLanguageSelection, setSecondLanguageSelection] = useState(null)
+    const languageStore = useSelector(state => state.crsStore.userProfile.secondary_language)
 
-    // const partnered = useSelector(state => state.partnered.value)
-    // const dispatch = useDispatch()
+    const partnered = useSelector(state => state.partnered.value)
+    const dispatch = useDispatch()
 
     const isPrincipal = props.target === 'principal'
 
@@ -26,12 +29,13 @@ function SubsidiaryLanguage(props) {
 
         if (!secondLanguageSelection ) return
         const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
-        let pointsToAdd
-        pointsToAdd = setUpJsonKey(secondLanguageSelection, partneredValue)
-
-        // setOldSecondLanguageSelection(newSecondLanguageSelection)
-        // dispatch(incrementByAmount(pointsToAdd))
-    }, [secondLanguageSelection])
+        const points = setUpJsonKey(secondLanguageSelection, partneredValue)
+        dispatch(setCrs({secondary_language: {
+                value: secondLanguageSelection,
+                points: points
+            }}
+        ))
+    }, [secondLanguageSelection, partnered])
 
 
 
@@ -67,6 +71,10 @@ function SubsidiaryLanguage(props) {
                               value={3}>{CLB_9_OR_MORE}</option>
                 </Form.Select>
             </Form.Group>
+
+            {/*<div>*/}
+            {/*    <Form.Text>{languageStore ? languageStore.points : 0}</Form.Text>*/}
+            {/*</div>*/}
         </div>
     )
 }

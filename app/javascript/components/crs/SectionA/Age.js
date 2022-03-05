@@ -7,10 +7,9 @@ import {setCrs} from "../../../redux/crsStore";
 
 
 function Age(props)  {
-    const [agePoints, setAgePoints] = useState(0)
     const [ageValue, setAgeValue] = useState(null)
-
     const partnered = useSelector(state => state.partnered.value)
+    const ageStore = useSelector(state => state.crsStore.userProfile.age)
     const dispatch = useDispatch()
 
     const getAgePointsKey = (age) => {
@@ -32,14 +31,13 @@ function Age(props)  {
         const newAgeKey = getAgePointsKey(ageValue)
         const partneredValue = partnered ? 'partnered' : 'single'
         const points = pointsJson[newAgeKey][partneredValue]
-        setAgePoints(points)
         dispatch(setCrs({age: {
                 value: ageValue,
                 points: points
             }}
         ))
 
-    }, [dispatch, ageValue, partnered])
+    }, [ ageValue, partnered])
 
 return (
     <div className="inputFieldDivs">
@@ -61,9 +59,9 @@ return (
             value={ageValue}
         ></Form.Control>
 
-        <div>
-            <Form.Text>{agePoints}</Form.Text>
-        </div>
+        {/*<div>*/}
+        {/*    <Form.Text>{ageStore ? ageStore.points : 0}</Form.Text>*/}
+        {/*</div>*/}
     </div>
 );
 

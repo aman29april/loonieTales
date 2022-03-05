@@ -15,9 +15,9 @@ const CLB_10_OR_MORE = "CLB 10 or more";
 
 function FirstLanguage(props)  {
 
-    const [firstLanguagePoints, setFirstLanguagePoints] = useState(null)
     const [firstLanguageSelection, setFirstLanguageSelection] = useState(null)
 
+    const firstLanguageStore = useSelector(state => state.crsStore.userProfile.first_language)
     const partnered = useSelector(state => state.partnered.value)
     const dispatch = useDispatch()
 
@@ -25,7 +25,7 @@ function FirstLanguage(props)  {
         const partneredValue = partnered ? 'partnered' : 'single'
         if(!firstLanguageSelection) return
         const points = pointsJson[firstLanguageSelection][partneredValue]
-        setFirstLanguagePoints(points)
+        // setFirstLanguagePoints(points)
         dispatch(setCrs({first_language: {
                 value: firstLanguageSelection,
                 points: points
@@ -41,7 +41,7 @@ function FirstLanguage(props)  {
     return (
         <div>
             <div className="inputFieldDivs">
-              {/*<Form.Control variant="outlinehandleFirstLanguageChanged" className="inputFields">*/}
+              <Form.Group variant="outlinehandleFirstLanguageChanged" className="inputFields">
                 <Form.Text>First Official Language</Form.Text>
                 <Form.Select
                     onChange={handleFirstLanguageChange}
@@ -62,12 +62,12 @@ function FirstLanguage(props)  {
                   <option id="first_lang_clb_10_or_more"
                             value={6}>{CLB_10_OR_MORE}</option>
                 </Form.Select>
-              {/*</Form.Control>*/}
+              </Form.Group>
             </div>
 
-            <div>
-                <Form.Text>{firstLanguagePoints}</Form.Text>
-            </div>
+            {/*<div>*/}
+            {/*    <Form.Text>{firstLanguageStore ? firstLanguageStore.points : 0}</Form.Text>*/}
+            {/*</div>*/}
         </div>
     );
 

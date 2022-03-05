@@ -1,7 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import HumanCapitalFactors from "./HumanCapitalFactors";
-import SectionA from "./SectionA/SectionA";
 import store from './../../redux/store'
 import {Provider, useSelector} from 'react-redux'
 import CrsCalculator from "./CrsCalculator";
