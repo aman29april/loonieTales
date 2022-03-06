@@ -4,9 +4,7 @@ import {Accordion, Form} from "react-bootstrap";
 import Education from "./General/Education";
 import SubsidiaryLanguage from "./General/SubsidiaryLanguage";
 import CanadianWorkExperience from "./General/CanadianWorkExperience";
-import {setValue} from "../../redux/partneredUpdate";
-
-
+import {setCrs, setCrsPartner} from "../../redux/crsStore";
 
 function SectionB(props) {
 
@@ -14,15 +12,22 @@ function SectionB(props) {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(setValue(hasPartner))
+        // dispatch(setValue(hasPartner))
+        dispatch(setCrsPartner(hasPartner))
+        //remove spouse values
+        // let data = {}
+        // data[storeKey] = {
+        //     value: experienceSelection,
+        //     points: points
+        // }
+        // dispatch(setCrs(data))
     }, [dispatch, hasPartner])
 
     return (
         <div>
-        <Accordion>
+        <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
                 <Accordion.Header
-                    // expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
@@ -37,13 +42,13 @@ function SectionB(props) {
                             label="Is Applicable?"
                             style={{marginBottom: '20px'}}
                                 onChange={() => setHasPartner(!hasPartner)}
-                                />
+                                /> <br/>
                         <div style={{ display: hasPartner ? 'inline' : 'none' }}>
                             <Education
-                                target='spouse' />
+                                target='spouse' /> <br/>
                             <SubsidiaryLanguage
                                 target='spouse'
-                                title="First Official Language" />
+                                title="First Official Language" /> <br/>
                             <CanadianWorkExperience
                                 target='spouse' />
                         </div>

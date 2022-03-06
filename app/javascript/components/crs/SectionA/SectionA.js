@@ -10,7 +10,7 @@ function SectionA(props) {
 
     return (
         <div>
-            <Accordion>
+            <Accordion defaultActiveKey={['0']} alwaysOpen >
                 <Accordion.Item eventKey="0">
                     <Accordion.Header
                         // expandIcon={<ExpandMoreIcon />}
@@ -24,13 +24,15 @@ function SectionA(props) {
                         <div style={{width: '100%'}}>
 
                             <Age />
-                            <FirstLanguage />
+                            <br/>
                             <Education target='principal' />
-
+                            <br/>
+                            <FirstLanguage />
+                            <br/>
                             <SubsidiaryLanguage
                                 title="Second Official Language"
                                 target='principal' />
-
+                            <br/>
                             <CanadianWorkExperience
                                 target='principal' />
                         </div>

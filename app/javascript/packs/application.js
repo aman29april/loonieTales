@@ -22,6 +22,8 @@ import "@fortawesome/fontawesome-free/js/all"
 import 'prismjs';
 import 'copy-to-clipboard'
 import "../trix-editor-overrides"
+import "./overrides"
+
 
 Rails.start()
 Turbolinks.start()
@@ -46,6 +48,7 @@ document.addEventListener('turbolinks:load', () => {
 
     gtag('config', 'G-Q10GQWEB40', {'page_location': event.data.url});
 });
+
 
 
 import 'bootstrap-tagsinput'

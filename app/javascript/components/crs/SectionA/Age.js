@@ -4,11 +4,12 @@ import {Form, FormText} from "react-bootstrap";
 import pointsJson from '../data/points.json';
 import { useDispatch, useSelector } from 'react-redux'
 import {setCrs} from "../../../redux/crsStore";
+import {PROVINCIAL_CODES} from "@equisoft/tax-ca";
 
 
 function Age(props)  {
     const [ageValue, setAgeValue] = useState(null)
-    const partnered = useSelector(state => state.partnered.value)
+    const partnered = useSelector(state => state.crsStore.partnered)
     const ageStore = useSelector(state => state.crsStore.userProfile.age)
     const dispatch = useDispatch()
 
@@ -39,25 +40,36 @@ function Age(props)  {
 
     }, [ ageValue, partnered])
 
+    function ageOptions(){
+        const first = {'17 years of age or less': 17}
+        const last = {'45 years of age or more': 45}
+        let middle = {}
+        for(let i = 18; i<=44; i++){
+            middle[i + ' years of age'] = i;
+        }
+        const all =  {...first, ...middle, ...last}
+        return Object.entries(all).map(([key,value]) => {
+            return(<option key={value} value={value}>{key}</option>)
+        })
+    }
+
 return (
     <div className="inputFieldDivs">
 
-        <Form.Text>Age</Form.Text>
-        <Form.Control
-            className="form-control"
-            type="number"
-            id="age"
+        <Form.Label className='fw-bold'>How old are you?</Form.Label>
+
+        <Form.Select
+            onChange={(e) => setAgeValue(e.target.selectedOptions[0].value) }
             label="Age"
             placeholder="Age"
-            onChange={(e) => {
-                const age = e.target.value;
-                const re = /^[0-9]+$/;
-                if (age === '' || re.test(age)){
-                    setAgeValue(age)
-                }
-            }}
-            value={ageValue}
-        ></Form.Control>
+        >
+            <option value="default" selected disabled>
+                Select...
+            </option>
+            {
+                ageOptions()
+            }
+        </Form.Select>
 
         {/*<div>*/}
         {/*    <Form.Text>{ageStore ? ageStore.points : 0}</Form.Text>*/}

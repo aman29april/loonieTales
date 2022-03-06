@@ -18,7 +18,7 @@ function FirstLanguage(props)  {
     const [firstLanguageSelection, setFirstLanguageSelection] = useState(null)
 
     const firstLanguageStore = useSelector(state => state.crsStore.userProfile.first_language)
-    const partnered = useSelector(state => state.partnered.value)
+    const partnered = useSelector(state => state.crsStore.partnered)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -41,26 +41,31 @@ function FirstLanguage(props)  {
     return (
         <div>
             <div className="inputFieldDivs">
-              <Form.Group variant="outlinehandleFirstLanguageChanged" className="inputFields">
-                <Form.Text>First Official Language</Form.Text>
+              <Form.Group variant="outlinehandle FirstLanguageChanged" className="inputFields">
+                <Form.Label className='fw-bold'>First Official Language</Form.Label>
+                  <p>Canada’s official languages are <b>English</b> and <b>French</b>.</p>
+                  <p>You need to submit language test results that are less than two years old for all programs under Express Entry, even if English or French is your first language.</p>
                 <Form.Select
                     onChange={handleFirstLanguageChange}
                     label="First Official Language"
                 >
-                  <option id="first_lang_less_than_clb_4"
-                            value={0}>{LESS_THAN_CLB_4}</option>
-                  <option id="first_lang_clb_4_5"
-                            value={1}>{CLB_4_OR_5}</option>
-                  <option id="first_lang_clb_6"
-                            value={2}>{CLB_6}</option>
-                  <option id="first_lang_clb_7"
-                            value={3}>{CLB_7}</option>
-                  <option id="first_lang_clb_8"
-                            value={4}>{CLB_8}</option>
-                  <option id="first_lang_clb_9"
-                            value={5}>{CLB_9}</option>
-                  <option id="first_lang_clb_10_or_more"
-                            value={6}>{CLB_10_OR_MORE}</option>
+                    <option value="default" selected disabled>
+                        Select...
+                    </option>
+                      <option id="first_lang_less_than_clb_4"
+                                value={0}>{LESS_THAN_CLB_4}</option>
+                      <option id="first_lang_clb_4_5"
+                                value={1}>{CLB_4_OR_5}</option>
+                      <option id="first_lang_clb_6"
+                                value={2}>{CLB_6}</option>
+                      <option id="first_lang_clb_7"
+                                value={3}>{CLB_7}</option>
+                      <option id="first_lang_clb_8"
+                                value={4}>{CLB_8}</option>
+                      <option id="first_lang_clb_9"
+                                value={5}>{CLB_9}</option>
+                      <option id="first_lang_clb_10_or_more"
+                                value={6}>{CLB_10_OR_MORE}</option>
                 </Form.Select>
               </Form.Group>
             </div>

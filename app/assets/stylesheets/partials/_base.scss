@@ -1,11 +1,22 @@
 html {
   background-color: $white;
 }
-body {
+body,button,input,select,textarea {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   background-color: $white;
+  line-height: 1.5;
+  font-weight: 400;
 }
+
+// body,button,input,select,textarea {
+//     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+//     font-weight: 400;
+//     text-transform: none;
+//     font-size: 17px;
+//     line-height: 1.5
+// }
+
 
 .side-padding-5 {
   padding: 0 5%;

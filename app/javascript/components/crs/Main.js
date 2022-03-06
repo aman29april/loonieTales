@@ -8,8 +8,6 @@ function Main(props){
 
     return (
         <Provider store={store}>
-            <h3>Canada PR Application (Express Entry CRS)</h3>
-
             <CrsCalculator></CrsCalculator>
         </Provider>
 

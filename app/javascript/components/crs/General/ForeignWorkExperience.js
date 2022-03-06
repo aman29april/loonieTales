@@ -7,7 +7,7 @@ function ForeignWorkExperience(props) {
             <div className="inputFieldDivs">
                 <h5>{props.title}</h5>
                 <Form.Group variant="outlined" className="inputFields">
-                    <Form.Text>Select One</Form.Text>
+                    {/*<Form.Label>Select One</Form.Label>*/}
                     <Form.Select
                         label="Education"
                         onChange={(e) => props.onChange(e.target.selectedOptions[0].id) }

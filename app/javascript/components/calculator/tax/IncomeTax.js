@@ -71,8 +71,13 @@ function IncomeTax(props)  {
                             </option>
                             {
                                 Object.entries(PROVINCIAL_CODES).map(([name, code]) => {
-                                    return(<option key={code} value={code}>{name}</option>)
-                                    // console.log(code)
+                                    return(
+                                        <option key={code} value={code}>
+                                        {
+                                            name.split('_').join(' ').toTileCase()
+                                        }
+                                    </option>
+                                    )
                                 })
                             }
                         </Form.Select>
@@ -100,6 +105,12 @@ function IncomeTax(props)  {
 
                     </Form.Group>
                 </form>
+
+                <div className="info"><p></p><p><strong>Alert!</strong> This calculator is without any warranty for general guidance and reference purposes only</p>
+                    <ul type="disc">
+
+                    </ul>
+                </div>
 
 
             </div>

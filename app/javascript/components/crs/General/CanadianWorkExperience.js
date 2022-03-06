@@ -14,27 +14,31 @@ const FIVE_YEARS_OR_MORE = "5 years or more"
 
 function CanadianWorkExperience(props) {
 
-    const [experienceSelection, setExperienceSelection] = useState(null)
+    const isPrincipal = props.target === 'principal'
+    const storeKey = isPrincipal ? 'canadian_experience' : 'spouse_canadian_experience'
 
-    const experienceStore = useSelector(state => state.crsStore.userProfile.canadian_experience)
-    const partnered = useSelector(state => state.partnered.value)
+    const [experienceSelection, setExperienceSelection] = useState(null)
+    // const experienceStore = useSelector(state => state.crsStore.userProfile[storeKey])
+    const partnered = useSelector(state => state.crsStore.partnered)
     const dispatch = useDispatch()
 
-    const isPrincipal = props.target === 'principal'
-
     useEffect(() => {
-
+        const setUpJsonKey = (educationKey, partnerValue = null) => {
+            return partnerValue ?
+                pointsJson[educationKey][partnerValue] :
+                pointsJson[educationKey]
+        }
 
         if (!experienceSelection) return
         const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
-        // const points = setUpJsonKey(experienceSelection, partneredValue)
-        const points = pointsJson[experienceSelection][partneredValue]
+        const points = setUpJsonKey(experienceSelection, partneredValue)
 
-        dispatch(setCrs({canadian_experience: {
-                value: experienceSelection,
-                points: points
-            }}
-        ))
+        let data = {}
+        data[storeKey] = {
+            value: experienceSelection,
+            points: points
+        }
+        dispatch(setCrs(data))
     }, [experienceSelection, partnered])
 
     const handleCanadianWorkExperienceChange = (event) => {
@@ -45,11 +49,26 @@ function CanadianWorkExperience(props) {
     return (
         <div className="inputFieldDivs">
             <Form.Group variant="outlined" className="inputFields">
-                <Form.Text>Canadian work experience</Form.Text>
+                <Form.Label className='fw-bold'>Skilled work experience in Canada</Form.Label>
+                {isPrincipal &&
+                <div>
+                    <p>In the last ten years, how many years of skilled work experience in Canada do you have?</p>
+                    <p>It must have been paid and full-time (or an equal amount in part-time).</p>
+                    <p>“Skilled work” in the NOC is:</p>
+                    <ul>
+                        <li>managerial jobs (NOC Skill Level 0)</li>
+                        <li>professional jobs (NOC Skill Type A)</li>
+                        <li>technical jobs and skilled trades/manual work (NOC Skill Type B)</li>
+                    </ul>
+                </div>
+                }
                 <Form.Select
                     onChange={handleCanadianWorkExperienceChange}
                     label="Canadian work experience"
                 >
+                    <option value="default" selected disabled>
+                        Select...
+                    </option>
                     <option id={
                         isPrincipal ?
                             'canadian_work_exp_none_or_less_than_1_year' :

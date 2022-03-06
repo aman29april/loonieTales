@@ -11,8 +11,8 @@ const NCLC_7_HIGHER_CLB_4_LOWER = 'nclc_7_or_higher_and_clb_4_or_lower'
 const NCLC_7_HIGHER_CLB_5_HIGHER = 'nclc_7_or_higher_and_clb_5_or_higher'
 const POST_SECONDARY_EDUCATION_CANADA_1_2_YEARS = 'post_secondary_education_in_canada_1_or_2_years'
 const POST_SECONDARY_EDUCATION_CANADA_3_YEARS = 'post_secondary_education_in_canada_3_years_longer'
-const ARRANGED_EMPLOYMENT_NOC_00 = 'arranged_employment_noc_00'
-const ARRANGED_EMPLOYMENT_NOC_0_A_B = 'arranged_employment_noc_0_a_b'
+const ARRANGED_EMPLOYMENT_NOC_00 = 'arranged_employment_NOC_00'
+const ARRANGED_EMPLOYMENT_NOC_0_A_B = 'arranged_employment_NOC_0/A/B'
 const PROVINCIAL_TERRITORIAL_NOMINATION = 'provincial_nomination'
 
 function SectionD(props) {
@@ -84,7 +84,7 @@ function SectionD(props) {
     }
 
     return (
-        <Accordion>
+        <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
                 <Accordion.Header
                     // expandIcon={<ExpandMoreIcon />}
@@ -100,7 +100,7 @@ function SectionD(props) {
                     <FormCheckbox
                         onChange={() => checkBoxClick(SIBLING_IN_CANADA)}
                         title="Brother or sister living in
-            Canada who is a citizen or permanent resident of Canada"/>
+            Canada who is a citizen or PR of Canada"/>
                     <FormCheckbox
                         onChange={() => checkBoxClick(NCLC_7_HIGHER_CLB_4_LOWER)}
                         title="Scored NCLC 7 or higher on all four

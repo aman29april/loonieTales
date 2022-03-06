@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import SectionA from "./SectionA/SectionA";
 import {useSelector} from "react-redux";
 import crsStore from "../../redux/crsStore";
@@ -8,17 +7,17 @@ import SectionC from "./SectionC";
 import SectionD from "./SectionD";
 import {Form} from "react-bootstrap";
 import {Button} from "bootstrap";
-
+import {ResultTable} from "./common";
 
 function CrsCalculator(props){
     const totalPoints = useSelector(state => state.crsStore.total)
     const userProfile = useSelector(state => state.crsStore.userProfile)
+    const partnered = useSelector(state => state.crsStore.partnered)
 
     return (
-        <div style={{display: 'flex'}} className='mb-lg-5'>
+        <div style={{}} className='mb-lg-5 row'>
             <div id="currentScore" className='col-md-7'>
                 <Form>
-
                     <SectionA></SectionA>
                     <br/>
                     <SectionB />
@@ -37,7 +36,7 @@ function CrsCalculator(props){
                 </Form>
             </div>
 
-            <div className='col-md-4 results'>
+            <div className='col-md-4 results sticky-top'>
                 <div className="text-center-xs">
                     <span className="results-title">Total Points</span>
                     <div className='results-return'>{totalPoints} </div>
@@ -45,20 +44,24 @@ function CrsCalculator(props){
 
 
                 <table className='table center'>
-                    <thead>
-                        <th>Type</th>
-                        <th> Points</th>
-                    </thead>
+                    {/*<thead>*/}
+                    {/*    <th>Type</th>*/}
+                    {/*    <th> Points</th>*/}
+                    {/*</thead>*/}
                     <tbody>
+                      <ResultTable userProfile={userProfile} partnered={partnered}/>
                         {
-                            Object.entries(userProfile).map(([key, value]) => {
-                                return (
-                                    <tr>
-                                        <td>{key.toUpperCase()}</td>
-                                        <td>{value.points}</td>
-                                    </tr>
-                                )
-                            })
+
+
+                            // Object.entries(userProfile).map(([key, value]) => {
+                            //
+                            //     return (
+                            //         <tr>
+                            //             <td>{key.toUpperCase()}</td>
+                            //             <td>{value.points}</td>
+                            //         </tr>
+                            //     )
+                            // })
                         }
                     </tbody>
                 </table>

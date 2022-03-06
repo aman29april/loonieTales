@@ -48,10 +48,10 @@ en:
       title: 'CRS Score Calculator | CIC Express Entry Points Tool'
       description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
       keywords: 'CRS Score Calculator'
-    ielts:
-      title: 'CRS Score Calculator | CIC Express Entry Points Tool'
-      description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'
-      keywords: 'CRS Score Calculator'
+    ieltsToClb:
+      title: 'IELTS to CLB calculator | Convert IELTS Score Into CLB'
+      description: 'Convert IELTS Score Into CLB'
+      keywords: 'IELTS Score Into CLB Calculator'
   jobs:
     lmia:
       title: 'Canada LMIA Jobs'

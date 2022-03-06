@@ -17,13 +17,13 @@ const DOCTORAL_LEVEL = "Doctoral level university degree (Ph.D.)"
 
 function Education(props) {
 
+    const isPrincipal = props.target === 'principal'
+    const storeKey = isPrincipal ? 'education' : 'spouse_education'
     const [educationSelection, setEducationSelection] = useState(null)
 
-    const partnered = useSelector(state => state.partnered.value)
-    const educationStore = useSelector(state => state.crsStore.userProfile.education)
+    const partnered = useSelector(state => state.crsStore.partnered)
+    const educationStore = useSelector(state => state.crsStore.userProfile[storeKey])
     const dispatch = useDispatch()
-
-    const isPrincipal = props.target === 'principal'
 
     useEffect(() => {
         const setUpJsonKey = (educationKey, partnerValue = null) => {
@@ -35,11 +35,12 @@ function Education(props) {
         if (!educationSelection ) return
         const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
         const points = setUpJsonKey(educationSelection, partneredValue)
-        dispatch(setCrs({education: {
-                value: educationSelection,
-                points: points
-            }}
-        ))
+        let data = {}
+        data[storeKey] = {
+            value: educationSelection,
+            points: points
+        }
+        dispatch(setCrs(data))
     }, [educationSelection, partnered])
 
 
@@ -52,11 +53,24 @@ function Education(props) {
         <div>
             <div className="inputFieldDivs">
                 <Form.Group variant="outlined" className="inputFields">
-                    <Form.Text>Education</Form.Text>
+                    <Form.Label className='fw-bold'>What is your level of education?</Form.Label>
+                    {isPrincipal &&
+                        <div>
+                            <p>Enter the highest level of education for which you:</p>
+                            <ul>
+                                <li>earned a <strong>Canadian degree, diploma or certificate</strong> or</li>
+                                <li>had an Educational Credential Assessment (ECA) if you did your study outside Canada. (ECAs must be from an approved agency, in the last five years)</li>
+                            </ul>
+                        </div>
+                    }
                     <Form.Select
                         onChange={handleEducationChange}
                         label="Education"
                     >
+                        <option value="default" selected disabled>
+                            Select...
+                        </option>
+
                         <option id={
                             isPrincipal ?
                                 'less_than_secondary_school' :
@@ -73,7 +87,7 @@ function Education(props) {
                                   value={2}>
                   {/*          <Tooltip title="One-year degree, diploma or certificate from  a*/}
                   {/*university, college, trade or technical school, or other institute">*/}
-                  {/*              <div>{ONE_YEAR_DEGREE}</div>*/}
+                            {ONE_YEAR_DEGREE}
                   {/*          </Tooltip>*/}
                         </option>
                         <option id={
@@ -82,7 +96,7 @@ function Education(props) {
                                   value={3}>
                   {/*          <Tooltip title="Two-year program at a university, college,*/}
                   {/*trade or technical school, or other institute">*/}
-                  {/*              <div>{TWO_YEAR_PROGRAM}</div>*/}
+                                {TWO_YEAR_PROGRAM}
                   {/*          </Tooltip>*/}
                         </option>
                         <option id={
@@ -91,7 +105,7 @@ function Education(props) {
                                   value={4}>
                   {/*          <Tooltip title="Bachelor's degree OR a three or more year program at*/}
                   {/*a university, college, trade or technical school, or other institute">*/}
-                  {/*              <div>{BACHELORS_DEGREE}</div>*/}
+                            {BACHELORS_DEGREE}
                   {/*          </Tooltip>*/}
                         </option>
                         <option id={
@@ -102,7 +116,7 @@ function Education(props) {
                                   value={5}>
                   {/*          <Tooltip title="Two or more certificates, diplomas, or degrees.*/}
                   {/*One must be for a program of three or more years	">*/}
-                  {/*              <div>{TWO_OR_MORE_CERTIFICATES}</div>*/}
+                                {TWO_OR_MORE_CERTIFICATES}
                   {/*          </Tooltip>*/}
                         </option>
                         <option id={
@@ -113,7 +127,7 @@ function Education(props) {
                     {/*practice in a licensed profession (For “professional degree,” the*/}
                     {/*degree program must have been in: medicine, veterinary medicine,*/}
                     {/*dentistry, optometry, law, chiropractic medicine, or pharmacy.)	">*/}
-                    {/*            <div>{MASTERS_DEGREE}</div>*/}
+                              {MASTERS_DEGREE}
                     {/*        </Tooltip>*/}
                         </option>
                         <option id={

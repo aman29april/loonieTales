@@ -15,7 +15,7 @@
     .col
       .field
         = select_tag :province, options_for_select(Province.all, params[:province]), {class: 'form-control',
-        placeholder: 'Province', include_blank: true}
+        placeholder: 'Province', include_blank: 'Select Province'}
     .col
       .actions
         = submit_tag "Search", class: 'btn btn-primary'

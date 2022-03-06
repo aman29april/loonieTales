@@ -203,7 +203,7 @@ function SectionC(props) {
 
     return (
 
-        <Accordion>
+        <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
                 <Accordion.Header
                     // expandIcon={<ExpandMoreIcon />}
@@ -230,7 +230,7 @@ function SectionC(props) {
                     {/*    {`Additional Points Earned - ${second ? second : 0}`}*/}
                     {/*</h5>*/}
                     {/*<Divider />*/}
-                    <h4>Foreign work experience</h4>
+                    {/*<h4>Foreign work experience</h4>*/}
                     {/*<Divider />*/}
                     <ForeignWorkExperience
                         title="Foreign work experience"

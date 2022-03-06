@@ -12,13 +12,14 @@ const CLB_9_OR_MORE = "CLB 9 or more";
 
 function SubsidiaryLanguage(props) {
 
-    const [secondLanguageSelection, setSecondLanguageSelection] = useState(null)
-    const languageStore = useSelector(state => state.crsStore.userProfile.secondary_language)
-
-    const partnered = useSelector(state => state.partnered.value)
-    const dispatch = useDispatch()
-
     const isPrincipal = props.target === 'principal'
+    const storeKey = isPrincipal ? 'secondary_language' : 'spouse_language'
+
+    const [secondLanguageSelection, setSecondLanguageSelection] = useState(null)
+    const languageStore = useSelector(state => state.crsStore.userProfile[storeKey])
+
+    const partnered = useSelector(state => state.crsStore.partnered)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         const setUpJsonKey = (educationKey, partnerValue = null) => {
@@ -30,11 +31,13 @@ function SubsidiaryLanguage(props) {
         if (!secondLanguageSelection ) return
         const partneredValue = isPrincipal ? (partnered ? 'partnered' : 'single') : null
         const points = setUpJsonKey(secondLanguageSelection, partneredValue)
-        dispatch(setCrs({secondary_language: {
-                value: secondLanguageSelection,
-                points: points
-            }}
-        ))
+
+        let data = {}
+        data[storeKey] = {
+            value: secondLanguageSelection,
+            points: points
+        }
+        dispatch(setCrs(data))
     }, [secondLanguageSelection, partnered])
 
 
@@ -47,11 +50,20 @@ function SubsidiaryLanguage(props) {
     return (
         <div className="inputFieldDivs">
             <Form.Group variant="outlined" className="inputFields mb-3">
-                <Form.Text>{props.title}</Form.Text>
+                <Form.Label className='fw-bold'>{props.title}</Form.Label>
+                {isPrincipal &&
+                    <div>
+                        <p>If so, which language test did you take for your second official language?</p>
+                        <p>Test results must be less than two years old.</p>
+                    </div>
+                }
                 <Form.Select
                     onChange={handleSubsidiaryLanguageChange}
                     label={props.title}
                 >
+                    <option value="default" selected disabled>
+                        Select...
+                    </option>
                     <option id={isPrincipal ?
                         'second_lang_clb_4_or_less' :
                         'spouse_first_lang_clb_4_or_less'}
@@ -71,10 +83,6 @@ function SubsidiaryLanguage(props) {
                               value={3}>{CLB_9_OR_MORE}</option>
                 </Form.Select>
             </Form.Group>
-
-            {/*<div>*/}
-            {/*    <Form.Text>{languageStore ? languageStore.points : 0}</Form.Text>*/}
-            {/*</div>*/}
         </div>
     )
 }

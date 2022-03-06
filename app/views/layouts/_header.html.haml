@@ -12,15 +12,15 @@
       #navbarSupportedContent.collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-end.me-auto.mb-2.mb-lg-0
           %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
-              Calculator
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "/calculators", :role => "button"}
+              Calculators
             %ul.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
               %li
                 %a.dropdown-item{:href => "/crs-calculator"} CRS
               %li
                 %a.dropdown-item{:href => "/tax-calculator"} Tax
-              -#%li
-                -#%a.dropdown-item{:href => "/tags/strings"} IELTS
+              %li
+                %a.dropdown-item{:href => "/ielts-to-clb-calculator"} IELTS to CLB
       %ul.nav.navbar-nav.navbar-end.me-auto.mb-2.mb-lg-0
         %li.nav-item
           %a.nav-link{:href => "/info/about-us"}

@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   post 'posts/create_and_edit' => 'posts#create_and_edit', as: :post_create_and_edit
   get 'crs-calculator', to: 'calculator#crs'
   get 'tax-calculator', to: 'calculator#tax'
+  get 'ielts-to-clb-calculator', to: 'calculator#ieltsToClb'
+
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]
 
