@@ -56,6 +56,8 @@ gem 'config'
 gem 'carrierwave'                 # Image uploader
 gem 'image_processing'
 gem 'mini_magick'                 # resizable image
+gem 'cloudinary'
+
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

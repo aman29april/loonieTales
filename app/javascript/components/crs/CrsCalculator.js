@@ -1,7 +1,6 @@
 import React from "react"
 import SectionA from "./SectionA/SectionA";
 import {useSelector} from "react-redux";
-import crsStore from "../../redux/crsStore";
 import SectionB from "./SectionB";
 import SectionC from "./SectionC";
 import SectionD from "./SectionD";
@@ -39,7 +38,7 @@ function CrsCalculator(props){
             <div className='col-md-4 results sticky-top'>
                 <div className="text-center-xs">
                     <span className="results-title">Total Points</span>
-                    <div className='results-return'>{totalPoints} </div>
+                    <div className='results-return text-success'>{totalPoints} </div>
                 </div>
 
 
@@ -50,19 +49,6 @@ function CrsCalculator(props){
                     {/*</thead>*/}
                     <tbody>
                       <ResultTable userProfile={userProfile} partnered={partnered}/>
-                        {
-
-
-                            // Object.entries(userProfile).map(([key, value]) => {
-                            //
-                            //     return (
-                            //         <tr>
-                            //             <td>{key.toUpperCase()}</td>
-                            //             <td>{value.points}</td>
-                            //         </tr>
-                            //     )
-                            // })
-                        }
                     </tbody>
                 </table>
 

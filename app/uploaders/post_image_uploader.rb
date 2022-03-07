@@ -1,24 +1,23 @@
 # require 'carrierwave/processing/mime_types'
 
 class PostImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
+  # include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
   # include CarrierWave::MimeTypes
   # process :set_content_type
 
   process resize_to_limit: [1024, 512]
+  process :convert => 'jpg'
+  process :tags => ['post_picture']
+  cloudinary_transformation :quality => 80
 
   version :thumb do
     process resize_to_fill: [512, 256]
+    process :convert => 'jpg'
+    cloudinary_transformation :quality => 90
   end
 
-  # if Rails.env.production? || Rails.env.staging?
-  #   storage :fog
-  # else
-  #   storage :file
-  # end
-  #
-
-  storage :file
+  # storage :file
 
   def store_dir
     "uploads/project/#{mounted_as}/#{model.id}/"
@@ -30,6 +29,10 @@ class PostImageUploader < CarrierWave::Uploader::Base
 
   def filename
     "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  def public_id
+    return model.slug
   end
 
   protected

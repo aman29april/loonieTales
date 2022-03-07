@@ -7,7 +7,7 @@
     = render 'post_metadata', post: @post
     - if @post.picture?
       .post-picture-wrapper
-        = image_tag @post.picture.url(:thumb)
+        = image_tag @post.picture.url
     %h3.title= @post.title
     .body
       / <p><haml_silent></haml_silent></p>

@@ -31,7 +31,7 @@ function SectionB(props) {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <h4>B. Spouse or common-law partner factors (if applicable)</h4>
+                    <h4>B. Spouse or common-law partner factors</h4>
                 </Accordion.Header>
                 <Accordion.Body>
                     <div style={{width: '100%'}}>

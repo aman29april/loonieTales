@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react"
-import PropTypes from "prop-types"
 import {Form, FormText, OverlayTrigger, Overlay, Tooltip, Button} from "react-bootstrap";
 import Popover from 'react-bootstrap/Popover'
 import {
@@ -59,7 +58,7 @@ function IncomeTax(props)  {
             <div className="col-md-6 ">
                 <form className='form-calculator-tax'>
                     <Form.Group>
-                        <Form.Text>Province</Form.Text>
+                        <Form.Label>Province</Form.Label>
 
                         <Form.Select
                             onChange={handleProvinceChange}
@@ -82,9 +81,9 @@ function IncomeTax(props)  {
                             }
                         </Form.Select>
                     </Form.Group>
-
+                    <br/>
                     <Form.Group>
-                        <Form.Text>Income</Form.Text>
+                        <Form.Label>Income</Form.Label>
                         <NumberFormat
                             thousandSeparator={true}
                             prefix={'$'}

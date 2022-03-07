@@ -33,7 +33,7 @@ function IeltsToClb(props)  {
                     <div className='row'>
                         <div className='col-md-6'>
                             <Form.Group>
-                                <Form.Text>Listening</Form.Text>
+                                <Form.Label>Listening</Form.Label>
 
                                 <Form.Select
                                     onChange={(e) => setListening(e.target.value)}
@@ -54,7 +54,7 @@ function IeltsToClb(props)  {
 
                         <div className='col-md-6'>
                             <Form.Group>
-                                <Form.Text>Reading</Form.Text>
+                                <Form.Label>Reading</Form.Label>
 
                                 <Form.Select
                                     onChange={(e) => setReading(e.target.value)}
@@ -73,11 +73,11 @@ function IeltsToClb(props)  {
                             </Form.Group>
                         </div>
                     </div>
-
+                    <br/>
                     <div className='row'>
                         <div className='col-md-6'>
                             <Form.Group>
-                                <Form.Text>Speaking</Form.Text>
+                                <Form.Label>Speaking</Form.Label>
 
                                 <Form.Select
                                     onChange={(e) => setSpeaking(e.target.value)}
@@ -98,7 +98,7 @@ function IeltsToClb(props)  {
 
                         <div className='col-md-6'>
                             <Form.Group>
-                                <Form.Text>Writing</Form.Text>
+                                <Form.Label >Writing</Form.Label>
 
                                 <Form.Select
                                     onChange={(e) => setWriting(e.target.value)}

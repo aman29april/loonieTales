@@ -1,8 +1,3 @@
 .youtubePreview.video
   .thumb.video-wrap
-    %img.image{src: data[:thumbnail]}
-    .play-btn
-  -#.youtubePreview{style: "background-image: url('#{ data[:thumbnail]}')"}
-
-
-  -#%iframe{:allowfullscreen => "", :src => "https://www.youtube.com/embed/#{data[:id]}", :title => "YouTube video", rel: '0', allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"}
+    =link_to image_tag(data[:thumbnail], border: 0, class: 'image') , data[:url], class: 'text-reset no-underline', target: '_blank'

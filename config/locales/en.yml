@@ -36,6 +36,10 @@ en:
       keywords: 'Canada Immigration, Canada Jobs, Work Permit Canada, Life in Canada'
       description: 'Loonie Tales is our journey to Canada'
   calculators:
+    index:
+      title: 'Canada Calculators'
+      description: 'Canada Calculators'
+      keywords: 'Canada Calculators'
     crs:
       title: 'CRS Score Calculator | CIC Express Entry Points Tool'
       description: 'Get a free Express Entry CRS assessment. Calculate your CRS points'

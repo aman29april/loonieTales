@@ -2,6 +2,12 @@
 SitemapGenerator::Sitemap.default_host = 'https://loonietales.herokuapp.com'
 SitemapGenerator::Sitemap.compress = :all_but_first
 
+add crs_calculator_path, :priority => 0.7, :changefreq => 'monthly'
+add tax_calculator_path, :priority => 0.7, :changefreq => 'monthly'
+add ielts_to_clb_calculator_path, :priority => 0.7, :changefreq => 'monthly'
+add calculators_path, :priority => 0.7, :changefreq => 'monthly'
+
+
 SitemapGenerator::Sitemap.create do
   Post.find_each do |post|
     add post_path(post), lastmod: post.updated_at
@@ -33,4 +39,6 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
+  #
+  # changefreq how often the content of the page changes. One of 'always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly' or 'never'
 end

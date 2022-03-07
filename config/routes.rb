@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get 'lmia-jobs', to: 'lmia_jobs#index'
   resources :tags, only: [:show]
   post 'posts/create_and_edit' => 'posts#create_and_edit', as: :post_create_and_edit
+
+  get 'calculators', to: 'calculator#index'
   get 'crs-calculator', to: 'calculator#crs'
   get 'tax-calculator', to: 'calculator#tax'
   get 'ielts-to-clb-calculator', to: 'calculator#ieltsToClb'
