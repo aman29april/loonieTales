@@ -8,4 +8,4 @@ production:
   cloud_name: "dljuphdw1"
   api_key: "591854168232272"
   api_secret: "QfbRoF0PXQJNcLnOoytms4Xkm_M"
-  secure:true
+  secure: true
