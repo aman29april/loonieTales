@@ -1,0 +1,49 @@
+.immigration-calc-description{
+    table{
+        thead{
+            tr{
+                 background:#d80027;
+                 color:#ffffff;
+            }
+        }
+    }
+}
+
+.rgtside-head{
+	padding:30px;
+	background:#f2f2f2;
+}
+.rgtside-menu ul{
+	list-style:none;
+	padding: 0;
+}
+.rgtside-menu ul li {
+	font-size: 18px;
+	margin-bottom: 10px;
+	padding: 10px 30px;
+	background: #f2f2f2;
+	-webkit-transition-duration:.5s;
+	-webkit-transition-timing-function:linear;
+}
+.rgtside-menu ul li:before {
+	content: "\f0d9"; /* FontAwesome Unicode */
+	font-family: FontAwesome;
+	margin:0 5px 0 -15px;
+}
+.rgtside-menu ul li:hover {
+	box-shadow:400px 0 0 #d80027 inset;
+	color:#ffffff;
+}
+.rgtside-menu ul li:hover a {
+	color:#ffffff;
+}
+.rgtside-menu ul li.active{
+	background:#d80027;
+	color:#ffffff;
+}
+.rgtside-menu ul li.active a{
+	color:#ffffff;
+}
+.py-10{
+	padding:10px 0;
+}

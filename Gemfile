@@ -29,6 +29,7 @@ gem 'strscan'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'active_link_to'
 gem 'devise'
 gem 'haml-rails'
 
@@ -54,10 +55,9 @@ gem 'config'
 
 # For Image upload
 gem 'carrierwave'                 # Image uploader
+gem 'cloudinary'
 gem 'image_processing'
 gem 'mini_magick'                 # resizable image
-gem 'cloudinary'
-
 
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

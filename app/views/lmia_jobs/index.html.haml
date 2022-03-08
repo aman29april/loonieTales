@@ -1,55 +1,65 @@
 
 = render 'shared/hero_image', image: 'lmia_jobs.png'
 
+=render partial: 'shared/banner_heading', locals: {heading: 'Search LMIA Approvals'}
 
-%h1 LMIA Approvals
+.container.mt-5.immigration-calc-description
+  %p
+    %a{:href => "/noc-codes", :target => "_blank"} Know your NOC
 
-= form_tag(lmia_jobs_path, method: :get, class: 'inline-form') do |form|
+  = form_tag(lmia_jobs_path, method: :get, class: 'inline-form') do |form|
+    .row
+      .col
+        .field
+          = text_field_tag :NOC, params[:NOC], placeholder: 'NOC', class: 'form-control'
+      .col
+        .field
+          = text_field_tag :company, params[:company], placeholder: 'Company Name', class: 'form-control'
+      .col
+        .field
+          = select_tag :province, options_for_select(Province.all, params[:province]), {class: 'form-control',
+          placeholder: 'Province', include_blank: 'Select Province'}
+      .col
+        .actions
+          = submit_tag "Search", class: 'btn btn-primary'
+          = link_to 'Reset', lmia_jobs_path, class: 'btn btn-secondary'
+
   .row
-    .col
-      .field
-        = text_field_tag :NOC, params[:NOC], placeholder: 'NOC', class: 'form-control'
-    .col
-      .field
-        = text_field_tag :company, params[:company], placeholder: 'Company', class: 'form-control'
-    .col
-      .field
-        = select_tag :province, options_for_select(Province.all, params[:province]), {class: 'form-control',
-        placeholder: 'Province', include_blank: 'Select Province'}
-    .col
-      .actions
-        = submit_tag "Search", class: 'btn btn-primary'
-        = button_tag "Reset", type: :reset, class: 'btn btn-secondary'
+    .col-md-9
+      %table.table.table-striped.table-bordered.mt-4{role: 'datatable', id: 'lmia-table'}
+        %thead.thead-dark
+          %tr
+            %th NOC
+            %th Company
+            %th Program
+            %th Positions
+            %th Year
+            -#%th Month
+            %th Province
+        %tbody
+          - @lmia_jobs.each do |lmia_job|
+            %tr
+              %td
+                =link_to lmia_job.noc, "https://www23.statcan.gc.ca/imdb/p3VD.pl?CLV=4&CPV=#{lmia_job.noc}&CST=01012011&CVD=122376&Function=getVD&MLV=4&TVD=122372", target: '_blank'
+              %td= lmia_job.company
+              %td= lmia_job.program_stream
+              %td= lmia_job.positions_approved
+              %td= lmia_job.year
+              -#%td= lmia_job.month
+              %td= lmia_job.province
+    .col-md-3
+      .mt-4
+        =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }
 
+:javascript
+  $(document).ready(function() {
+    $('#lmia-table').dataTable({
+      "stripeClasses":["even","odd"],
+      "pagingType":"simple",
+      "pageLength": 100,
+      "searching": false,
+      lengthChange: false,
+      info: true
+    })
+  });
 
-%table.table.table-hover
-  %thead.thead-dark
-    %tr
-      %th NOC
-      %th Company
-
-      %th Program
-      %th Positions
-      %th Year
-      -#%th Month
-      %th Province
-
-
-  %tbody
-    - @lmia_jobs.each do |lmia_job|
-      %tr
-        %td= lmia_job.noc
-        %td= lmia_job.company
-
-        %td= lmia_job.program_stream
-        %td= lmia_job.positions_approved
-        %td= lmia_job.year
-        -#%td= lmia_job.month
-        %td= lmia_job.province
-        -#%td= link_to 'Show', lmia_job
-        -#%td= link_to 'Edit', edit_lmia_job_path(lmia_job)
-        -#%td= link_to 'Destroy', lmia_job, method: :delete, data: { confirm: 'Are you sure?' }
-
--#%br
--#
--#= link_to 'New Lmia job', new_lmia_job_path

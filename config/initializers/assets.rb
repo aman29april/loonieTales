@@ -4,6 +4,8 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts', 'Gordita')
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path

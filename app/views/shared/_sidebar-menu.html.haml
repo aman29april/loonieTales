@@ -1,0 +1,9 @@
+.rgtside-head.mb-30.text-center.d-none.d-lg-block
+  %h2
+    =heading
+  =image_tag 'arrow-layer.png', class: 'img-fluid'
+
+.rgtside-menu.mt-30.mb-30.d-none.d-lg-block
+  %ul
+    -list.each do |item|
+      = active_link_to item.title, item.path, wrap_tag: :li, wrap_class: ''

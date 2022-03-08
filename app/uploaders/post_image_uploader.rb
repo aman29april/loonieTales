@@ -7,14 +7,14 @@ class PostImageUploader < CarrierWave::Uploader::Base
   # process :set_content_type
 
   process resize_to_limit: [1024, 512]
-  process :convert => 'jpg'
-  process :tags => ['post_picture']
-  cloudinary_transformation :quality => 80
+  process convert: 'jpg'
+  process tags: ['post_picture']
+  cloudinary_transformation quality: 80
 
   version :thumb do
     process resize_to_fill: [512, 256]
-    process :convert => 'jpg'
-    cloudinary_transformation :quality => 90
+    process convert: 'jpg'
+    cloudinary_transformation quality: 90
   end
 
   # storage :file
@@ -32,7 +32,7 @@ class PostImageUploader < CarrierWave::Uploader::Base
   end
 
   def public_id
-    return model.slug
+    model.slug
   end
 
   protected

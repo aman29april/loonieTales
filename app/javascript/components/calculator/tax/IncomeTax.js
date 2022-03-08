@@ -55,7 +55,7 @@ function IncomeTax(props)  {
 
     return (
         <div className=" row">
-            <div className="col-md-6 ">
+            <div className="col-md-6 shadow-box">
                 <form className='form-calculator-tax'>
                     <Form.Group>
                         <Form.Label>Province</Form.Label>
@@ -114,7 +114,7 @@ function IncomeTax(props)  {
 
             </div>
 
-            <div id="results" className="col col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
+            <div id="results" className="col col-xs-12 col-sm-6 col-md-4 col-md-offset-1 ">
                 <div className="results">
                     <div className="text-center-xs">
                         <span className="results-title">Estimated Tax amount</span>

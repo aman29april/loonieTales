@@ -1,100 +1,103 @@
-%h1
-  IELTS to CLB calculator
+=render partial: 'shared/banner_heading', locals: {heading: 'IELTS to CLB calculator'}
 
-%h2
-  Convert IELTS Score Into CLB
-
-
-.row
-  .widget.widget-calculator.clearfix
-    = react_component('calculator/IeltsToClb')
-
-
-.row
-  .col-md-6
-
-  .col-md-6
-    %table.table
-      %caption International English Language Testing System (IELTS) – General Training – Test score equivalency chart
-      %thead
-        %tr
-          %th.text-center{:scope => "col"} CLB Level
-          %th.text-center{:scope => "col"} Reading
-          %th.text-center{:scope => "col"} Writing
-          %th.text-center{:scope => "col"} Listening
-          %th.text-center{:scope => "col"} Speaking
-      %tbody
-        %tr.text-center
-          %td 10
-          %td 8.0
-          %td 7.5
-          %td 8.5
-          %td 7.5
-        %tr.text-center
-          %td 9
-          %td 7.0
-          %td 7.0
-          %td 8.0
-          %td 7.0
-        %tr.text-center
-          %td 8
-          %td 6.5
-          %td 6.5
-          %td 7.5
-          %td 6.5
-        %tr.text-center
-          %td 7
-          %td 6.0
-          %td 6.0
-          %td 6.0
-          %td 6.0
-        %tr.text-center
-          %td 6
-          %td 5.0
-          %td 5.5
-          %td 5.5
-          %td 5.5
-        %tr.text-center
-          %td 5
-          %td 4.0
-          %td 5.0
-          %td 5.0
-          %td 5.0
-        %tr.text-center
-          %td 4
-          %td 3.5
-          %td 4.0
-          %td 4.5
-          %td 4.0
+.container
+  %h2
+    Convert IELTS Score Into CLB
 
   .row
-    %h3 Express Entry CLB Levels
-  %p
-  The Express Entry system
-  manages the three biggest Canadian immigration programs mentioned below. The programs are designed as permanent pathways for skilled foreign workers to enter the Canadian workforce. The minimum CLB levels required for each of the programs are as follows:
-  %table.table.content-table
-    %thead
-      %tr
-        %th{:colspan => "2"} Express Entry Programs
-    %tbody
-      %tr
-        %td
-          %strong Program
-        %td
-          %strong Required CLB scores
-      %tr
-        %td Federal Skilled Worker Program (FSWP)
-        %td CLB 7 or higher
-      %tr
-        %td Federal Skilled Trade Program (FSTP)
-        %td
-          CLB 5 or higher for speaking and listening
-          %br>/
-          CLB 4 or higher for reading and writing
-      %tr
-        %td Canadian Experience Class (CEC)
-        %td
-          CLB 7 or higher if your NOC is 0 or A
-          %br>/
-          CLB 5 or higher if your NOC is B
+    .col-md-9
+      .widget-calculator
+        = react_component('calculator/IeltsToClb')
+
+    .col-md-3
+      =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }
+
+.bg-light
+  .container
+    .row.immigration-calc-description
+      .col-md-6
+        %table.table.table-striped.table-bordered
+          %caption International English Language Testing System (IELTS) – General Training – Test score equivalency chart
+          %thead
+            %tr
+              %th.text-center{:scope => "col"} CLB Level
+              %th.text-center{:scope => "col"} Reading
+              %th.text-center{:scope => "col"} Writing
+              %th.text-center{:scope => "col"} Listening
+              %th.text-center{:scope => "col"} Speaking
+          %tbody
+            %tr.text-center
+              %td 10
+              %td 8.0
+              %td 7.5
+              %td 8.5
+              %td 7.5
+            %tr.text-center
+              %td 9
+              %td 7.0
+              %td 7.0
+              %td 8.0
+              %td 7.0
+            %tr.text-center
+              %td 8
+              %td 6.5
+              %td 6.5
+              %td 7.5
+              %td 6.5
+            %tr.text-center
+              %td 7
+              %td 6.0
+              %td 6.0
+              %td 6.0
+              %td 6.0
+            %tr.text-center
+              %td 6
+              %td 5.0
+              %td 5.5
+              %td 5.5
+              %td 5.5
+            %tr.text-center
+              %td 5
+              %td 4.0
+              %td 5.0
+              %td 5.0
+              %td 5.0
+            %tr.text-center
+              %td 4
+              %td 3.5
+              %td 4.0
+              %td 4.5
+              %td 4.0
+
+      .row
+        .col-md-8
+          %h3 Express Entry CLB Levels
+          %p
+          The Express Entry system
+          manages the three biggest Canadian immigration programs mentioned below. The programs are designed as permanent pathways for skilled foreign workers to enter the Canadian workforce. The minimum CLB levels required for each of the programs are as follows:
+          %table.table.content-table.table-striped.table-bordered
+            %thead
+              %tr
+                %th{:colspan => "2"} Express Entry Programs
+            %tbody
+              %tr
+                %td
+                  %strong Program
+                %td
+                  %strong Required CLB scores
+              %tr
+                %td Federal Skilled Worker Program (FSWP)
+                %td CLB 7 or higher
+              %tr
+                %td Federal Skilled Trade Program (FSTP)
+                %td
+                  CLB 5 or higher for speaking and listening
+                  %br>/
+                  CLB 4 or higher for reading and writing
+              %tr
+                %td Canadian Experience Class (CEC)
+                %td
+                  CLB 7 or higher if your NOC is 0 or A
+                  %br>/
+                  CLB 5 or higher if your NOC is B
 

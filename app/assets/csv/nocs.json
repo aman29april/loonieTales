@@ -1,0 +1,2502 @@
+[
+  {
+    "NOC": 11,
+    "Title": "Legislators",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 12,
+    "Title": "Senior government managers and officials",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 13,
+    "Title": "Senior managers - financial, communications and other business services",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 14,
+    "Title": "Senior managers - health, education, social and community services and membership organizations",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 15,
+    "Title": "Senior managers - trade, broadcasting and other services, n.e.c.",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 16,
+    "Title": "Senior managers - construction, transportation, production and utilities",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 111,
+    "Title": "Financial managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 112,
+    "Title": "Human resources managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 113,
+    "Title": "Purchasing managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 114,
+    "Title": "Other administrative services managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 121,
+    "Title": "Insurance, real estate and financial brokerage managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 122,
+    "Title": "Banking, credit and other investment managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 124,
+    "Title": "Advertising, marketing and public relations managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 125,
+    "Title": "Other business services managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 131,
+    "Title": "Telecommunication carriers managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 132,
+    "Title": "Postal and courier services managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 211,
+    "Title": "Engineering managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 212,
+    "Title": "Architecture and science managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 213,
+    "Title": "Computer and information systems managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 311,
+    "Title": "Managers in health care",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 411,
+    "Title": "Government managers - health and social policy development and program administration",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 412,
+    "Title": "Government managers - economic analysis, policy development and program administration",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 413,
+    "Title": "Government managers - education policy development and program administration",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 414,
+    "Title": "Other managers in public administration",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 421,
+    "Title": "Administrators - post-secondary education and vocational training",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 422,
+    "Title": "School principals and administrators of elementary and secondary education",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 423,
+    "Title": "Managers in social, community and correctional services",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 431,
+    "Title": "Commissioned police officers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 432,
+    "Title": "Fire chiefs and senior firefighting officers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 433,
+    "Title": "Commissioned officers of the Canadian Armed Forces",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 511,
+    "Title": "Library, archive, museum and art gallery managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 512,
+    "Title": "Managers - publishing, motion pictures, broadcasting and performing arts",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 513,
+    "Title": "Recreation, sports and fitness program and service directors",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 601,
+    "Title": "Corporate sales managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 621,
+    "Title": "Retail and wholesale trade managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 631,
+    "Title": "Restaurant and food service managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 632,
+    "Title": "Accommodation service managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 651,
+    "Title": "Managers in customer and personal services, n.e.c.",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 711,
+    "Title": "Construction managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 712,
+    "Title": "Home building and renovation managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 714,
+    "Title": "Facility operation and maintenance managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 731,
+    "Title": "Managers in transportation",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 811,
+    "Title": "Managers in natural resources production and fishing",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 821,
+    "Title": "Managers in agriculture",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 822,
+    "Title": "Managers in horticulture",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 823,
+    "Title": "Managers in aquaculture",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 911,
+    "Title": "Manufacturing managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 912,
+    "Title": "Utilities managers",
+    "Skill level or type": "0"
+  },
+  {
+    "NOC": 1111,
+    "Title": "Financial auditors and accountants",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1112,
+    "Title": "Financial and investment analysts",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1113,
+    "Title": "Securities agents, investment dealers and brokers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1114,
+    "Title": "Other financial officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1121,
+    "Title": "Human resources professionals",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1122,
+    "Title": "Professional occupations in business management consulting",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1123,
+    "Title": "Professional occupations in advertising, marketing and public relations",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 1211,
+    "Title": "Supervisors, general office and administrative support workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1212,
+    "Title": "Supervisors, finance and insurance office workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1213,
+    "Title": "Supervisors, library, correspondence and related information workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1214,
+    "Title": "Supervisors, mail and message distribution occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1215,
+    "Title": "Supervisors, supply chain, tracking and scheduling co-ordination occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1221,
+    "Title": "Administrative officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1222,
+    "Title": "Executive assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1223,
+    "Title": "Human resources and recruitment officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1224,
+    "Title": "Property administrators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1225,
+    "Title": "Purchasing agents and officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1226,
+    "Title": "Conference and event planners",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1227,
+    "Title": "Court officers and justices of the peace",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1228,
+    "Title": "Employment insurance, immigration, border services and revenue officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1241,
+    "Title": "Administrative assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1242,
+    "Title": "Legal administrative assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1243,
+    "Title": "Medical administrative assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1251,
+    "Title": "Court reporters, medical transcriptionists and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1252,
+    "Title": "Health information management occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1253,
+    "Title": "Records management technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1254,
+    "Title": "Statistical officers and related research support occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1311,
+    "Title": "Accounting technicians and bookkeepers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1312,
+    "Title": "Insurance adjusters and claims examiners",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1313,
+    "Title": "Insurance underwriters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1314,
+    "Title": "Assessors, valuators and appraisers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1315,
+    "Title": "Customs, ship and other brokers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 1411,
+    "Title": "General office support workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1414,
+    "Title": "Receptionists",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1415,
+    "Title": "Personnel clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1416,
+    "Title": "Court clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1422,
+    "Title": "Data entry clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1423,
+    "Title": "Desktop publishing operators and related occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1431,
+    "Title": "Accounting and related clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1432,
+    "Title": "Payroll administrators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1434,
+    "Title": "Banking, insurance and other financial clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1435,
+    "Title": "Collectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1451,
+    "Title": "Library assistants and clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1452,
+    "Title": "Correspondence, publication and regulatory clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1454,
+    "Title": "Survey interviewers and statistical clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1511,
+    "Title": "Mail, postal and related workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1512,
+    "Title": "Letter carriers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1513,
+    "Title": "Couriers, messengers and door-to-door distributors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1521,
+    "Title": "Shippers and receivers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1522,
+    "Title": "Storekeepers and partspersons",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1523,
+    "Title": "Production logistics co-ordinators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1524,
+    "Title": "Purchasing and inventory control workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1525,
+    "Title": "Dispatchers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 1526,
+    "Title": "Transportation route and crew schedulers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 2111,
+    "Title": "Physicists and astronomers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2112,
+    "Title": "Chemists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2113,
+    "Title": "Geoscientists and oceanographers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2114,
+    "Title": "Meteorologists and climatologists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2115,
+    "Title": "Other professional occupations in physical sciences",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2121,
+    "Title": "Biologists and related scientists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2122,
+    "Title": "Forestry professionals",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2123,
+    "Title": "Agricultural representatives, consultants and specialists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2131,
+    "Title": "Civil engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2132,
+    "Title": "Mechanical engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2133,
+    "Title": "Electrical and electronics engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2134,
+    "Title": "Chemical engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2141,
+    "Title": "Industrial and manufacturing engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2142,
+    "Title": "Metallurgical and materials engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2143,
+    "Title": "Mining engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2144,
+    "Title": "Geological engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2145,
+    "Title": "Petroleum engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2146,
+    "Title": "Aerospace engineers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2147,
+    "Title": "Computer engineers (except software engineers and designers)",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2148,
+    "Title": "Other professional engineers, n.e.c.",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2151,
+    "Title": "Architects",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2152,
+    "Title": "Landscape architects",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2153,
+    "Title": "Urban and land use planners",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2154,
+    "Title": "Land surveyors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2161,
+    "Title": "Mathematicians, statisticians and actuaries",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2171,
+    "Title": "Information systems analysts and consultants",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2172,
+    "Title": "Database analysts and data administrators",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2173,
+    "Title": "Software engineers and designers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2174,
+    "Title": "Computer programmers and interactive media developers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2175,
+    "Title": "Web designers and developers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 2211,
+    "Title": "Chemical technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2212,
+    "Title": "Geological and mineral technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2221,
+    "Title": "Biological technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2222,
+    "Title": "Agricultural and fish products inspectors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2223,
+    "Title": "Forestry technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2224,
+    "Title": "Conservation and fishery officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2225,
+    "Title": "Landscape and horticulture technicians and specialists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2231,
+    "Title": "Civil engineering technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2232,
+    "Title": "Mechanical engineering technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2233,
+    "Title": "Industrial engineering and manufacturing technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2234,
+    "Title": "Construction estimators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2241,
+    "Title": "Electrical and electronics engineering technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2242,
+    "Title": "Electronic service technicians (household and business equipment)",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2243,
+    "Title": "Industrial instrument technicians and mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2244,
+    "Title": "Aircraft instrument, electrical and avionics mechanics, technicians and inspectors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2251,
+    "Title": "Architectural technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2252,
+    "Title": "Industrial designers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2253,
+    "Title": "Drafting technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2254,
+    "Title": "Land survey technologists and technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2255,
+    "Title": "Technical occupations in geomatics and meteorology",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2261,
+    "Title": "Non-destructive testers and inspection technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2262,
+    "Title": "Engineering inspectors and regulatory officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2263,
+    "Title": "Inspectors in public and environmental health and occupational health and safety",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2264,
+    "Title": "Construction inspectors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2271,
+    "Title": "Air pilots, flight engineers and flying instructors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2272,
+    "Title": "Air traffic controllers and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2273,
+    "Title": "Deck officers, water transport",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2274,
+    "Title": "Engineer officers, water transport",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2275,
+    "Title": "Railway traffic controllers and marine traffic regulators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2281,
+    "Title": "Computer network technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2282,
+    "Title": "User support technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 2283,
+    "Title": "Information systems testing technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3011,
+    "Title": "Nursing co-ordinators and supervisors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3012,
+    "Title": "Registered nurses and registered psychiatric nurses",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3111,
+    "Title": "Specialist physicians",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3112,
+    "Title": "General practitioners and family physicians",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3113,
+    "Title": "Dentists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3114,
+    "Title": "Veterinarians",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3121,
+    "Title": "Optometrists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3122,
+    "Title": "Chiropractors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3124,
+    "Title": "Allied primary health practitioners",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3125,
+    "Title": "Other professional occupations in health diagnosing and treating",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3131,
+    "Title": "Pharmacists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3132,
+    "Title": "Dietitians and nutritionists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3141,
+    "Title": "Audiologists and speech-language pathologists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3142,
+    "Title": "Physiotherapists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3143,
+    "Title": "Occupational therapists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3144,
+    "Title": "Other professional occupations in therapy and assessment",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 3211,
+    "Title": "Medical laboratory technologists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3212,
+    "Title": "Medical laboratory technicians and pathologists' assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3213,
+    "Title": "Animal health technologists and veterinary technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3214,
+    "Title": "Respiratory therapists, clinical perfusionists and cardiopulmonary technologists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3215,
+    "Title": "Medical radiation technologists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3216,
+    "Title": "Medical sonographers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3217,
+    "Title": "Cardiology technologists and electrophysiological diagnostic technologists, n.e.c.",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3219,
+    "Title": "Other medical technologists and technicians (except dental health)",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3221,
+    "Title": "Denturists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3222,
+    "Title": "Dental hygienists and dental therapists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3223,
+    "Title": "Dental technologists, technicians and laboratory assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3231,
+    "Title": "Opticians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3232,
+    "Title": "Practitioners of natural healing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3233,
+    "Title": "Licensed practical nurses",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3234,
+    "Title": "Paramedical occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3236,
+    "Title": "Massage therapists",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3237,
+    "Title": "Other technical occupations in therapy and assessment",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 3411,
+    "Title": "Dental assistants",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 3413,
+    "Title": "Nurse aides, orderlies and patient service associates",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 3414,
+    "Title": "Other assisting occupations in support of health services",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4011,
+    "Title": "University professors and lecturers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4012,
+    "Title": "Post-secondary teaching and research assistants",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4021,
+    "Title": "College and other vocational instructors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4031,
+    "Title": "Secondary school teachers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4032,
+    "Title": "Elementary school and kindergarten teachers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4033,
+    "Title": "Educational counsellors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4111,
+    "Title": "Judges",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4112,
+    "Title": "Lawyers and Quebec notaries",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4151,
+    "Title": "Psychologists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4152,
+    "Title": "Social workers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4153,
+    "Title": "Family, marriage and other related counsellors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4154,
+    "Title": "Professional occupations in religion",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4155,
+    "Title": "Probation and parole officers and related occupations",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4156,
+    "Title": "Employment counsellors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4161,
+    "Title": "Natural and applied science policy researchers, consultants and program officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4162,
+    "Title": "Economists and economic policy researchers and analysts",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4163,
+    "Title": "Business development officers and marketing researchers and consultants",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4164,
+    "Title": "Social policy researchers, consultants and program officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4165,
+    "Title": "Health policy researchers, consultants and program officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4166,
+    "Title": "Education policy researchers, consultants and program officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4167,
+    "Title": "Recreation, sports and fitness policy researchers, consultants and program officers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4168,
+    "Title": "Program officers unique to government",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4169,
+    "Title": "Other professional occupations in social science, n.e.c.",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 4211,
+    "Title": "Paralegal and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4212,
+    "Title": "Social and community service workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4214,
+    "Title": "Early childhood educators and assistants",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4215,
+    "Title": "Instructors of persons with disabilities",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4216,
+    "Title": "Other instructors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4217,
+    "Title": "Other religious occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4311,
+    "Title": "Police officers (except commissioned)",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4312,
+    "Title": "Firefighters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4313,
+    "Title": "Non-commissioned ranks of the Canadian Armed Forces",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 4411,
+    "Title": "Home child care providers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4412,
+    "Title": "Home support workers, housekeepers and related occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4413,
+    "Title": "Elementary and secondary school teacher assistants",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4421,
+    "Title": "Sheriffs and bailiffs",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4422,
+    "Title": "Correctional service officers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 4423,
+    "Title": "By-law enforcement and other regulatory officers, n.e.c.",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 5111,
+    "Title": "Librarians",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5112,
+    "Title": "Conservators and curators",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5113,
+    "Title": "Archivists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5121,
+    "Title": "Authors and writers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5122,
+    "Title": "Editors",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5123,
+    "Title": "Journalists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5125,
+    "Title": "Translators, terminologists and interpreters",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5131,
+    "Title": "Producers, directors, choreographers and related occupations",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5132,
+    "Title": "Conductors, composers and arrangers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5133,
+    "Title": "Musicians and singers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5134,
+    "Title": "Dancers",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5135,
+    "Title": "Actors and comedians",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5136,
+    "Title": "Painters, sculptors and other visual artists",
+    "Skill level or type": "A"
+  },
+  {
+    "NOC": 5211,
+    "Title": "Library and public archive technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5212,
+    "Title": "Technical occupations related to museums and art galleries",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5221,
+    "Title": "Photographers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5222,
+    "Title": "Film and video camera operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5223,
+    "Title": "Graphic arts technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5224,
+    "Title": "Broadcast technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5225,
+    "Title": "Audio and video recording technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5226,
+    "Title": "Other technical and co-ordinating occupations in motion pictures, broadcasting and the performing arts",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5227,
+    "Title": "Support occupations in motion pictures, broadcasting, photography and the performing arts",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5231,
+    "Title": "Announcers and other broadcasters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5232,
+    "Title": "Other performers, n.e.c.",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5241,
+    "Title": "Graphic designers and illustrators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5242,
+    "Title": "Interior designers and interior decorators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5243,
+    "Title": "Theatre, fashion, exhibit and other creative designers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5244,
+    "Title": "Artisans and craftspersons",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5245,
+    "Title": "Patternmakers - textile, leather and fur products",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5251,
+    "Title": "Athletes",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5252,
+    "Title": "Coaches",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5253,
+    "Title": "Sports officials and referees",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 5254,
+    "Title": "Program leaders and instructors in recreation, sport and fitness",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6211,
+    "Title": "Retail sales supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6221,
+    "Title": "Technical sales specialists - wholesale trade",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6222,
+    "Title": "Retail and wholesale buyers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6231,
+    "Title": "Insurance agents and brokers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6232,
+    "Title": "Real estate agents and salespersons",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6235,
+    "Title": "Financial sales representatives",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6311,
+    "Title": "Food service supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6312,
+    "Title": "Executive housekeepers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6313,
+    "Title": "Accommodation, travel, tourism and related services supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6314,
+    "Title": "Customer and information services supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6315,
+    "Title": "Cleaning supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6316,
+    "Title": "Other services supervisors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6321,
+    "Title": "Chefs",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6322,
+    "Title": "Cooks",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6331,
+    "Title": "Butchers, meat cutters and fishmongers - retail and wholesale",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6332,
+    "Title": "Bakers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6341,
+    "Title": "Hairstylists and barbers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6342,
+    "Title": "Tailors, dressmakers, furriers and milliners",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6343,
+    "Title": "Shoe repairers and shoemakers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6344,
+    "Title": "Jewellers, jewellery and watch repairers and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6345,
+    "Title": "Upholsterers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6346,
+    "Title": "Funeral directors and embalmers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 6411,
+    "Title": "Sales and account representatives - wholesale trade (non-technical)",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6421,
+    "Title": "Retail salespersons",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6511,
+    "Title": "Maîtres d'hôtel and hosts/hostesses",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6512,
+    "Title": "Bartenders",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6513,
+    "Title": "Food and beverage servers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6521,
+    "Title": "Travel counsellors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6522,
+    "Title": "Pursers and flight attendants",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6523,
+    "Title": "Airline ticket and service agents",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6524,
+    "Title": "Ground and water transport ticket agents, cargo service representatives and related clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6525,
+    "Title": "Hotel front desk clerks",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6531,
+    "Title": "Tour and travel guides",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6532,
+    "Title": "Outdoor sport and recreational guides",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6533,
+    "Title": "Casino occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6541,
+    "Title": "Security guards and related security service occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6551,
+    "Title": "Customer services representatives - financial institutions",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6552,
+    "Title": "Other customer and information services representatives",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6561,
+    "Title": "Image, social and other personal consultants",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6562,
+    "Title": "Estheticians, electrologists and related occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6563,
+    "Title": "Pet groomers and animal care workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6564,
+    "Title": "Other personal service occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 6611,
+    "Title": "Cashiers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6621,
+    "Title": "Service station attendants",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6622,
+    "Title": "Store shelf stockers, clerks and order fillers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6623,
+    "Title": "Other sales related occupations",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6711,
+    "Title": "Food counter attendants, kitchen helpers and related support occupations",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6721,
+    "Title": "Support occupations in accommodation, travel and facilities set-up services",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6722,
+    "Title": "Operators and attendants in amusement, recreation and sport",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6731,
+    "Title": "Light duty cleaners",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6732,
+    "Title": "Specialized cleaners",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6733,
+    "Title": "Janitors, caretakers and building superintendents",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6741,
+    "Title": "Dry cleaning, laundry and related occupations",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 6742,
+    "Title": "Other service support occupations, n.e.c.",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 7201,
+    "Title": "Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7202,
+    "Title": "Contractors and supervisors, electrical trades and telecommunications occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7203,
+    "Title": "Contractors and supervisors, pipefitting trades",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7204,
+    "Title": "Contractors and supervisors, carpentry trades",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7205,
+    "Title": "Contractors and supervisors, other construction trades, installers, repairers and servicers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7231,
+    "Title": "Machinists and machining and tooling inspectors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7232,
+    "Title": "Tool and die makers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7233,
+    "Title": "Sheet metal workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7234,
+    "Title": "Boilermakers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7235,
+    "Title": "Structural metal and platework fabricators and fitters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7236,
+    "Title": "Ironworkers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7237,
+    "Title": "Welders and related machine operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7241,
+    "Title": "Electricians (except industrial and power system)",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7242,
+    "Title": "Industrial electricians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7243,
+    "Title": "Power system electricians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7244,
+    "Title": "Electrical power line and cable workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7245,
+    "Title": "Telecommunications line and cable workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7246,
+    "Title": "Telecommunications installation and repair workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7247,
+    "Title": "Cable television service and maintenance technicians",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7251,
+    "Title": "Plumbers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7252,
+    "Title": "Steamfitters, pipefitters and sprinkler system installers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7253,
+    "Title": "Gas fitters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7271,
+    "Title": "Carpenters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7272,
+    "Title": "Cabinetmakers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7281,
+    "Title": "Bricklayers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7282,
+    "Title": "Concrete finishers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7283,
+    "Title": "Tilesetters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7284,
+    "Title": "Plasterers, drywall installers and finishers and lathers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7291,
+    "Title": "Roofers and shinglers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7292,
+    "Title": "Glaziers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7293,
+    "Title": "Insulators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7294,
+    "Title": "Painters and decorators (except interior decorators)",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7295,
+    "Title": "Floor covering installers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7301,
+    "Title": "Contractors and supervisors, mechanic trades",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7302,
+    "Title": "Contractors and supervisors, heavy equipment operator crews",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7303,
+    "Title": "Supervisors, printing and related occupations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7304,
+    "Title": "Supervisors, railway transport operations",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7305,
+    "Title": "Supervisors, motor transport and other ground transit operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7311,
+    "Title": "Construction millwrights and industrial mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7312,
+    "Title": "Heavy-duty equipment mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7313,
+    "Title": "Heating, refrigeration and air conditioning mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7314,
+    "Title": "Railway carmen/women",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7315,
+    "Title": "Aircraft mechanics and aircraft inspectors",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7316,
+    "Title": "Machine fitters",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7318,
+    "Title": "Elevator constructors and mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7321,
+    "Title": "Automotive service technicians, truck and bus mechanics and mechanical repairers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7322,
+    "Title": "Motor vehicle body repairers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7331,
+    "Title": "Oil and solid fuel heating mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7332,
+    "Title": "Appliance servicers and repairers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7333,
+    "Title": "Electrical mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7334,
+    "Title": "Motorcycle, all-terrain vehicle and other related mechanics",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7335,
+    "Title": "Other small engine and small equipment repairers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7361,
+    "Title": "Railway and yard locomotive engineers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7362,
+    "Title": "Railway conductors and brakemen/women",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7371,
+    "Title": "Crane operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7372,
+    "Title": "Drillers and blasters - surface mining, quarrying and construction",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7373,
+    "Title": "Water well drillers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7381,
+    "Title": "Printing press operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7384,
+    "Title": "Other trades and related occupations, n.e.c.",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 7441,
+    "Title": "Residential and commercial installers and servicers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7442,
+    "Title": "Waterworks and gas maintenance workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7444,
+    "Title": "Pest controllers and fumigators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7445,
+    "Title": "Other repairers and servicers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7451,
+    "Title": "Longshore workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7452,
+    "Title": "Material handlers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7511,
+    "Title": "Transport truck drivers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7512,
+    "Title": "Bus drivers, subway operators and other transit operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7513,
+    "Title": "Taxi and limousine drivers and chauffeurs",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7514,
+    "Title": "Delivery and courier service drivers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7521,
+    "Title": "Heavy equipment operators (except crane)",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7522,
+    "Title": "Public works maintenance equipment operators and related workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7531,
+    "Title": "Railway yard and track maintenance workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7532,
+    "Title": "Water transport deck and engine room crew",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7533,
+    "Title": "Boat and cable ferry operators and related occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7534,
+    "Title": "Air transport ramp attendants",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7535,
+    "Title": "Other automotive mechanical installers and servicers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 7611,
+    "Title": "Construction trades helpers and labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 7612,
+    "Title": "Other trades helpers and labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 7621,
+    "Title": "Public works and maintenance labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 7622,
+    "Title": "Railway and motor transport labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8211,
+    "Title": "Supervisors, logging and forestry",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8221,
+    "Title": "Supervisors, mining and quarrying",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8222,
+    "Title": "Contractors and supervisors, oil and gas drilling and services",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8231,
+    "Title": "Underground production and development miners",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8232,
+    "Title": "Oil and gas well drillers, servicers, testers and related workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8241,
+    "Title": "Logging machinery operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8252,
+    "Title": "Agricultural service contractors, farm supervisors and specialized livestock workers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8255,
+    "Title": "Contractors and supervisors, landscaping, grounds maintenance and horticulture services",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8261,
+    "Title": "Fishing masters and officers",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8262,
+    "Title": "Fishermen/women",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 8411,
+    "Title": "Underground mine service and support workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8412,
+    "Title": "Oil and gas well drilling and related workers and services operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8421,
+    "Title": "Chain saw and skidder operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8422,
+    "Title": "Silviculture and forestry workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8431,
+    "Title": "General farm workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8432,
+    "Title": "Nursery and greenhouse workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8441,
+    "Title": "Fishing vessel deckhands",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8442,
+    "Title": "Trappers and hunters",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 8611,
+    "Title": "Harvesting labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8612,
+    "Title": "Landscaping and grounds maintenance labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8613,
+    "Title": "Aquaculture and marine harvest labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8614,
+    "Title": "Mine labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8615,
+    "Title": "Oil and gas drilling, servicing and related labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 8616,
+    "Title": "Logging and forestry labourers",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9211,
+    "Title": "Supervisors, mineral and metal processing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9212,
+    "Title": "Supervisors, petroleum, gas and chemical processing and utilities",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9213,
+    "Title": "Supervisors, food and beverage processing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9214,
+    "Title": "Supervisors, plastic and rubber products manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9215,
+    "Title": "Supervisors, forest products processing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9217,
+    "Title": "Supervisors, textile, fabric, fur and leather products processing and manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9221,
+    "Title": "Supervisors, motor vehicle assembling",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9222,
+    "Title": "Supervisors, electronics manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9223,
+    "Title": "Supervisors, electrical products manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9224,
+    "Title": "Supervisors, furniture and fixtures manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9226,
+    "Title": "Supervisors, other mechanical and metal products manufacturing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9227,
+    "Title": "Supervisors, other products manufacturing and assembly",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9231,
+    "Title": "Central control and process operators, mineral and metal processing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9232,
+    "Title": "Central control and process operators, petroleum, gas and chemical processing",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9235,
+    "Title": "Pulping, papermaking and coating control operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9241,
+    "Title": "Power engineers and power systems operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9243,
+    "Title": "Water and waste treatment plant operators",
+    "Skill level or type": "B"
+  },
+  {
+    "NOC": 9411,
+    "Title": "Machine operators, mineral and metal processing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9412,
+    "Title": "Foundry workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9413,
+    "Title": "Glass forming and finishing machine operators and glass cutters",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9414,
+    "Title": "Concrete, clay and stone forming operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9415,
+    "Title": "Inspectors and testers, mineral and metal processing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9416,
+    "Title": "Metalworking and forging machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9417,
+    "Title": "Machining tool operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9418,
+    "Title": "Other metal products machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9421,
+    "Title": "Chemical plant machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9422,
+    "Title": "Plastics processing machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9423,
+    "Title": "Rubber processing machine operators and related workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9431,
+    "Title": "Sawmill machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9432,
+    "Title": "Pulp mill machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9433,
+    "Title": "Papermaking and finishing machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9434,
+    "Title": "Other wood processing machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9435,
+    "Title": "Paper converting machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9436,
+    "Title": "Lumber graders and other wood processing inspectors and graders",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9437,
+    "Title": "Woodworking machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9441,
+    "Title": "Textile fibre and yarn, hide and pelt processing machine operators and workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9442,
+    "Title": "Weavers, knitters and other fabric making occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9445,
+    "Title": "Fabric, fur and leather cutters",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9446,
+    "Title": "Industrial sewing machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9447,
+    "Title": "Inspectors and graders, textile, fabric, fur and leather products manufacturing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9461,
+    "Title": "Process control and machine operators, food and beverage processing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9462,
+    "Title": "Industrial butchers and meat cutters, poultry preparers and related workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9463,
+    "Title": "Fish and seafood plant workers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9465,
+    "Title": "Testers and graders, food and beverage processing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9471,
+    "Title": "Plateless printing equipment operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9472,
+    "Title": "Camera, platemaking and other prepress occupations",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9473,
+    "Title": "Binding and finishing machine operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9474,
+    "Title": "Photographic and film processors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9521,
+    "Title": "Aircraft assemblers and aircraft assembly inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9522,
+    "Title": "Motor vehicle assemblers, inspectors and testers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9523,
+    "Title": "Electronics assemblers, fabricators, inspectors and testers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9524,
+    "Title": "Assemblers and inspectors, electrical appliance, apparatus and equipment manufacturing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9525,
+    "Title": "Assemblers, fabricators and inspectors, industrial electrical motors and transformers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9526,
+    "Title": "Mechanical assemblers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9527,
+    "Title": "Machine operators and inspectors, electrical apparatus manufacturing",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9531,
+    "Title": "Boat assemblers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9532,
+    "Title": "Furniture and fixture assemblers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9533,
+    "Title": "Other wood products assemblers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9534,
+    "Title": "Furniture finishers and refinishers",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9535,
+    "Title": "Plastic products assemblers, finishers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9536,
+    "Title": "Industrial painters, coaters and metal finishing process operators",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9537,
+    "Title": "Other products assemblers, finishers and inspectors",
+    "Skill level or type": "C"
+  },
+  {
+    "NOC": 9611,
+    "Title": "Labourers in mineral and metal processing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9612,
+    "Title": "Labourers in metal fabrication",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9613,
+    "Title": "Labourers in chemical products processing and utilities",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9614,
+    "Title": "Labourers in wood, pulp and paper processing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9615,
+    "Title": "Labourers in rubber and plastic products manufacturing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9616,
+    "Title": "Labourers in textile processing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9617,
+    "Title": "Labourers in food and beverage processing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9618,
+    "Title": "Labourers in fish and seafood processing",
+    "Skill level or type": "D"
+  },
+  {
+    "NOC": 9619,
+    "Title": "Other labourers in processing, manufacturing and utilities",
+    "Skill level or type": "D"
+  }
+]

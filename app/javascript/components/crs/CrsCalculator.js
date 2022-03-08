@@ -35,7 +35,7 @@ function CrsCalculator(props){
                 </Form>
             </div>
 
-            <div className='col-md-4 results sticky-top'>
+            <div className='col-md-4 results sticky-top shadow-box' >
                 <div className="text-center-xs">
                     <span className="results-title">Total Points</span>
                     <div className='results-return text-success'>{totalPoints} </div>

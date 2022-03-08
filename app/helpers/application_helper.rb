@@ -52,4 +52,25 @@ module ApplicationHelper
       {}
     end
   end
+
+  def random_tag_class(index: nil)
+    tags = %w[fashion
+              online-tutorial
+              marketing
+              javaScript
+              laravel
+              magento
+              ux-design
+              wordpress
+              woocommerce
+              health
+              travel
+              business
+              tech
+              food
+              lifesytle
+              doctor]
+
+    index.present? && tags[index].present? ? tags[index] : tags.sample
+  end
 end

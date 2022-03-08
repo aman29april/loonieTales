@@ -1,11 +1,12 @@
-%h1 All Info Pages
-- @static_pages.each do |resource|
-  .post-panel.col-md-5
-  - if resource.picture?
-    .post-picture-wrapper
-      = link_to image_tag(resource.picture.url(:thumb)), post
-  .main-body
-    %h3.post-title
-      = link_to resource.title, resource
+.container
+  %h1 All Info Pages
+  - @static_pages.each do |resource|
+    .post-panel.col-md-5
+    - if resource.picture?
+      .post-picture-wrapper
+        = link_to image_tag(resource.picture.url(:thumb)), post
+    .main-body
+      %h3.post-title
+        = link_to resource.title, resource
 
-= link_to 'New Info page', new_static_page_path, class: 'btn-link'
+  = link_to 'New Info page', new_static_page_path, class: 'btn-link'

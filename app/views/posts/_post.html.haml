@@ -1,11 +1,13 @@
-.post-panel.col-md-5
+.post-panel.col-md-5.m-lg-3
   - if user_signed_in?
     = render partial: 'posts/feed_metadata', locals: { post: PostDecorator.new(post, current_user) }
   - if post.picture?
-    .post-picture-wrapper
-      = link_to image_tag(post.picture.url(:thumb)), post
+    .post-picture-wrapper.hover-overlay.hover-zoom{'data-mdb-ripple-color': :light}
+      = link_to image_tag(post.picture.url(:thumb), class: 'img-fluid'), post
+      -#.mask{style: "background-color: rgba(251, 251, 251, 0.15);"}
+
   .main-body
-    %h3.post-title
+    %h5.post-title
       = link_to post.title, post
     - if post.lead
       .post-body

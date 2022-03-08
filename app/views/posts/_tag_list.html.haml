@@ -1,0 +1,2 @@
+- tags.each_with_index do |tag, index|
+  = link_to tag.name, tag, class: "btn-medium mb-3 #{random_tag_class(index: index)}"

@@ -28,7 +28,7 @@ function IeltsToClb(props)  {
 
     return (
         <div className=" row">
-            <div className="col-md-6 ">
+            <div className="col-md-7 shadow-box">
                 <form className='form-calculator-tax'>
                     <div className='row'>
                         <div className='col-md-6'>
@@ -123,7 +123,7 @@ function IeltsToClb(props)  {
 
             </div>
 
-            <div id="results" className="col col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
+            <div id="results" className="col col-xs-12 col-sm-6 col-md-4">
                 <div className="results">
                     <div className="text-center-xs">
                         <span className="results-title">Your CLB is</span>

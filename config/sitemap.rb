@@ -2,11 +2,13 @@
 SitemapGenerator::Sitemap.default_host = 'https://loonietales.herokuapp.com'
 SitemapGenerator::Sitemap.compress = :all_but_first
 
-add crs_calculator_path, :priority => 0.7, :changefreq => 'monthly'
-add tax_calculator_path, :priority => 0.7, :changefreq => 'monthly'
-add ielts_to_clb_calculator_path, :priority => 0.7, :changefreq => 'monthly'
-add calculators_path, :priority => 0.7, :changefreq => 'monthly'
-
+add crs_calculator_path, priority: 0.7, changefreq: 'monthly'
+add tax_calculator_path, priority: 0.7, changefreq: 'monthly'
+add ielts_to_clb_calculator_path, priority: 0.7, changefreq: 'monthly'
+add calculators_path, priority: 0.7, changefreq: 'monthly'
+add sinp_points_calculator_path, priority: 0.7, changefreq: 'monthly'
+add noc_codes_path, priority: 0.7, changefreq: 'monthly'
+add lmia_jobs_path, priority: 0.7, changefreq: 'monthly'
 
 SitemapGenerator::Sitemap.create do
   Post.find_each do |post|

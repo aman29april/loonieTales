@@ -1,0 +1,314 @@
+=render partial: 'shared/banner_heading', locals: {heading: 'SASKATCHEWAN PNP POINTS CALCULATOR'}
+
+.container
+  .row
+    %h2.mb-3
+      Check Your Eligibility
+    .col-md-9
+      .widget-calculator.shadow-box
+        .snip-calc
+          = react_component('calculator/Immigration/Sinp')
+    .col-md-3
+      =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }
+
+.bg-light
+  .container
+    .row.immigration-calc-description
+      .custm-cont.col-md-8
+        %h1
+          %font{:color => "#000000", :style => ""} Saskatchewan Immigration Points Calculator
+
+        %h4
+          %b There are four immigration categories under Saskatchewan PNP:
+        %div
+          %br/
+        %div
+          %p{:style => "text-align: justify; "}
+            %b International Skilled Worker Category:
+            Foreign skilled workers can
+            apply for Saskatchewan PNP through this category. If you can meet the
+            minimum requirements of this category like have work experience in a
+            Saskatchewan occupation in-demand, etc. you can be selected for the
+            provincial nomination.
+          %p{:style => "text-align: justify; "}
+            %b> Saskatchewan Experience Category:
+            This category is for temporary
+            foreign workers already working in the province to apply for provincial
+            nomination.
+          %p{:style => "text-align: justify; "}
+            %b> Entrepreneur and Farm Category:
+            This category is for those
+            immigrants who are planning to run a business or farm in Saskatchewan.
+            These categories have different immigration processes as well as
+            requirements.
+          %p{:style => "text-align: justify; "}
+            A minimum score of 60/110 points is required under SINP International
+            Skilled Worker (ISW) sub-category if you want to apply for Saskatchewan
+            PNP through SINP's International skilled worker and Entrepreneur category.
+        %div
+          %div{:style => "text-align: justify; "}
+            Know your Saskatchewan PNP score with the use of our
+            = succeed "r." do
+              %b SINP points calculato
+          %div
+            %br/
+          %div  
+        %div
+          %h2
+            %font{:color => "#000000", :style => ""} What is the minimum requirement for SINP for a skilled worker?
+          %p
+            Following are the minimum requirements for SINP's Express entry category:
+          %p
+          %ul
+            %li
+              Must score a minimum of 60 points out of 110 in the Saskatchewan PNP
+              points calculator.
+          %ul
+            %li
+              Must have a valid Express Entry program profile and job seeker
+              validation code.
+          %ul
+            %li Must take IELTS to prove language proficiency.
+          %ul
+            %li
+              Must have completed a minimum of one year of post-secondary education or
+              training (degree, diploma, or certificate) with an ECA.
+          %ul
+            %li
+              Must have a minimum level of work experience required in an occupation
+              that is classified under NOC skill level 0, A, or B, and the occupation
+              must be in-demand in the province. (In case, occupation is regulated in
+              the province then candidates must be provided with respective
+              certification or licensing).
+          %ul
+            %li
+              Must have sufficient amounts of settlement funds and a settlement plan.
+          %p
+
+          %p
+            %font{:color => "#000000", :style => ""}
+              %br/
+          %h2
+            %font{:color => "#000000", :style => ""} What are the main factors for the SINP Points Calculator?
+          %p
+            SINP point assessment grid awards point based on the following factors:
+          %p
+            %b Labour Market Success (Maximum 80 points)
+          %div
+            %p
+            %ul
+              %li Education and Training
+            %ul
+              %li Skilled Work Experience
+            %ul
+              %li Language Ability
+            %ul
+              %li Age
+            %p
+              Connection to Saskatchewan Labour Market & Adaptability (Maximum 30
+              points)
+            %p
+              %br/
+          %h2
+            %font{:color => "#000000", :style => ""} SINP Points Calculator
+          %p
+            The following tables will illustrate how points are awarded in the SINP
+            points Calculator:
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Selection Factor
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td Education and training
+              %td 23
+            %tr
+              %td Skilled Work Experience
+              %td 15
+            %tr
+              %td Language Ability
+              %td 20
+            %tr
+              %td Age
+              %td 12
+            %tr
+              %td Connection to Saskatchewan labor market
+              %td 30
+        %p
+          %br/
+        %h4
+          %b Education and Training
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Educational qualifications
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td Master's or Doctorate Degree
+              %td 23
+            %tr
+              %td University Bachelor's Degree (Minimum 3-year program)
+              %td 20
+            %tr
+              %td Trade Certification
+              %td 20
+            %tr
+              %td Degree, diploma, or certificate (Minimum 2 year program)
+              %td 15
+            %tr
+              %td Degree, diploma, or certificate (Minimum 1 year program)
+              %td 12
+        %p
+          %br/
+        %h4
+          %br/
+        %h4
+          %b Skilled Work Experience
+        %p In 5 years prior to Application Submission
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Duration (In years)
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td 5
+              %td 10
+            %tr
+              %td 4
+              %td 8
+            %tr
+              %td 3
+              %td 6
+            %tr
+              %td 2
+              %td 4
+            %tr
+              %td 1
+              %td 2
+        %p In 6-10 years prior to Application Submission
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Duration (In years)
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td 5
+              %td 5
+            %tr
+              %td 4
+              %td 4
+            %tr
+              %td 3
+              %td 3
+            %tr
+              %td 2
+              %td 2
+            %tr
+              %td Less than 1 year
+              %td 0
+        %p
+          %br/
+        %h4
+          %b Language Proficiency
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong CLB Level
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td 8 and higher
+              %td 20
+            %tr
+              %td 7
+              %td 18
+            %tr
+              %td 6
+              %td 16
+            %tr
+              %td 5
+              %td 14
+            %tr
+              %td 4
+              %td 12
+        %p
+          %br/
+        %h4
+          %b Age
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Age (In years)
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td Less than 18
+              %td 0
+            %tr
+              %td 18-21
+              %td 8
+            %tr
+              %td 22-34
+              %td 12
+            %tr
+              %td 35-45
+              %td 10
+            %tr
+              %td 46-50
+              %td 8
+            %tr
+              %td More than 50
+              %td 0
+        %p
+          All the above-mentioned give a total of
+          %b 80 points
+          under SINP
+          calculator 2022.
+        %p
+          %b The remaining 30 points
+          for immigrants who are having a strong
+          connection to the Saskatchewan labor market, which shows a genuine intent
+          and ability to successfully settle and economically establish in
+          Saskatchewan as a permanent resident.
+        %table.table.table-bordered.table-striped.text-center
+          %thead
+            %tr
+              %td
+                %strong Connection to Saskatchewan Labor Market
+              %td
+                %strong Points
+          %tbody
+            %tr
+              %td Highly skilled employment offer from a Saskatchewan employer
+              %td 30
+            %tr
+              %td Close family relative in Saskatchewan
+              %td 20
+            %tr
+              %td
+                Past work experience in Saskatchewan (at least 12 months of work in
+                the past five years on a valid work permit)
+              %td 5
+            %tr
+              %td
+                Past student experience in Saskatchewan (at least one-year full-time
+                academic year of study at a recognized Saskatchewan post-secondary
+                education institution on a valid study permit)
+              %td 5
+

@@ -1,11 +1,14 @@
 class CalculatorController < ApplicationController
-
   def index
     set_meta_tags meta_info_from_locals(prefix: 'calculators.crs')
   end
 
   def crs
     set_meta_tags meta_info_from_locals(prefix: 'calculators.crs')
+  end
+
+  def sinp
+    set_meta_tags meta_info_from_locals(prefix: 'calculators.sinp')
   end
 
   def tax

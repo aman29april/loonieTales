@@ -1,14 +1,15 @@
-.row{"data-animation" => "fadeInUp-fadeOutDown"}
-  #main-post.col-xs-10.col-md-9.col-md-offset-2.col-xs-offset-1.main-content
-    - cache @resource do
-      - if @resource.picture?
-        .post-picture-wrapper
-          = image_tag @resource.picture.url(:thumb)
-      %h3.title= @resource.title
-      .body
-        %p= @resource.body
+.container
+  .row{"data-animation" => "fadeInUp-fadeOutDown"}
+    #main-post.col-xs-10.col-md-9.col-md-offset-2.col-xs-offset-1.main-content
+      - cache @resource do
+        - if @resource.picture?
+          .post-picture-wrapper
+            = image_tag @resource.picture.url(:thumb)
+        %h3.title= @resource.title
+        .body
+          %p= @resource.body
 
-    - if user_signed_in? && current_user?(@resource.user)
-      .edit-delete-button-wrapper
-        = link_to "Edit", edit_static_page_path(@resource), class: 'button'
-        = link_to "Delete", static_page_path(@resource), method: :delete, class: 'button', data: { confirm: 'Are you sure?' }
+      - if user_signed_in? && current_user?(@resource.user)
+        .edit-delete-button-wrapper
+          = link_to "Edit", edit_static_page_path(@resource), class: 'button'
+          = link_to "Delete", static_page_path(@resource), method: :delete, class: 'button', data: { confirm: 'Are you sure?' }

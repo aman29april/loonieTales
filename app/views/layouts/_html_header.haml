@@ -1,0 +1,11 @@
+%head
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  = csrf_meta_tags
+  = favicon_link_tag 'favicon.ico', type: 'image/x-icon'
+  = favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png'
+  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+  = display_meta_tags
+  / site: 'My website'
+  %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"}
+  = render 'shared/google_analytics'

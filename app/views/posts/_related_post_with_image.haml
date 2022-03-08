@@ -1,0 +1,24 @@
+.single-related-post.col-md-6
+  .related-post-thum
+    %img{:alt => "", :src => "assets/images/blog/01.jpg"}/
+  .following-post-content
+    .following-blog-post-top
+      .trending-blog-post-category
+        %a{:href => "#"} Business
+      .following-blog-post-author
+        By
+        %a{:href => "#"} Kathy Ramirez
+    %h5.following-blog-post-title
+      %a{:href => "#"}
+        Customize your WooCommerce
+        store with countless design
+    .following-blog-post-meta
+      .post-meta-left-side
+        %span.post-date
+          %i.icofont-ui-calendar
+          %a{:href => "#"} 03 April, 2021
+        %span 10 min read
+      .post-meta-right-side
+        - if post.picture?
+          .pli-picture-wrapper
+            = image_tag post.picture.url(:thumb)

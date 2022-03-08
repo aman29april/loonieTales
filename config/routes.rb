@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   # resources :info, controller: 'static_pages'
   resources :static_pages, path: 'info'
 
-  resources :provinces
-  resources :program_streams
-  resources :nocs
-  resources :companies
+  # resources :provinces
+  # resources :program_streams
+  # resources :nocs
+  # resources :companies
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                                     registrations: 'users/registrations' }
 
@@ -24,8 +24,12 @@ Rails.application.routes.draw do
 
   get 'calculators', to: 'calculator#index'
   get 'crs-calculator', to: 'calculator#crs'
+  get 'sinp-points-calculator', to: 'calculator#sinp'
+
   get 'tax-calculator', to: 'calculator#tax'
   get 'ielts-to-clb-calculator', to: 'calculator#ieltsToClb'
+
+  get 'noc-codes', to: 'nocs#index'
 
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]

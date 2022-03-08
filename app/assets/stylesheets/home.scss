@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .yt-video-section {
+    padding: 20px 0px;
+    margin-bottom: 10px;
     .card {
         border: none;
+        background: none;
     }
     .card-body{
         padding: 0rem 1rem;
@@ -44,7 +47,11 @@
   transform: translateX(0);
 }
 
-
+.shadow-box {
+    box-shadow: rgba(0, 43, 92, 0.08) 0px 0px 10px 0px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
 .media-container-row {
   display: flex;
   flex-direction: row;
@@ -57,7 +64,8 @@
 .follow-us {
   padding-top: 45px;
   padding-bottom: 45px;
-  background: linear-gradient(0deg, #a8d5f4, #70dfc1);
+//   background: linear-gradient(0deg, #a8d5f4, #70dfc1);
+  background: linear-gradient(42deg, #f71227, #dfde70);
   .display-2 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3rem;

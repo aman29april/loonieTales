@@ -3,7 +3,10 @@ class NocsController < ApplicationController
 
   # GET /nocs or /nocs.json
   def index
-    @nocs = Noc.all
+    file = File.open("#{Rails.root}/app/assets/csv/nocs.json")
+    data = JSON.load file
+    @nocs = data
+    # @nocs = Noc.all
   end
 
   # GET /nocs/1 or /nocs/1.json

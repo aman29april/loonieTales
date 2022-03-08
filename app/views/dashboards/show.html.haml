@@ -1,32 +1,88 @@
 = render 'shared/hero_image', image: 'hero.png'
-%section.text-center1.mt-lg-2
-  %h4.mb-2
-    %strong Latest Videos
-  .row.mx-auto.my-auto.yt-video-section
-    = render 'yt_videos', videos: @videos
-.col.col-md-8.col-md-offset-1.dashboard-main-content
-  %h4.mb-2
-    %strong Latest Articles
-  - unless @dashboard.top_stories?
-    / <div data-animation="fadeInUp-fadeOutDown">
-    / </div>
-    .posts-wrapper.row{"data-animation" => "fadeInUp-fadeOutDown", "data-behavior" => "endless-scroll"}
-      = render @dashboard.posts
-  - else
-    .posts-wrapper{"data-animation" => "fadeInUp-fadeOutDown"}
-      = render 'posts/top_stories', posts: @dashboard.posts
-  - unless @dashboard.top_stories?
-    .center
-      = will_paginate @dashboard.posts
-- content_for :sidebar do
-  %aside.col.col-md-4.main-sidebar
-    / border-top
-    %h4.small-heading Featured Categories
-    = react_component('TagList', { tags: @dashboard.featured_tags })
-    / <div class="flex-container border-top">
-    / <h4 class="small-heading">Tags you follow</h4><haml_silent></haml_silent>
-    / </div>
-    - unless @dashboard.filtered?
-      %h4.small-heading.border-top Top stories
-      .sidebar-top-stories
-        = render partial: 'top_stories_bar', locals: {records: @dashboard.top_stories}
+.container
+  .row
+    .col.col-md-8.col-md-offset-1.dashboard-main-content
+      .col-lg-12
+        .row
+          .col-lg-12
+            .recent-article-header
+              .section-title
+                %h4.mb-4.text-black-50
+                  Latest Articles
+        - unless @dashboard.top_stories?
+          / <div data-animation="fadeInUp-fadeOutDown">
+          / </div>
+          .posts-wrapper.row.g-4{"data-animation" => "fadeInUp-fadeOutDown", "data-behavior" => "endless-scroll"}
+            = render @dashboard.posts
+        - else
+          .posts-wrapper{"data-animation" => "fadeInUp-fadeOutDown"}
+            = render 'posts/top_stories', posts: @dashboard.posts
+        - unless @dashboard.top_stories?
+          .center
+            = will_paginate @dashboard.posts
+
+    %aside.col.col-md-4.main-sidebar
+      %h4.small-heading Featured Categories
+      = render partial: 'posts/tag_list', locals: {tags: @dashboard.featured_tags}
+
+      - unless @dashboard.filtered?
+        %h4.small-heading.border-top Top stories
+        .sidebar-top-stories
+          = render partial: 'top_stories_bar', locals: {records: @dashboard.top_stories}
+
+.bg-gray.yt-video-section
+  .container
+    %section.text-center1.mt-lg-2.col-md-12
+      %h4.mb-2
+        %strong Youtube Videos
+      .row.mx-auto.my-auto
+        = render 'yt_videos', videos: @videos
+
+
+.special-for-beginner-area.section-space--pb_120.col-md-12
+  .container
+    .row
+      .col-lg-12
+        .section-title-three.text-center.mb-4
+          %h3 Calculators
+
+    .row
+      .col-xl-12.col-lg-12.col-md-12.col-sm-12
+        .row
+          .col-xl-3.col-lg-3.col-md-3.col-sm-4.mb-40
+            .impo-links.text-center
+              %h4.mt-10
+                %a{:href => "/crs-calculator"} Express Entry Canada Requirements
+          .col-xl-3.col-lg-3.col-md-3.col-sm-4.mb-40
+            .impo-links.text-center
+              %h4.mt-10
+                %a{:href => ""} Canada Immigration Eligibility
+          .col-xl-3.col-lg-3.col-md-3.col-sm-4.mb-40
+            .impo-links.text-center
+              %h4.mt-10
+                %a{:href => "/tax-calculator"} Canada Income Tax
+          .col-xl-3.col-lg-3.col-md-3.col-sm-4.mb-40
+            .impo-links.text-center
+              %h4.mt-10
+                %a{:href => "/sinp-points-calculator"} SINP Points Calculator
+
+    -#
+    -# .row.row--30
+    -#   .col-lg-4
+    -#     / Single Most Populer Item Start
+    -#     .single-most-populer-item.aos-init.aos-animate{"data-aos" => "fade-up"}
+    -#       %a.most-populer-thum{:href => "blog-details.html"}
+    -#         %img{:alt => "", :src => "assets/images/banners/02-special-banner.jpg"}/
+    -#       .most-populer-content
+    -#         .most-populer-post-author
+    -#           By
+    -#           %a{:href => "blog-details.html"} Andrew Hoffman
+    -#         %h3.title
+    -#           %a{:href => "blog-details.html"}
+    -#             All of these amazing features
+    -#             come at an affordable price!
+    -#         .most-populer-post-meta
+    -#           %span.post-date
+    -#             %a{:href => "blog-details.html"} 03 April, 2021
+    -#           %span 10 min read
+    -#     / Single Most Populer Item End

@@ -6,7 +6,7 @@ class LmiaJobsController < ApplicationController
     # @lmia_jobs = LmiaJob.all
     #
     # File.read()
-    @lmia_jobs = ReadCsv.new("#{Rails.root}/app/assets/csv/LMIAQ3.csv").call(search_params)
+    @lmia_jobs = ReadCsv.new("#{Rails.root}/app/assets/csv/LMIAQ3.csv").call(search_params).first(500)
     set_meta_tags meta_info_from_locals(prefix: 'jobs.lmia')
   end
 

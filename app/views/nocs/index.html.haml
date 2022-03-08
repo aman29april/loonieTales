@@ -1,25 +1,42 @@
-%h1 Listing nocs
+=render partial: 'shared/banner_heading', locals: {heading: 'Know your NOC'}
 
-%table
-  %thead
-    %tr
-      %th Code
-      %th Skill type
-      %th Title
-      %th
-      %th
-      %th
 
-  %tbody
-    - @nocs.each do |noc|
-      %tr
-        %td= noc.code
-        %td= noc.skill_type
-        %td= noc.title
-        %td= link_to 'Show', noc
-        %td= link_to 'Edit', edit_noc_path(noc)
-        %td= link_to 'Destroy', noc, method: :delete, data: { confirm: 'Are you sure?' }
+.container.mt-4
+  .row.immigration-calc-description
+    .col-md-9
+      .info
+        %p
+        %p
+          %strong Alert!
+          This table is for your convenience. If any part conflicts with information on the
+          = succeed "," do
+            %a{:href => "https://noc.esdc.gc.ca/", target: '_blank'} official NOC website
+      %table.table.table-striped.table-bordered{id: 'noc-table'}
+        %thead
+          %tr
+            %th Code
+            %th Title
+            %th Skill type
 
-%br
+        %tbody
+          - @nocs.each do |noc|
+            %tr
+              %td
+                =link_to to4Chas(noc['NOC']), "https://www23.statcan.gc.ca/imdb/p3VD.pl?CLV=4&CPV=#{to4Chas(noc['NOC'])}&CST=01012011&CVD=122376&Function=getVD&MLV=4&TVD=122372", target: '_blank'
 
-= link_to 'New Noc', new_noc_path
+              %td= noc['Title']
+              %td= noc['Skill level or type']
+      %br
+    .col-md-3
+      =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }
+
+
+:javascript
+  $(document).ready(function() {
+    $('#noc-table').dataTable({
+      "stripeClasses":["even","odd"],
+      "pagingType":"simple",
+      "pageLength": 50,
+    })
+  });
+

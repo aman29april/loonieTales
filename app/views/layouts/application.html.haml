@@ -1,16 +1,17 @@
 !!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title LoonieTales
-    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    %p.notice
-      =notice
-    %p.alert
-      =alert
-    = yield
+%html{"ng-app" => "Stories"}
+  = render 'layouts/html_header'
+  %body{:class => "#{controller.controller_name} #{controller.action_name}", "data-prismjs-copy-timeout" => "500"}
+    = render 'layouts/overlay' unless user_signed_in?
+    = react_component('UserOverlay', {})
+    .progress-bar{"data-behavior" => "progress-bar"}
+    = render 'layouts/nav_bar'
+
+    #main-wrapper
+      = render 'layouts/alert_messages'
+      = yield :hero
+      = yield
+      = yield :sidebar
+      = render 'layouts/footer'
+  :javascript
+    window.userSignedIn = #{user_signed_in?};

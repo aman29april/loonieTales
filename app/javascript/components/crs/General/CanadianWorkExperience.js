@@ -56,10 +56,11 @@ function CanadianWorkExperience(props) {
                     <p>It must have been paid and full-time (or an equal amount in part-time).</p>
                     <p>“Skilled work” in the NOC is:</p>
                     <ul>
-                        <li>managerial jobs (NOC Skill Level 0)</li>
-                        <li>professional jobs (NOC Skill Type A)</li>
-                        <li>technical jobs and skilled trades/manual work (NOC Skill Type B)</li>
+                        <li>Managerial jobs (NOC Skill Level 0)</li>
+                        <li>Professional jobs (NOC Skill Type A)</li>
+                        <li>Technical jobs and skilled trades/manual work (NOC Skill Type B)</li>
                     </ul>
+                    <p><a href='/noc-codes' target='_blank'>Know your NOC</a></p>
                 </div>
                 }
                 <Form.Select

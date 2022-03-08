@@ -1,97 +1,98 @@
-%body
-  .banner-container.mt-5{"data-animation" => "fadeInUp-fadeOutDown-slow"}
-    .row
-      .col-md-1.col-sm-8
-        %header
-          .hero-avatar
-            = avatar_for @user, size: 100
-      .col-md-8.col-sm-10
-        .profile-info
-          %h1.hero-title= @user.full_name
-          %p.hero-description= @user.description
-      .col-md-1.mt-5
-        - if user_signed_in?
-        - else
-        - if user_signed_in? && current_user?(@user)
-          = link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-right edit-button'
-  .row.mt-4
-    .col.col-md-4
+.container-fluid
+  %body
+    .banner-container.mt-5{"data-animation" => "fadeInUp-fadeOutDown-slow"}
       .row
-        %h5 Personal Information
-        - if @user.email.present?
-          .hero-location.mt-1
-            = fa_icon('envelope', type: :far)
-            = link_to @user.email , "mailto:#{@user.email}", target: '_blank', class: ' social-link'
-        - if @user.resume.present?
-          .hero-location.mt-2
-            = fa_icon('id-badge')
-            = link_to "Resume", @user.resume, target: '_blank', class: 'social-link'
-        - if @user.location.present?
-          .hero-location.mt-2
-            = fa_icon('map-marker')
-            = @user.location
-        - if @user.mobile.present?
-          .hero-location.mt-2
-            = fa_icon('phone')
-            = link_to @user.mobile, "tel:#{@user.mobile}", target: '_blank', class: 'social-link'
-      - if @user.has_social_links?
-        .row.mt-3
-          %h5 Social Links
-          .flex.flex-row.margin--top.external-links-social
-            - if @user.linkedin.present? && !@user.can_show_linkedin_badge?
-              .external-links
-                = link_to fa_icon('linkedin', type: :brand) , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link'
-            - if @user.github.present?
-              .external-links
-                = link_to fa_icon('github', type: :brand), "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link'
-        - if @user.can_show_linkedin_badge?
+        .col-md-1.col-sm-8
+          %header
+            .hero-avatar
+              = avatar_for @user, size: 100
+        .col-md-8.col-sm-10
+          .profile-info
+            %h1.hero-title= @user.full_name
+            %p.hero-description= @user.description
+        .col-md-1.mt-5
+          - if user_signed_in?
+          - else
+          - if user_signed_in? && current_user?(@user)
+            = link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-right edit-button'
+    .row.mt-4
+      .col.col-md-4
+        .row
+          %h5 Personal Information
+          - if @user.email.present?
+            .hero-location.mt-1
+              = fa_icon('envelope', type: :far)
+              = link_to @user.email , "mailto:#{@user.email}", target: '_blank', class: ' social-link'
+          - if @user.resume.present?
+            .hero-location.mt-2
+              = fa_icon('id-badge')
+              = link_to "Resume", @user.resume, target: '_blank', class: 'social-link'
+          - if @user.location.present?
+            .hero-location.mt-2
+              = fa_icon('map-marker')
+              = @user.location
+          - if @user.mobile.present?
+            .hero-location.mt-2
+              = fa_icon('phone')
+              = link_to @user.mobile, "tel:#{@user.mobile}", target: '_blank', class: 'social-link'
+        - if @user.has_social_links?
           .row.mt-3
-            = render partial: 'shared/linkedin_badge', locals: {username: @user.linkedin}
-      = render partial: 'tags_list_wit_heading', locals: { tags: @user.skills_array, heading: 'Skills'}
-      = render partial: 'tags_list_wit_heading', locals: { tags: @user.languages_array, heading: 'Languages'}
-      = render partial: 'tags_list_wit_heading', locals: { tags: @user.hobbies_array, heading: 'Hobbies'}
-      - if @projects.side.any?
-        .row.mt-3
-          %h5 Side Projects
-          - @projects.side.each do |project|
+            %h5 Social Links
+            .flex.flex-row.margin--top.external-links-social
+              - if @user.linkedin.present? && !@user.can_show_linkedin_badge?
+                .external-links
+                  = link_to fa_icon('linkedin', type: :brand) , "https://www.linkedin.com/in/#{@user.linkedin}", target: '_blank', class: ' social-link'
+              - if @user.github.present?
+                .external-links
+                  = link_to fa_icon('github', type: :brand), "https://www.github.com/#{@user.github}", target: '_blank', class: ' social-link'
+          - if @user.can_show_linkedin_badge?
+            .row.mt-3
+              = render partial: 'shared/linkedin_badge', locals: {username: @user.linkedin}
+        = render partial: 'tags_list_wit_heading', locals: { tags: @user.skills_array, heading: 'Skills'}
+        = render partial: 'tags_list_wit_heading', locals: { tags: @user.languages_array, heading: 'Languages'}
+        = render partial: 'tags_list_wit_heading', locals: { tags: @user.hobbies_array, heading: 'Hobbies'}
+        - if @projects.side.any?
+          .row.mt-3
+            %h5 Side Projects
+            - @projects.side.each do |project|
+              = render partial: 'projects/project', locals: {project: project}
+        - if @latest_posts.any?
+          .row.mt-3
+            %h4.small-heading Latest Posts
+            .sidebar-top-stories
+              = render partial: 'dashboards/top_stories_bar', locals: {records: @latest_posts}
+      .col.col-md-8
+        .user-wrapper.user-experiences{"data-animation" => "fadeInUp-fadeOutDown"}
+          .flex-container
+            %h4.small-heading Experiences
+            - if user_signed_in? && current_user?(@user)
+              = link_to render('shared/tag_button'), new_user_experience_path(current_user)
+          - if @user.experiences.any?
+            - @user.experiences.chronological.each do |experience|
+              = render partial: 'experiences/experience', locals: {experience: experience}
+          - else
+        .user-wrapper.user-projects{"data-animation" => "fadeInUp-fadeOutDown"}
+          .flex-container
+            %h4.small-heading Projects
+            - if user_signed_in? && current_user?(@user)
+              = link_to render('shared/tag_button'), new_user_project_path(current_user)
+          - @projects.main.each do |project|
             = render partial: 'projects/project', locals: {project: project}
-      - if @latest_posts.any?
-        .row.mt-3
-          %h4.small-heading Latest Posts
-          .sidebar-top-stories
-            = render partial: 'dashboards/top_stories_bar', locals: {records: @latest_posts}
-    .col.col-md-8
-      .user-wrapper.user-experiences{"data-animation" => "fadeInUp-fadeOutDown"}
-        .flex-container
-          %h4.small-heading Experiences
-          - if user_signed_in? && current_user?(@user)
-            = link_to render('shared/tag_button'), new_user_experience_path(current_user)
-        - if @user.experiences.any?
-          - @user.experiences.chronological.each do |experience|
-            = render partial: 'experiences/experience', locals: {experience: experience}
-        - else
-      .user-wrapper.user-projects{"data-animation" => "fadeInUp-fadeOutDown"}
-        .flex-container
-          %h4.small-heading Projects
-          - if user_signed_in? && current_user?(@user)
-            = link_to render('shared/tag_button'), new_user_project_path(current_user)
-        - @projects.main.each do |project|
-          = render partial: 'projects/project', locals: {project: project}
-  / <div class="posts-wrapper" data-animation="fadeInUp-fadeOutDown">
-  / <div class="flex-container border-top">
-  / <h4 class="small-heading">Interests</h4>
-  / </div>
-  / <h4 class="small-heading border-top">latest</h4>
-  / </div>
-  - if @recommended_posts.any?
-    .banner-container{"data-animation" => "fadeInUp-fadeOutDown"}
-      .posts-wrapper
-        %h4.heading-border-b
-          Recommended by #{@user.username} 
-          \#{link_to "See all", user_recommended_posts_path(@user)}
-        .flex-container.f-wrap
-          - @recommended_posts.each do |post|
-            .recommended-post-card
-              = link_to post.title, post, class: "rpc-title"
-              %br/
-              %small.rpc-username= post.username
+    / <div class="posts-wrapper" data-animation="fadeInUp-fadeOutDown">
+    / <div class="flex-container border-top">
+    / <h4 class="small-heading">Interests</h4>
+    / </div>
+    / <h4 class="small-heading border-top">latest</h4>
+    / </div>
+    - if @recommended_posts.any?
+      .banner-container{"data-animation" => "fadeInUp-fadeOutDown"}
+        .posts-wrapper
+          %h4.heading-border-b
+            Recommended by #{@user.username} 
+            \#{link_to "See all", user_recommended_posts_path(@user)}
+          .flex-container.f-wrap
+            - @recommended_posts.each do |post|
+              .recommended-post-card
+                = link_to post.title, post, class: "rpc-title"
+                %br/
+                %small.rpc-username= post.username

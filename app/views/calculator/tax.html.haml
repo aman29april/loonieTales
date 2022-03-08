@@ -1,9 +1,8 @@
-%h1
-  Income tax calculator Canada 2022
+=render partial: 'shared/banner_heading', locals: {heading: 'Income tax calculator Canada 2022'}
+.container
+  %h2
+    Find out how much your salary is after tax
 
-%h2
-  Find out how much your salary is after tax
-
-.row
-  .widget.widget-calculator.clearfix
-    = react_component('calculator/tax/IncomeTax')
+  .row
+    .widget.widget-calculator.clearfix
+      = react_component('calculator/tax/IncomeTax')

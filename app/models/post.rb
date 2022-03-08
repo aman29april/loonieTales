@@ -21,6 +21,7 @@ class Post < ApplicationRecord
   scope :drafts, -> { where(published_at: nil) }
   scope :featured, -> { where(featured: true) }
   scope :by_user, ->(user) { where(user: user) }
+  scope :with_images, ->  { where.not(picture: nil) }
   delegate :username, to: :user
   delegate :full_name, to: :user, prefix: :user
 
@@ -34,6 +35,10 @@ class Post < ApplicationRecord
   mount_uploader :picture, PostImageUploader
 
   # has_rich_text :content
+
+  def has_image?
+    picture?
+  end
 
   def unpublish
     self.published_at = nil
