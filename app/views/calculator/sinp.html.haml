@@ -4,18 +4,17 @@
   .row
     %h2.mb-3
       Check Your Eligibility
-    .col-md-9
-      .widget-calculator.shadow-box
+    .col-md-12
+      .widget-calculator
         .snip-calc
           = react_component('calculator/Immigration/Sinp')
-    .col-md-3
-      =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }
+
 
 .bg-light
   .container
     .row.immigration-calc-description
       .custm-cont.col-md-8
-        %h1
+        %h3
           %font{:color => "#000000", :style => ""} Saskatchewan Immigration Points Calculator
 
         %h4
@@ -312,3 +311,9 @@
                 education institution on a valid study permit)
               %td 5
 
+
+
+      .col-md-4
+        .row
+          .col-md-10.fa-pull-right
+            =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }

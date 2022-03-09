@@ -43,10 +43,6 @@ function CrsCalculator(props){
 
 
                 <table className='table center'>
-                    {/*<thead>*/}
-                    {/*    <th>Type</th>*/}
-                    {/*    <th> Points</th>*/}
-                    {/*</thead>*/}
                     <tbody>
                       <ResultTable userProfile={userProfile} partnered={partnered}/>
                     </tbody>

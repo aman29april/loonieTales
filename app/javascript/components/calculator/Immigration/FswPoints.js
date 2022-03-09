@@ -6,11 +6,8 @@ import {ResultTable} from "../../crs/common";
 
 const SINP_AGE_OPTIONS =  {
     'Under 18': 0,
-    '18 to 21': 8,
-    '22 to 34': 12,
-    '35 to 45': 10,
-    '46 and 50': 8,
-    '50 or over': 0
+    '18 to 35': 8,
+    '47 or over': 0
 }
 
 const SINP_EDUCATION_OPTIONS = {

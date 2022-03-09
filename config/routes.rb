@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   root 'dashboards#show'
   resources :posts
-  resources :lmia_jobs
+  # resources :lmia_jobs
   # get 'admin', to: 'admin#index'
   resources :admin, only: :index do
     collection do
@@ -25,11 +25,13 @@ Rails.application.routes.draw do
   get 'calculators', to: 'calculator#index'
   get 'crs-calculator', to: 'calculator#crs'
   get 'sinp-points-calculator', to: 'calculator#sinp'
+  get 'fsw-eligibility-calculator', to: 'calculator#fsw67Point'
 
   get 'tax-calculator', to: 'calculator#tax'
   get 'ielts-to-clb-calculator', to: 'calculator#ieltsToClb'
 
   get 'noc-codes', to: 'nocs#index'
+  get 'lmia-jobs', to: 'lmia_jobs#index'
 
   resources :users, only: %i[show edit update] do
     resources :recommended_posts, only: [:index]

@@ -1,3 +1,12 @@
+ .post-picture-wrapper {
+    max-width: 750px;
+    img {
+      display: block;
+      width: 100%;
+      margin: auto;
+    }
+  }
+
 body.posts.show {
   .row {
     width: 100%;
@@ -14,14 +23,7 @@ body.posts.show {
     padding-left: 3%;
     padding-right: 3%;
   }
-  .post-picture-wrapper {
-    //padding: 2em 0;
-    img {
-      display: block;
-      width: 100%;
-      margin: auto;
-    }
-  }
+
 
   .title {
     color: $black;

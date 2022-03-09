@@ -1,0 +1,25 @@
+=render partial: 'shared/banner_heading', locals: {heading: '67 Points Calculator'}
+
+.container
+  .row
+    %h2.mb-3
+      Check Your Eligibility
+    .col-md-12
+      .widget-calculator
+        .snip-calc
+          = react_component('calculator/Immigration/FswPoints')
+
+
+.bg-light
+  .container
+    .row.immigration-calc-description
+      .custm-cont.col-md-8
+        %h3
+          %font{:color => "#000000", :style => ""} Federal Skilled Worker (FSW) Selection Factor Points Calculator aka 67 points calculator
+
+
+
+      .col-md-4
+        .row
+          .col-md-10.fa-pull-right
+            =render partial: 'shared/sidebar-menu', locals: {heading: 'TOOLS', list: calculators_list }

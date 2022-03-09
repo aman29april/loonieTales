@@ -18,13 +18,16 @@
 }
 
 
+
+
 .canada67-calc label,
 .snip-calc label {
 	display: inline-block;
 	cursor: pointer;
-	padding: 5px 20px;
+	padding: 10px 2px 0px 0px;
 	margin-top: 0;
-	margin-bottom: 0
+	margin-bottom: 0;
+
 }
 .canada67-calc input[type=radio],
 .snip-calc input[type=radio] {
@@ -36,7 +39,26 @@
 .snip-calc .radio-group {
 	border: solid 1px #bdbdbd;
 	display: inline-block;
-	overflow: hidden
+	overflow: hidden;
+
+    label{
+        padding: 5px 20px;
+    }
+}
+
+.canada67-calc,
+.snip-calc{
+    .radio-group{
+        .form-check-inline{
+            margin-right: 0em;
+            border-left: solid 1px #bdbdbd
+         }
+         .form-check{
+             margin-bottom: 0em;
+             padding-left: 0em;
+         }
+    }
+
 }
 .canada67-calc label+input[type=radio]+label,
 .snip-calc label+input[type=radio]+label {
